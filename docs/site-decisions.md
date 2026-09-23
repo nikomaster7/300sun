@@ -4,7 +4,7 @@ Built following the master prompt (from another hostel project), adapted to 300s
 
 ## Stack (prompt section 1)
 - Hand-written HTML, CSS and JS, no framework and no site builder (option **c** of the prompt). No generator meta tags, and class names are specific to this project (`.route`, `.band`, `.figures`, `.ask`).
-- Hosted on **GitHub Pages** from the `gh-pages` branch, which holds the contents of `site/`. To publish after changes: `git subtree push --prefix site origin gh-pages`. A custom domain can be added later.
+- Hosted on **Vercel**, connected to the GitHub repo: every push to `main` publishes automatically (`vercel.json` points it at `site/`, with no build step).
 - Fonts are self-hosted (Inter + Instrument Serif), so there are no calls to Google. That's why the footer can honestly say **"No cookies, no tracking"**, and why no cookie banner is needed.
 - Two real languages: English at `/`, Spanish at `/es/`, with `hreflang`. English is the default because the main buyers are US cruise passengers.
 - JSON-LD `TravelAgency` with the real phone number. No street address because there's no office; add one if that changes.
@@ -43,7 +43,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 | Hostel terrace | hostels | 300sun-valencia-hostel-terraza |
 
 ## Nicolás to confirm (these are my assumptions in the copy)
-- [ ] Prices: walk €180 / cruise day €340 / +€30 per person / paella from €65
+- [x] Prices: walk €150 (3 h, up to 4) / cruise day €280 (6 h, up to 4, Claude's proposal, to confirm) / +€30 per person / paella from €65
 - [ ] Payment: "small deposit, rest on the day"
 - [ ] "I usually answer the same day"
 - [x] About section removed for now (Nicolás prefers not to present himself yet)
