@@ -337,3 +337,6 @@ html.present .present-hint.show { opacity: .9; }
   .top, .wa-float, form.ask, .present-hint { display: none !important; }
   section.block { break-inside: avoid; padding: 40px 0; }
 }
+
+.strip.wide { margin-top: clamp(40px, 6vw, 72px); }
+.strip.wide figure { aspect-ratio: 4 / 3; }
