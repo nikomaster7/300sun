@@ -41,7 +41,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 | Hostel room | hostels | 300sun-valencia-hostel-habitacion-grupo |
 | Hostel common area | hostels | 300sun-valencia-hostel-zona-comun |
 | Hostel terrace | hostels | 300sun-valencia-hostel-terraza |
-| Nicolás portrait | valencia | 300sun-valencia-nicolas-maldonado |
+| Nicolás portrait | valencia | 300sun-valencia-nicolas-maldonado.jpg (cropped from the group photo, only 272px wide; replace with a proper portrait when there is one) |
 
 ## Nicolás to confirm (these are my assumptions in the copy)
 - [ ] Prices: walk €180 / cruise day €340 / +€30 per person / paella from €65
