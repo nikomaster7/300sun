@@ -7,6 +7,7 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 2. **Instagram + Facebook**: create the Facebook Page and Instagram @300sun in Meta Business Suite, profile photo (brand/300sun-logo-dark.png), bio, link to 300sun.com/cruise, and the first 6–9 posts with the real photos.
 3. **Google Business Profile**: create it as a service-area business (no public address), verify it, and set up the review link to send to past clients.
 4. **Storing passwords safely**: choose and set up a password manager (e.g. Bitwarden, free, or 1Password), move every 300sun account into it, and turn on 2FA everywhere.
+5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
 - [ ] Give Claude your **NIF + postal address** for the legal notice (or decide on a business address)
