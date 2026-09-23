@@ -13,3 +13,5 @@ Preview locally: open `site/index.html` in a browser. Press **P** for presentati
 - `docs/booking-setup.md`: connect Cal.com so walks can be booked from the site
 - `docs/domain-and-email.md`: 300sun.com availability, prices, email options
 - `docs/usa-campaign.md`: plan to sell to Americans (in person + online)
+- `docs/marketing/`: marketing campaigns and strategies
+  - `docs/marketing/cruise-paella-campaign.md`: "Skip the €50 paella" campaign for cruise passengers (draft)

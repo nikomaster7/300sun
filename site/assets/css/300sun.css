@@ -350,3 +350,20 @@ html.present .present-hint.show { opacity: .9; }
 .booking-note { margin-top: 14px; }
 .book-fallback { border: 1px dashed var(--ink-2); padding: 24px; display: grid; gap: 14px; justify-items: start; }
 .book-fallback p { margin: 0; color: var(--ink-2); }
+
+/* cruise landing page */
+.facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--ink); }
+.facts li { padding: 20px 16px 20px 0; border-bottom: 1px solid var(--line); }
+.facts li:nth-child(odd) { border-right: 1px solid var(--line); }
+.facts li:nth-child(even) { padding-left: 20px; }
+.facts b { display: block; font: 400 clamp(36px, 4.4vw, 56px)/1 var(--serif); letter-spacing: -.01em; margin-bottom: 8px; }
+.facts span { font-size: 14px; color: var(--ink-2); }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li { counter-increment: step; position: relative; padding: 0 0 22px 48px; color: var(--ink-2); }
+.steps li b { color: var(--ink); font-weight: 500; }
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: -2px;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: var(--ink);
+  display: grid; place-items: center; font: 500 14px/1 var(--sans);
+}
+@media (max-width: 720px) { .facts span br { display: none; } }

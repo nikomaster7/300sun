@@ -48,3 +48,31 @@ Build pages like **"MSC World Europa in Valencia – 14 May 2027 – private wal
 - Cards: ~€30
 - Google Ads: ~€200–300 per month
 - **Total: under €1,000**, which is roughly 4–6 walks sold directly.
+
+---
+
+## Calendar: set up before the trip, launch on return
+Nicolás is in the USA **28 Oct – 13 Nov 2026**. Ads go live when he's back (~16 Nov). Everything is ready before 28 Oct.
+
+**Before 28 Oct**
+- [ ] Buy 300sun.com (Porkbun) and connect it to Vercel
+- [ ] Google Workspace: hola@300sun.com (a new Google account for the business)
+- [ ] Cal.com with hola@300sun.com, connecting BOTH calendars (personal + business) so nothing clashes
+- [ ] In Cal.com, **block 28 Oct – 13 Nov** (Availability → Date overrides) so nobody books while you're away
+- [ ] Send the Cal.com link, and it goes onto the site and the `/cruise` page
+- [ ] Google Business Profile (a service-area business, with no public address), then ask 3–5 recent clients for reviews
+- [ ] Facebook Page + Instagram @300sun (Meta Business Suite), with 6–9 posts using the real photos
+- [ ] Google Ads: create the account and leave the campaign as a **draft** (keywords and ads written, no spending)
+
+**In the USA (28 Oct – 13 Nov)**
+- Cards with a QR code to `300sun.com/cruise?utm_source=card`
+- Visits to agencies, travel advisors and the Port of Miami / cruise contacts (a separate plan)
+
+**Around 16 Nov:** turn the Google campaign on (plus Meta if we decide to), and check it every week.
+
+### Ad landing page
+All ads point to **`/cruise`** with their own tag, for example:
+- Google: `300sun.com/cruise?utm_source=google&utm_campaign=cruise-test`
+- Instagram/Facebook: `300sun.com/cruise?utm_source=meta&utm_campaign=cruise-test`
+
+The page passes those tags on to the Cal.com booking, so each booking records where it came from.
