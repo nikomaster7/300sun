@@ -34,4 +34,4 @@ Cal.com can charge through **Stripe** (a card deposit, for example €50). Befor
 Until then, the booking reserves the date and the guest pays on the day.
 
 ## 6. Send me the link
-Done: the event is `cal.com/300-sun-6scc8d/old-town-walk` (set up 2026-09-23). If the username changes, update `CAL_LINK` in `site/assets/js/300sun.js`.
+Done: the event is `cal.com/300-sun/old-town-walk` (set up 2026-09-23; the username changed from 300-sun-6scc8d to 300-sun). If the username changes, update `CAL_LINK` in `site/assets/js/300sun.js`.
