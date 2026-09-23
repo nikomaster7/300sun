@@ -4,7 +4,7 @@ Built following the master prompt (from another hostel project), adapted to 300s
 
 ## Stack (prompt section 1)
 - Hand-written HTML, CSS and JS, no framework and no site builder (option **c** of the prompt). No generator meta tags, and class names are specific to this project (`.route`, `.band`, `.figures`, `.ask`).
-- Hosted on **Vercel**, connected to the GitHub repo: every push to `main` publishes automatically (`vercel.json` points it at `site/`, with no build step).
+- Hosted on **Vercel** at https://300sun.vercel.app (project `300sun`), connected to GitHub: every push to `main` publishes automatically. `vercel.json` points it at `site/`.
 - Fonts are self-hosted (Inter + Instrument Serif), so there are no calls to Google. That's why the footer can honestly say **"No cookies, no tracking"**, and why no cookie banner is needed.
 - Two real languages: English at `/`, Spanish at `/es/`, with `hreflang`. English is the default because the main buyers are US cruise passengers.
 - JSON-LD `TravelAgency` with the real phone number. No street address because there's no office; add one if that changes.
