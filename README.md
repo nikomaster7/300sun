@@ -15,3 +15,5 @@ Preview locally: open `site/index.html` in a browser. Press **P** for presentati
 - `docs/usa-campaign.md`: plan to sell to Americans (in person + online)
 - `docs/marketing/`: marketing campaigns and strategies
   - `docs/marketing/cruise-paella-campaign.md`: "Skip the €50 paella" campaign for cruise passengers (draft)
+- `docs/privacy-and-security.md`: GDPR / LSSI checklist, record of processing, breach steps
+- `docs/next-session.md`: **homework and agenda for the next session**

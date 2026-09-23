@@ -1,0 +1,5 @@
+Contact: mailto:300sunvalencia@gmail.com
+Expires: 2027-09-23T00:00:00.000Z
+Preferred-Languages: en, es
+Canonical: https://300sun.com/.well-known/security.txt
+Policy: https://300sun.com/legal/#security

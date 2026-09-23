@@ -82,15 +82,17 @@
 
   var booking = document.querySelector(".booking");
   if (booking) {
+    var frame = booking.querySelector(".cal-frame");
     if (!CAL_LINK) {
       booking.querySelector(".booking-note").hidden = true;
-      booking.querySelector(".cal-frame").hidden = true;
+      frame.hidden = true;
       booking.querySelector(".book-fallback").hidden = false;
     } else {
       var loaded = false;
       var loadCal = function () {
         if (loaded) return;
         loaded = true;
+        frame.innerHTML = "";
         // Cal.com's standard embed loader
         (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
         Cal("init", "walk", { origin: "https://cal.com" });
@@ -99,11 +101,13 @@
         Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
         Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#1a1a1a" } } });
       };
-      // Load the calendar only when someone scrolls to it (nothing third-party before that)
-      if ("IntersectionObserver" in window) {
-        var bo = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { loadCal(); bo.disconnect(); } }, { rootMargin: "200px" });
-        bo.observe(booking);
-      } else loadCal();
+      // Nothing from Cal.com loads until the visitor asks for it (privacy: no third-party requests or cookies before that)
+      var privacyHref = es ? "/es/legal/#cookies" : "/legal/#cookies";
+      frame.innerHTML = '<div class="cal-gate"><button type="button" class="btn">' + (es ? "Ver días disponibles" : "See available days") + '</button>' +
+        '<p class="fine">' + (es ? "Se abre el calendario de reservas de Cal.com. " : "Opens the booking calendar, provided by Cal.com. ") +
+        '<a href="' + privacyHref + '">' + (es ? "Privacidad y cookies" : "Privacy &amp; cookies") + '</a></p></div>';
+      frame.querySelector(".cal-gate .btn").addEventListener("click", loadCal);
+      document.querySelectorAll('a[href="#book"], a[href="#reservar"]').forEach(function (a) { a.addEventListener("click", loadCal); });
     }
   }
 
