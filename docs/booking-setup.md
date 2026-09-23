@@ -34,4 +34,4 @@ Cal.com can charge through **Stripe** (a card deposit, for example €50). Befor
 Until then, the booking reserves the date and the guest pays on the day.
 
 ## 6. Send me the link
-It looks like `cal.com/300sun/old-town-walk`. I paste it into `site/assets/js/300sun.js` (`CAL_LINK`) and the calendar appears on the site straight away. Until then, the section shows a WhatsApp button.
+Done: the event is `cal.com/300-sun-6scc8d/old-town-walk` (set up 2026-09-23). If the username changes, update `CAL_LINK` in `site/assets/js/300sun.js`.

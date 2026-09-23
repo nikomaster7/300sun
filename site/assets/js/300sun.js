@@ -78,7 +78,7 @@
 
   // Walk bookings — Cal.com event link ("username/event-slug").
   // Leave empty until the Cal.com account exists; the WhatsApp fallback shows instead.
-  var CAL_LINK = "";
+  var CAL_LINK = "300-sun-6scc8d/old-town-walk";
 
   var booking = document.querySelector(".booking");
   if (booking) {
