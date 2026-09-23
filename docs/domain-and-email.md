@@ -25,6 +25,9 @@ You **don't need Squarespace**. The site is already built and hosted on Vercel, 
 
 ## Email (for example hola@300sun.com or nicolas@300sun.com)
 
+**Decision for now (test phase):** a free Gmail (300sun@gmail.com or similar) + Porkbun's free **email forwarding** hola@300sun.com → that Gmail. The site shows hola@300sun.com; replies go out from the Gmail. Move to Google Workspace when the business is up and running.
+
+
 | Option | Price | Good for |
 |---|---|---|
 | **Google Workspace Business Starter** | ~€6.90 per user per month | Gmail with your own domain, plus Calendar (which Cal.com syncs with). **Recommended.** It looks professional to US clients and you already know Gmail. |

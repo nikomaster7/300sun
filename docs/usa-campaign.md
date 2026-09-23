@@ -56,8 +56,8 @@ Nicolás is in the USA **28 Oct – 13 Nov 2026**. Ads go live when he's back (~
 
 **Before 28 Oct**
 - [ ] Buy 300sun.com (Porkbun) and connect it to Vercel
-- [ ] Google Workspace: hola@300sun.com (a new Google account for the business)
-- [ ] Cal.com with hola@300sun.com, connecting BOTH calendars (personal + business) so nothing clashes
+- [ ] Free Gmail for the business (300sun@gmail.com or similar) + Porkbun forwarding hola@300sun.com → that Gmail. Google Workspace later, if needed
+- [ ] Cal.com with the business Gmail, connecting BOTH calendars (personal + business) so nothing clashes
 - [ ] In Cal.com, **block 28 Oct – 13 Nov** (Availability → Date overrides) so nobody books while you're away
 - [ ] Send the Cal.com link, and it goes onto the site and the `/cruise` page
 - [ ] Google Business Profile (a service-area business, with no public address), then ask 3–5 recent clients for reviews
