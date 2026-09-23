@@ -96,7 +96,7 @@
             <dt>Cada persona extra, hasta 8</dt><dd>30 €</dd>
           </dl>
           <small>No incluye entradas, taxis ni comida. Eso se paga allí, y solo lo que uséis.</small>
-          <a class="btn" href="#escribeme" data-service="walk">Consultar fecha</a>
+          <a class="btn" href="#reservar">Reservar fecha</a>
         </div>
       </div>
 
@@ -127,6 +127,25 @@
           <li><time>13:15</time><div><strong>Paella (opcional)</strong><span>Aquí la paella se come a mediodía. Si te la ofrecen a las nueve de la noche, desconfía.</span></div></li>
           <li><time>—</time><div><strong>Vuelta a la terminal</strong><span>Calculado desde tu hora de embarque, no desde la hora de llegada.</span></div></li>
         </ol>
+      </div>
+    </div>
+    <div class="booking rise" id="reservar">
+      <div class="booking-head">
+        <div>
+          <span class="label">Reserva tu paseo</span>
+          <h3 class="booking-title">Elige un día. <span class="it">Es tuyo.</span></h3>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Elige el paseo">
+          <button type="button" role="tab" aria-selected="true" data-cal="walk">Centro · 3 h · 150 €</button>
+          <button type="button" role="tab" aria-selected="false" data-cal="cruise">Día de crucero · 6 h · 280 €</button>
+        </div>
+      </div>
+      <div class="cal-frame" id="cal-walk" data-cal-panel="walk"></div>
+      <div class="cal-frame" id="cal-cruise" data-cal-panel="cruise" hidden></div>
+      <p class="fine booking-note">Solo salen los días que tengo libres. Te llega la confirmación por email al momento, y a mí también. ¿Sois más de 4? Elige el día y pon el número en la reserva.</p>
+      <div class="book-fallback" hidden>
+        <p>El calendario online está casi listo. Mientras tanto, mándame la fecha por WhatsApp y te la confirmo.</p>
+        <a class="btn" href="#escribeme" data-service="walk">Pedir fecha</a>
       </div>
     </div>
   </div>
@@ -373,7 +392,7 @@
     <span>Valencia, España</span>
     <a href="https://wa.me/34615858017" target="_blank" rel="noopener">WhatsApp +34 615 85 80 17</a>
     <span class="spacer"></span>
-    <span>Sin cookies, sin rastreo.</span>
+    <span>Sin cookies ni rastreo. Las reservas van por Cal.com.</span>
     <button type="button" data-present>Presentar esta página (P)</button>
     <span>© 2026</span>
   </div>

@@ -98,7 +98,7 @@
             <dt>Each extra person, up to 8</dt><dd>€30</dd>
           </dl>
           <small>Museum tickets, taxis and food aren't included. You pay those on the spot, only for what you actually use.</small>
-          <a class="btn" href="#ask" data-service="walk">Check a date</a>
+          <a class="btn" href="#book">Book a date</a>
         </div>
       </div>
 
@@ -129,6 +129,25 @@
           <li><time>13:15</time><div><strong>Paella lunch (optional)</strong><span>Valencians eat paella at lunch. If someone offers it to you at 9 pm, be suspicious.</span></div></li>
           <li><time>—</time><div><strong>Back at the terminal</strong><span>Timed from your all-aboard, not from when the ship arrives.</span></div></li>
         </ol>
+      </div>
+    </div>
+    <div class="booking rise" id="book">
+      <div class="booking-head">
+        <div>
+          <span class="label">Book a walk</span>
+          <h3 class="booking-title">Pick a day. <span class="it">It’s yours.</span></h3>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Choose a walk">
+          <button type="button" role="tab" aria-selected="true" data-cal="walk">Old town · 3 h · €150</button>
+          <button type="button" role="tab" aria-selected="false" data-cal="cruise">Cruise day · 6 h · €280</button>
+        </div>
+      </div>
+      <div class="cal-frame" id="cal-walk" data-cal-panel="walk"></div>
+      <div class="cal-frame" id="cal-cruise" data-cal-panel="cruise" hidden></div>
+      <p class="fine booking-note">Only the days I’m free show up. You get a confirmation email straight away, and I get one too. More than 4 people? Pick the day and put the number in the booking.</p>
+      <div class="book-fallback" hidden>
+        <p>The online calendar is almost ready. Until then, send me your date on WhatsApp and I’ll confirm it.</p>
+        <a class="btn" href="#ask" data-service="walk">Ask for a date</a>
       </div>
     </div>
   </div>
@@ -375,7 +394,7 @@
     <span>Valencia, Spain</span>
     <a href="https://wa.me/34615858017" target="_blank" rel="noopener">WhatsApp +34 615 85 80 17</a>
     <span class="spacer"></span>
-    <span>No cookies, no tracking.</span>
+    <span>No cookies or tracking here. Bookings run on Cal.com.</span>
     <button type="button" data-present>Present this page (P)</button>
     <span>© 2026</span>
   </div>
