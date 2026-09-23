@@ -345,14 +345,8 @@ html.present .present-hint.show { opacity: .9; }
 .booking { margin-top: clamp(56px, 8vw, 110px); border-top: 1px solid var(--ink); padding-top: 28px; }
 .booking-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 24px; }
 .booking-title { font: 400 clamp(30px, 3.4vw, 44px)/1.05 var(--serif); margin-top: 12px; }
-.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
-.tabs button {
-  font: 500 14px/1 var(--sans); padding: 11px 16px; border-radius: 999px; cursor: pointer;
-  background: transparent; color: var(--ink); border: 0; box-shadow: inset 0 0 0 1px var(--ink);
-}
-.tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
 .cal-frame { min-height: 560px; background: #fff; border: 1px solid var(--line); overflow: auto; }
-.tabs[hidden], .cal-frame[hidden], .book-fallback[hidden], .booking-note[hidden] { display: none; }
+.cal-frame[hidden], .book-fallback[hidden], .booking-note[hidden] { display: none; }
 .booking-note { margin-top: 14px; }
 .book-fallback { border: 1px dashed var(--ink-2); padding: 24px; display: grid; gap: 14px; justify-items: start; }
 .book-fallback p { margin: 0; color: var(--ink-2); }

@@ -10,22 +10,15 @@ The website already has the calendar built in. It just needs your Cal.com links.
 ## 2. Set your availability
 Settings → Availability: the days and hours you want to offer walks (for example Monday to Saturday, 08:30 to 14:00). Time zone: **Europe/Madrid**.
 
-## 3. Create two event types
+## 3. Create the event type
+- Title: **Old town walk (3 h)**. URL slug: `old-town-walk`
+- Duration: 180 min. Buffer after: 30 min. Minimum notice: 24 h
+- Location: "Meeting point sent by WhatsApp" (Torres de Serranos)
 
-| | Old town walk | Cruise day |
-|---|---|---|
-| Title | Old town walk (3 h) | Cruise day (6 h) |
-| URL slug | `old-town-walk` | `cruise-day` |
-| Duration | 180 min | 360 min |
-| Buffer after | 30 min | 60 min |
-| Minimum notice | 24 h | 48 h |
-| Limit | — | 1 per day |
-| Location | "Meeting point sent by WhatsApp" | "Cruise terminal exit" |
-
-In each one, under **Advanced → Booking questions**, add:
+Under **Advanced → Booking questions**, add:
 - **WhatsApp number** (phone, required)
 - **How many people?** (number, required)
-- **Ship name and all-aboard time** (text, only for the cruise day)
+- **Coming off a cruise? Ship name and all-aboard time** (text, optional)
 - **Anything I should know?** (kids, mobility, interests)
 
 ## 4. Notifications
@@ -40,5 +33,5 @@ Cal.com can charge through **Stripe** (a card deposit, for example €50). Befor
 
 Until then, the booking reserves the date and the guest pays on the day.
 
-## 6. Send me the two links
-They look like `cal.com/300sun/old-town-walk` and `cal.com/300sun/cruise-day`. I paste them into `site/assets/js/300sun.js` (`CAL_LINKS`) and the calendar appears on the site straight away. Until then, the section shows a WhatsApp button.
+## 6. Send me the link
+It looks like `cal.com/300sun/old-town-walk`. I paste it into `site/assets/js/300sun.js` (`CAL_LINK`) and the calendar appears on the site straight away. Until then, the section shows a WhatsApp button.

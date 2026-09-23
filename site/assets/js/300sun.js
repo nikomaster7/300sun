@@ -76,43 +76,32 @@
     });
   }
 
-  // Walk bookings — Cal.com event links ("username/event-slug").
+  // Walk bookings — Cal.com event link ("username/event-slug").
   // Leave empty until the Cal.com account exists; the WhatsApp fallback shows instead.
-  var CAL_LINKS = { walk: "", cruise: "" };
+  var CAL_LINK = "";
 
   var booking = document.querySelector(".booking");
   if (booking) {
-    var tabs = booking.querySelectorAll("[data-cal]");
-    var ready = CAL_LINKS.walk && CAL_LINKS.cruise;
-    if (!ready) {
-      booking.querySelector(".tabs").hidden = true;
+    if (!CAL_LINK) {
       booking.querySelector(".booking-note").hidden = true;
-      booking.querySelectorAll(".cal-frame").forEach(function (f) { f.hidden = true; });
+      booking.querySelector(".cal-frame").hidden = true;
       booking.querySelector(".book-fallback").hidden = false;
     } else {
-      var loaded = {};
-      var loadCal = function (key) {
-        if (loaded[key]) return;
-        loaded[key] = true;
+      var loaded = false;
+      var loadCal = function () {
+        if (loaded) return;
+        loaded = true;
         // Cal.com's standard embed loader
         (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", key, { origin: "https://cal.com" });
-        Cal.ns[key]("inline", { elementOrSelector: "#cal-" + key, calLink: CAL_LINKS[key], config: { layout: "month_view", theme: "light" } });
-        Cal.ns[key]("ui", { theme: "light", layout: "month_view", hideEventTypeDetails: false, cssVarsPerTheme: { light: { "cal-brand": "#1a1a1a" } } });
+        Cal("init", "walk", { origin: "https://cal.com" });
+        Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK, config: { layout: "month_view", theme: "light" } });
+        Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#1a1a1a" } } });
       };
-      tabs.forEach(function (t) {
-        t.addEventListener("click", function () {
-          var key = t.getAttribute("data-cal");
-          tabs.forEach(function (o) { o.setAttribute("aria-selected", String(o === t)); });
-          booking.querySelectorAll("[data-cal-panel]").forEach(function (p) { p.hidden = p.getAttribute("data-cal-panel") !== key; });
-          loadCal(key);
-        });
-      });
       // Load the calendar only when someone scrolls to it (nothing third-party before that)
       if ("IntersectionObserver" in window) {
-        var bo = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { loadCal("walk"); bo.disconnect(); } }, { rootMargin: "200px" });
+        var bo = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { loadCal(); bo.disconnect(); } }, { rootMargin: "200px" });
         bo.observe(booking);
-      } else loadCal("walk");
+      } else loadCal();
     }
   }
 
