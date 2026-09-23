@@ -41,12 +41,11 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 | Hostel room | hostels | 300sun-valencia-hostel-habitacion-grupo |
 | Hostel common area | hostels | 300sun-valencia-hostel-zona-comun |
 | Hostel terrace | hostels | 300sun-valencia-hostel-terraza |
-| Nicolás portrait | valencia | 300sun-valencia-nicolas-maldonado.jpg (cropped from the group photo, only 272px wide; replace with a proper portrait when there is one) |
 
 ## Nicolás to confirm (these are my assumptions in the copy)
 - [ ] Prices: walk €180 / cruise day €340 / +€30 per person / paella from €65
 - [ ] Payment: "small deposit, rest on the day"
 - [ ] "I usually answer the same day"
-- [ ] About text: "I teach English and Spanish and walk people through the city most weeks"
+- [x] About section removed for now (Nicolás prefers not to present himself yet)
 - [ ] Hostel photos show a room, a common area and a terrace. Change the list if a hostel has no terrace.
 - [ ] Legal notice (aviso legal: name + NIF), required by the LSSI once the site is selling
