@@ -21,7 +21,7 @@ _Last updated: 2026-09-23. This is a practical checklist, not legal advice. Have
 
 - [ ] **NIF + postal address** in the legal notice (LSSI art. 10 requires them). If you don't want your home address public, use a business address, a coworking space or a mail service.
 - [ ] **Two-factor authentication (2FA)** on: Gmail (300sunvalencia), Cal.com, GitHub (nikomaster7), Vercel, Porkbun, and later Meta/Google Business. This is the single most important security step.
-- [ ] **Delete Cal.com API keys** after each use (the two shared in chat on 2026-09-23 must be deleted).
+- [x] **Delete Cal.com API keys** after each use (both keys from 2026-09-23 deleted)
 - [ ] **Password manager** (see next-session.md).
 - [ ] Accept the **data processing agreements (DPAs)**: Cal.com and Vercel include them in their terms. Keep a note that you accepted them. The free Gmail has **no** DPA; when the business is formal, move business email to Google Workspace (which has one).
 - [ ] **Keep records only as long as needed**: delete bookings and WhatsApp chats older than 12 months (except anything tax requires you to keep).

@@ -11,7 +11,8 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 
 ## Pending from today
 - [ ] Give Claude your **NIF + postal address** for the legal notice (or decide on a business address)
-- [ ] **Delete the Cal.com API key** shared today (Settings → Developer → API Keys)
+- [x] Delete the Cal.com API key shared today (done 2026-09-23)
+- [ ] **Turn on two-step verification (2FA)**: Gmail, Cal.com, GitHub, Vercel, Porkbun
 - [ ] Check Google Calendar on **2 Oct** for a leftover test "Old town walk" event
 - [ ] Optional: in Porkbun, change the A record from 76.76.21.21 to 216.198.79.1 (Vercel's newer value)
 - [ ] Set up Porkbun email forwarding hola@300sun.com → 300sunvalencia@gmail.com (if not done)
