@@ -394,3 +394,4 @@ html.present .present-hint.show { opacity: .9; }
 .cal-gate p { margin: 0; max-width: 34em; }
 .gdpr { margin-top: 10px; font-size: 12px; color: var(--ink-2); max-width: 60em; }
 .gdpr a { color: inherit; }
+.walk-photo { aspect-ratio: 4 / 5; margin-top: 40px; }
