@@ -72,6 +72,20 @@ No hay una base de datos pública que cuente las reseñas de "me quedé fuera" p
 | **Media** | Akiles u Omnitec + Raixer en el portal + Ojmar en las taquillas + Chekin | Menos inversión inicial, todo de empresas españolas |
 | **Mínima** | Nuki + Keypad 2 + Nuki Opener + Partee | Solo si son pocas puertas; no escala bien |
 
+### Ya tenemos RoomRaccoon → Salto KS + RoomRaccoon (decidido como combinación base)
+
+- **Encaja:** RoomRaccoon tiene integración oficial con Salto KS y RoomRaccoon aparece en la lista de partners tecnológicos de Salto. Salto KS genera los códigos y se los pasa a RoomRaccoon, que los envía a la huésped con el check-in online, antes de que llegue.
+- **Caso real en España:** Cerdanya Mountain Residences (6 unidades, Lleida, se gestiona en remoto) usa RoomRaccoon + Salto KS. Tiene un 100 % de check-in online y una nota media de 9,8 en las OTAs.
+- **RoomRaccoon ya cubre** el check-in online, el DNI digital y el envío automático a **SES.Hospedajes** (lo manda cada día a las 04:00 UTC para las reservas con check-in hecho). También tiene **kiosko de self check-in** a través de Roommatik. Así que **Chekin probablemente sobra.** Solo valdría la pena si queremos la verificación con selfie que RoomRaccoon no confirma tener.
+- Otras cerraduras que se integran con RoomRaccoon, por si Salto sale caro: **Nuki** (integración en los dos sentidos), **TTLock**, **RemoteLock** y **Flexipass** (que conecta Salto con Apple/Google Wallet). Akiles y Omnitec **no** aparecen en su marketplace.
+
+**Preguntas que hay que aclarar antes de firmar:**
+1. A RoomRaccoon: la conexión con Salto pide una **IP estática y un puerto abierto**. ¿Es así también para Salto KS, que va en la nube, o solo para Salto Space, que va instalado en el local? Si hace falta, se le pide al proveedor de internet.
+2. A RoomRaccoon: ¿cómo funciona en **dormitorios compartidos**? ¿Se genera un código por huésped (cama) o por habitación? En un hostel tiene que ser **por huésped**, para poder anular el código de una sola persona.
+3. A RoomRaccoon: ¿el check-in online puede **obligar** a completarlo antes de enviar el código? ¿Tienen verificación con selfie?
+4. A Salto: ¿la integración con RoomRaccoon envía **solo PIN o también llave móvil o pulsera**? ¿Qué plan de KS hace falta (Lite o Pro)?
+5. A los dos: ¿quién da **soporte de noche** si un código falla, y cómo se abre en remoto (app de KS)?
+
 ## 5. Qué preguntar a cada proveedor (copiar en el email)
 
 1. Precio del **hardware por puerta**, de la **instalación** y de la **cuota mensual o anual**.
@@ -112,4 +126,5 @@ Datos que hay que tener a mano antes de pedir presupuesto: número de puertas (c
 - Chekin: [self check-in](https://chekin.com/self-check-in/), [biometría](https://chekin.com/blog/sistema-biometrico-el-software-de-reconocimiento-facial-de-huespedes/), [comparativa de precios](https://gotocheck.pro/blog/comparativa-chekin-partee-gotocheck-2026.html)
 - Check-in y SES: [BookCheckin precios](https://bookcheckin.com/precio), [Check-in Scan hostels](https://www.checkinscan.com/en/check-in-solutions-for-hostels/), [BnCheck cerraduras](https://bncheck.com/en/blog/best-smart-locks-vacation-rentals-spain-2026-guide)
 - Cloudbeds: [kiosko](https://myfrontdesk.cloudbeds.com/hc/en-us/articles/40953189987483-Kiosk-Mode-Enable-Guest-Self-Check-In-and-Mobile-Staff-Check-Ins-in-Cloudbeds-App), [Salto KS](https://flexipass.tech/cloudbeds-salto-ks)
+- RoomRaccoon: [Salto KS](https://contact.roomraccoon.com/en/support/solutions/articles/150000086769-salto-ks), [conexión Salto](https://contact.roomraccoon.com/en/support/solutions/articles/150000026386-salto-connection), [Salto partner](https://saltosystems.com/en-us/technology-partners/roomraccoon/), [caso Cerdanya](https://roomraccoon.com/hotel-case-studies/cerdanya-mountain-residences/), [SES.Hospedajes](https://contact.roomraccoon.com/en/support/solutions/articles/150000192504-compliance-spain-spanish-police-reports-ses-hospedajes-), [Roommatik](https://thehotelmagazine.co.uk/roomraccoon-announces-first-integration-with-self-service-kiosk-solution-roommatik/), [cerraduras](https://roomraccoon.com/integrations/room-keys/)
 - Ley 15/2022: [BOE](https://www.boe.es/buscar/act.php?id=BOE-A-2022-11589)
