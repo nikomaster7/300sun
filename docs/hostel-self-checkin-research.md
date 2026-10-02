@@ -72,7 +72,7 @@ No hay una base de datos pública que cuente las reseñas de "me quedé fuera" p
 | **Media** | Akiles u Omnitec + Raixer en el portal + Ojmar en las taquillas + Chekin | Menos inversión inicial, todo de empresas españolas |
 | **Mínima** | Nuki + Keypad 2 + Nuki Opener + Partee | Solo si son pocas puertas; no escala bien |
 
-### Ya tenemos RoomRaccoon → Salto KS + RoomRaccoon (decidido como combinación base)
+### Ya tenemos RoomRaccoon → Salto KS + RoomRaccoon (combinación recomendada)
 
 - **Encaja:** RoomRaccoon tiene integración oficial con Salto KS y RoomRaccoon aparece en la lista de partners tecnológicos de Salto. Salto KS genera los códigos y se los pasa a RoomRaccoon, que los envía a la huésped con el check-in online, antes de que llegue.
 - **Caso real en España:** Cerdanya Mountain Residences (6 unidades, Lleida, se gestiona en remoto) usa RoomRaccoon + Salto KS. Tiene un 100 % de check-in online y una nota media de 9,8 en las OTAs.
