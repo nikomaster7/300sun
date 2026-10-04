@@ -41,5 +41,13 @@ Fees: PayPal charges the receiver about 2.9% + €0.35 per payment in the EU (ab
 
 Later: Cal.com can take the deposit by card itself through **Stripe**, which removes the manual step. You need to be registered to sell (autónomo or a company) to receive payments regularly and issue invoices.
 
+## 5b. Getting everything at your personal Gmail
+Bookings (Cal.com) and payments (PayPal) both email 300sunvalencia@gmail.com. To see them in nicolasmusicplus@gmail.com too:
+- **Emails:** in 300sunvalencia Gmail on a computer → ⚙️ → See all settings → Forwarding and POP/IMAP → Add a forwarding address (nicolasmusicplus@gmail.com, confirm with the code sent there). Then make a filter: search `from:(paypal.com OR cal.com)` → Create filter → Forward it to nicolasmusicplus@gmail.com.
+- **PayPal app:** ⚙️ Settings → Notification preferences → Push notifications → turn on payments received.
+- **Calendar:** in the Google Calendar that Cal.com writes to → Settings → that calendar → Share with specific people → add nicolasmusicplus@gmail.com with "See all event details", and accept the invite there. The walks then show in your personal calendar.
+- **Avoid double bookings:** Cal.com → Settings → Calendars → Add → Google → nicolasmusicplus@gmail.com, "Check for conflicts" on. Personal plans then block those hours on the website.
+- PayPal has no calendar. A payment is an email and a push notification, nothing more.
+
 ## 6. Send me the link
 Done: the event is `cal.com/300-sun/old-town-walk` (set up 2026-09-23; the username changed from 300-sun-6scc8d to 300-sun). If the username changes, update `CAL_LINK` in `site/assets/js/300sun.js`.
