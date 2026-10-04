@@ -44,7 +44,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 
 ## Nicolás to confirm (these are my assumptions in the copy)
 - [x] Prices: walk €150 (3 h, up to 4) / cruise day €280 (6 h, up to 4, Claude's proposal, to confirm) / +€30 per person / paella from €65
-- [ ] Payment: "small deposit, rest on the day"
+- [x] Payment (decided 2026-10-04): €45 deposit (30% of the €150 walk) by PayPal link after booking; rest at the end of the walk in cash, Bizum or PayPal. Deposit refunded in full if cancelled 48 h+ before, or if the ship doesn't dock. PayPal Business account. No PayPal script on the site, so no CSP change.
 - [ ] "I usually answer the same day"
 - [x] About section removed for now (Nicolás prefers not to present himself yet)
 - [ ] Hostel photos show a room, a common area and a terrace. Change the list if a hostel has no terrace.
