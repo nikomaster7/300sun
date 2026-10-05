@@ -45,6 +45,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 | Seafood paella lunch after a walk (Nicolás's own photo) | valencia | 300sun-valencia-paella-marisco-almuerzo |
 
 **Photo rights (2026-10-05):** the paella workshop photos (`images/paella/`) belong to the company Nicolás works for; permission to use them is **still to be asked**. Nicolás's own photos come first on the walk pages (home EN/ES, /cruise/, /advisors/, the one-pager). If permission is refused, remove the `images/paella/` photos.
+**Hostels (2026-10-05):** only the garden terrace photo is real and on the site (one wide photo in Groups, EN/ES). The storefront photo with the "u." sign and travellers with suitcases was **not used**: it looks AI-generated (rule: real photos only). Room and common-area photos still to come.
 **Faces:** never publish a photo of identifiable guests without their written OK (GDPR). The couple at the seafood paella is on hold until they agree.
 **One look for all photos:** `python3 tools/prepare-photos.py <photo> <folder> <name>` resizes, applies the same edit (warmer, a bit more contrast and colour, lifted shadows, light sharpening) and strips location data. All current photos went through it on 2026-10-05.
 
