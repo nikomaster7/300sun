@@ -388,6 +388,12 @@ html.present .present-hint.show { opacity: .9; }
 .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
 .steps li { counter-increment: step; position: relative; padding: 0 0 22px 48px; color: var(--ink-2); }
 .steps li b { color: var(--ink); font-weight: 500; }
+/* The three rays of the sun-3 logo, used instead of 01 / 02 / 03 */
+.ray { display: inline-block; width: 22px; height: 5px; border-radius: 3px; background: var(--sun); vertical-align: middle; }
+.ray-up { transform: rotate(-38deg); }
+.ray-down { transform: rotate(38deg); }
+.label .ray { width: 18px; height: 4px; margin-right: 10px; position: relative; top: -1px; }
+
 /* Step markers: the three rays of the sun-3 logo (up, level, down) instead of numbers */
 .steps li::before {
   content: ""; position: absolute; left: 2px; top: 11px;
