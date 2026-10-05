@@ -45,7 +45,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 | Seafood paella lunch after a walk (Nicolás's own photo) | valencia | 300sun-valencia-paella-marisco-almuerzo |
 
 **Photo rights (2026-10-05):** the paella workshop photos (`images/paella/`) belong to the company Nicolás works for; permission to use them is **still to be asked**. Nicolás's own photos come first on the walk pages (home EN/ES, /cruise/, /advisors/, the one-pager). If permission is refused, remove the `images/paella/` photos.
-**Hostels (2026-10-05):** only the garden terrace photo is real and on the site (one wide photo in Groups, EN/ES). The storefront photo with the "u." sign and travellers with suitcases was **not used**: it looks AI-generated (rule: real photos only). Room and common-area photos still to come.
+**Hostels (2026-10-05):** only the garden terrace photo is real and on the site (one wide photo in Groups, EN/ES). The storefront photo with the "u." sign and travellers with suitcases was **not used**: it looks AI-generated (rule: real photos only). Added the same day: shared bunk room, private room (for teachers), and an old-villa hostel facade cropped so the hostel's sign and name don't show. No hostel is named on the site. Copy: 200+ beds in shared rooms plus a few private rooms for teachers and group leaders. **Permission from the hostels to use these photos: Nicolás to confirm.**
 **Faces:** never publish a photo of identifiable guests without their written OK (GDPR). The couple at the seafood paella is on hold until they agree.
 **One look for all photos:** `python3 tools/prepare-photos.py <photo> <folder> <name>` resizes, applies the same edit (warmer, a bit more contrast and colour, lifted shadows, light sharpening) and strips location data. All current photos went through it on 2026-10-05.
 
@@ -66,3 +66,6 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 ## Decisions 2026-10-05 (after ChatGPT's design review)
 Applied: /cruise/ headline "See Valencia. Get back to your ship on time."; ship → taxi → walk → taxi → back on board strip; one in three jokes cut (kept the rude gargoyles); route times marked as approximate; "Hi, I'm Nico" replaces the commission comparison; /advisors/ leads with 10% + paid within 7 days and a "For your peace of mind" checklist.
 Not now: blue buttons (palette option A, #174A55), new logo (concept: a small sun with 3 rays built from the "3"), more photos (list in next-session.md). Fonts stay Instrument Serif + Inter.
+
+## Logo (2026-10-05)
+Sun-3 symbol: the "3" from Instrument Serif, a little heavier, with three round rays pointing back to its waist (concept from a ChatGPT sketch, "classic" variant). Replaces the orange dot before "300sun" in every header and footer, the favicon and the one-pager. Files in `brand/` (symbol in sun, ink and paper; round avatar for Instagram/WhatsApp), site copy in `site/assets/img/`. Rebuild with `python3 tools/logo/make-logo.py`.
