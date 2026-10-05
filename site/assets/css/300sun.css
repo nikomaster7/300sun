@@ -97,7 +97,7 @@ p { margin: 0 0 1em; }
   font: 600 19px/1 var(--sans); letter-spacing: -.02em; text-decoration: none;
 }
 .mark .dot {
-  width: 12px; height: 12px; border-radius: 50%; background: var(--sun);
+  width: 22px; height: 26px; background: url("../img/300sun-symbol.svg") no-repeat center / contain;
   transition: transform .6s cubic-bezier(.2,.8,.2,1);
 }
 .mark:hover .dot { transform: translateY(-3px) scale(1.15); }
