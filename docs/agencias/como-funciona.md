@@ -31,7 +31,6 @@ Así **no tengo que facturar a la agencia**: ella no me paga nada. Le pido un re
 
 ## Para que se rellene sola
 Paso a paso: **`docs/agencias/google-sheets-setup.md`**. El resumen:
-Ahora la hoja se rellena a mano. Para que cada reserva con enlace de agencia entre sola:
 1. Subir la hoja a **Google Sheets**.
 2. Crear en esa hoja un pequeño **Apps Script** gratuito que reciba los avisos de Cal.com.
 3. En Cal.com → Settings → Developer → **Webhooks**, añadir la dirección del script con el evento "Booking created".
