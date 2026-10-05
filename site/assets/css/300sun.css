@@ -187,6 +187,7 @@ section.block { padding: clamp(72px, 10vw, 140px) 0; border-top: 1px solid var(-
 .price dt { color: var(--ink-2); }
 .price dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 500; text-align: right; }
 .price small { color: var(--ink-2); font-size: 13px; }
+.usd { font-weight: 400; color: var(--ink-2); font-size: 13px; margin-left: 6px; }
 
 .aside-note {
   margin-top: 40px; padding-left: 18px; border-left: 3px solid var(--sun);
@@ -366,6 +367,8 @@ html.present .present-hint.show { opacity: .9; }
   width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: var(--ink);
   display: grid; place-items: center; font: 500 14px/1 var(--sans);
 }
+.band .steps li { color: #bdbbb3; }
+.band .steps li b { color: var(--paper); }
 @media (max-width: 720px) { .facts span br { display: none; } }
 
 /* legal & privacy page */

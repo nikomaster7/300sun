@@ -10,6 +10,8 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
+- [ ] Confirm the wording of the **back-on-board promise** (taxi paid by you) and the **advisor terms** (10%, paid within 7 days). See `docs/site-decisions.md`, 2026-10-05
+- [ ] Print the advisors one-pager (`300sun.com/advisors/300sun-travel-advisors.pdf`) for the USA trip
 - [x] PayPal account opened with 300sunvalencia@gmail.com; PayPal.me is `@300sun` (2026-10-04)
 - [ ] PayPal: the app looks like a **Personal** account. Upgrade to Business on a computer (paypal.com → ⚙️ → Account settings → Upgrade to a Business account), turn on 2FA, then add the deposit text to the Cal.com event (`docs/booking-setup.md` §5)
 - [ ] Give Claude your **NIF + postal address** for the legal notice (or decide on a business address)

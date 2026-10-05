@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>300sun · For travel advisors</title>
+<!-- Source for site/advisors/300sun-travel-advisors.pdf. Rebuild with tools/make-onepager.sh -->
+<link rel="stylesheet" href="../../site/assets/css/300sun.css">
+<style>
+  @page { size: Letter; margin: 0; }
+  html, body { background: var(--paper); }
+  body { width: 8.5in; height: 11in; margin: 0; padding: .55in .6in; font-size: 12.5px; line-height: 1.45; display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+  .mark { font-size: 20px; }
+  h1 { font: 400 44px/1 var(--serif); letter-spacing: -.01em; margin-top: 10px; }
+  h1 em { color: var(--sun-ink); }
+  .lede { font-size: 15px; max-width: none; margin: 0; }
+  .photo { height: 2.3in; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid var(--ink); padding-top: 14px; }
+  .grid3 h3 { font: italic 400 26px/1 var(--serif); margin-bottom: 8px; }
+  .grid3 p { margin: 0 0 6px; color: var(--ink-2); }
+  .grid3 .p { color: var(--ink); font-weight: 500; }
+  .deal { background: var(--ink); color: var(--paper); padding: 18px 22px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+  .deal .big { font: 400 64px/1 var(--serif); }
+  .deal ol { margin: 0; padding-left: 18px; color: #bdbbb3; }
+  .deal ol b { color: var(--paper); font-weight: 500; }
+  .foot1 { margin-top: auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; border-top: 1px solid var(--ink); padding-top: 14px; }
+  .foot1 p { margin: 0; }
+  .qr { width: 1.05in; height: 1.05in; }
+  .fine { font-size: 10.5px; }
+</style>
+</head>
+<body>
+  <div>
+    <span class="mark"><span class="dot"></span>300sun</span>
+    <span class="label" style="margin-left: 14px;">For travel advisors · Valencia, Spain</span>
+    <h1>Your clients stop in Valencia. <em>I’ll look after them.</em></h1>
+  </div>
+  <p class="lede">Private walks with a local, real paella and beds for whole groups. Your clients book directly with me, and you get 10% of what they pay.</p>
+
+  <figure class="photo"><img src="../../site/images/paella/300sun-valencia-paella-valenciana-cenital-1280.jpg" alt=""></figure>
+
+  <div class="grid3">
+    <div>
+      <h3>Walk</h3>
+      <p>Private old town walk, 3 hours, just their group. For cruise passengers, timed around the all-aboard. If we’re ever running tight, I put them in a taxi to the terminal and pay the fare.</p>
+      <p class="p">€150 (≈ $170) up to 4 people<br>+€30 (≈ $35) per extra person, up to 8</p>
+    </div>
+    <div>
+      <h3>Paella</h3>
+      <p>A paella workshop: they cook a real Valencian paella over fire, then eat it. For a couple or a group of fifty.</p>
+      <p class="p">From €65 (≈ $75) per person</p>
+    </div>
+    <div>
+      <h3>Groups</h3>
+      <p>Three partner hostels, 200+ beds. Study abroad, school and church trips, with paella and walks in the same chat.</p>
+      <p class="p">Quote on request</p>
+    </div>
+  </div>
+
+  <div class="deal">
+    <div class="big">10%</div>
+    <ol>
+      <li><b>Send your clients to 300sun.com/cruise</b> or book for them. Put your agency’s name under “How did you hear about us?”.</li>
+      <li><b>I confirm with them on WhatsApp.</b> They pay me a €45 deposit by PayPal and the rest at the end of the walk.</li>
+      <li><b>Within 7 days of the walk, I pay you 10%</b> of what they paid me, by PayPal or bank transfer.</li>
+    </ol>
+  </div>
+
+  <div class="foot1">
+    <div>
+      <p style="font-size: 15px;"><b style="font-weight:500">Nicolás · 300sun</b></p>
+      <p>WhatsApp +34 615 85 80 17 · 300sunvalencia@gmail.com · 300sun.com/advisors</p>
+      <p class="fine" style="margin-top: 6px;">Private walks with a local, not an official guided tour. Deposit refunded in full if the ship doesn’t dock or with 48 hours’ notice. Dollar prices are approximate; clients pay in euros.</p>
+    </div>
+    <img class="qr" src="qr-advisors.svg" alt="QR code to 300sun.com/advisors">
+  </div>
+</body>
+</html>
