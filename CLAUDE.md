@@ -5,6 +5,6 @@
 - Two languages: every text change on an English page also goes in its Spanish twin under `site/es/`.
 - `vercel.json` has a strict Content-Security-Policy (only our own files + cal.com). Anything new from outside (PayPal, Meta Pixel, Google tags, embeds, fonts) must be added there or the browser blocks it silently.
 - The footer promises no cookies and no tracking. Adding any tracker means, on the same day: cookie banner with consent, `/legal/#cookies` updated, footer text changed (`docs/next-session.md`, item 5).
-- Photos: real only, never generated or stock. Resize with `tools/prepare-photos.sh`; names and places in `docs/site-decisions.md`.
+- Photos: real only, never generated or stock. Resize and edit with `python3 tools/prepare-photos.py` (same look for every photo, strips GPS); names and places in `docs/site-decisions.md`.
 - Copy: first person from Nicolás, short lines. Say "private walks with a local", not "guided tours", until the guide licence arrives.
 - Start of a session ("300sun homework"): read `docs/next-session.md`. Record new decisions in `docs/site-decisions.md`.

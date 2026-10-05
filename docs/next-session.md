@@ -10,6 +10,8 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
+- [ ] **Photos before 28 Oct** (phone, vertical and horizontal): you waiting at Torres de Serranos; walking with 2–4 guests (from behind or the side); you pointing something out (a gargoyle, a door), camera behind the guests; San Nicolás with a person for scale; Mercado Central with people and stalls; horchata and fartons with a hand in the shot; the cruise terminal taxi rank; you checking the time while walking. Send the originals (email or Drive, not WhatsApp)
+- [ ] Logo: brief a designer on the "sun with 3 rays from the 3" idea (Claude can write the brief)
 - [ ] Ask the company for **permission to use the paella workshop photos** (otherwise they come off the site)
 - [ ] Ask the American couple from the paella photo if you can **show their photo on the site** (a WhatsApp "yes" is enough); then Claude adds it
 - [ ] Is **San Nicolás** a regular stop on the walk? If yes, add it to the route

@@ -52,7 +52,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 - [x] Prices: walk €150 (3 h, up to 4) / cruise day €280 (6 h, up to 4, Claude's proposal, to confirm) / +€30 per person / paella from €65
 - [x] Payment (decided 2026-10-04): €45 deposit (30% of the €150 walk) by PayPal link after booking; rest at the end of the walk in cash, Bizum or PayPal. Deposit refunded in full if cancelled 48 h+ before, or if the ship doesn't dock. PayPal Business account. No PayPal script on the site, so no CSP change.
 - [ ] "I usually answer the same day"
-- [x] About section removed for now (Nicolás prefers not to present himself yet)
+- [x] About section removed for now (Nicolás prefers not to present himself yet). **Changed 2026-10-05:** Nicolás now appears as "Hi, I'm Nico" with his photo at the City of Arts and Sciences (home EN/ES in place of the "20–30% vs 100%" block, /cruise/, /advisors/)
 - [ ] Hostel photos show a room, a common area and a terrace. Change the list if a hostel has no terrace.
 - [ ] Legal notice (aviso legal: name + NIF), required by the LSSI once the site is selling
 
@@ -61,3 +61,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 - **Back-on-board promise** (cruise page band + FAQ, home cruise note EN/ES): "If we're ever running tight, I put you in a taxi to the cruise terminal and I pay the fare." Nicolás to confirm the wording.
 - **/advisors/** page for US travel advisors (English only, like /cruise/; linked from both home footers): 10% commission on what the client pays (walk, extra people, paella; not tips, tickets, food), paid by PayPal or bank transfer within 7 days of the walk. Advisors identify themselves under "How did you hear about us?" in Cal.com. Nicolás to confirm the 10% and the 7 days.
 - **One-pager PDF** for advisors: `site/advisors/300sun-travel-advisors.pdf` (US Letter, QR to /advisors/?utm_source=onepager). Source `tools/onepager/advisors.html`; rebuild with `tools/make-onepager.sh` after any price or wording change.
+
+## Decisions 2026-10-05 (after ChatGPT's design review)
+Applied: /cruise/ headline "See Valencia. Get back to your ship on time."; ship → taxi → walk → taxi → back on board strip; one in three jokes cut (kept the rude gargoyles); route times marked as approximate; "Hi, I'm Nico" replaces the commission comparison; /advisors/ leads with 10% + paid within 7 days and a "For your peace of mind" checklist.
+Not now: blue buttons (palette option A, #174A55), new logo (concept: a small sun with 3 rays built from the "3"), more photos (list in next-session.md). Fonts stay Instrument Serif + Inter.
