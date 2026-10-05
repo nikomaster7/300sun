@@ -10,6 +10,7 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
+- [ ] Set up the commission sheet in Google Sheets (15 min, on a computer): `docs/agencias/google-sheets-setup.md`. Or connect Google Drive at claude.ai/customize/connectors and start a new session so Claude can do the Drive part
 - [ ] Book a first consultation with a **gestor**: questions ready in `docs/gestor-preguntas.md`
 - [ ] Test the agency link on your phone: https://300sun.com/cruise/?ref=test-agency (see `docs/agencias/como-funciona.md`)
 - [ ] **Photos before 28 Oct** (phone, vertical and horizontal): you waiting at Torres de Serranos; walking with 2–4 guests (from behind or the side); you pointing something out (a gargoyle, a door), camera behind the guests; San Nicolás with a person for scale; Mercado Central with people and stalls; horchata and fartons with a hand in the shot; the cruise terminal taxi rank; you checking the time while walking. Send the originals (email or Drive, not WhatsApp)

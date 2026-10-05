@@ -388,11 +388,13 @@ html.present .present-hint.show { opacity: .9; }
 .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
 .steps li { counter-increment: step; position: relative; padding: 0 0 22px 48px; color: var(--ink-2); }
 .steps li b { color: var(--ink); font-weight: 500; }
+/* Step markers: the three rays of the sun-3 logo (up, level, down) instead of numbers */
 .steps li::before {
-  content: counter(step); position: absolute; left: 0; top: -2px;
-  width: 30px; height: 30px; border-radius: 50%; background: var(--sun); color: var(--ink);
-  display: grid; place-items: center; font: 500 14px/1 var(--sans);
+  content: ""; position: absolute; left: 2px; top: 11px;
+  width: 26px; height: 6px; border-radius: 3px; background: var(--sun);
 }
+.steps li:nth-child(1)::before { transform: rotate(-38deg); }
+.steps li:nth-child(3)::before { transform: rotate(38deg); }
 .band .steps li { color: #bdbbb3; }
 .band .steps li b { color: var(--paper); }
 @media (max-width: 720px) { .facts span br { display: none; } }

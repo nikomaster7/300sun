@@ -28,7 +28,7 @@ for i,n in enumerate(notes): aj.cell(row=7+i,column=1,value='• '+n).font=BLACK
 aj.column_dimensions['A'].width=34; aj.column_dimensions['B'].width=36
 
 rs=wb.create_sheet('Reservas')
-hdr=['Fecha del paseo','Código ref (agencia)','Agencia','Cliente','Servicio','Personas','Importe cobrado al cliente (€)','Comisión %','Comisión (€)','Pagar antes de','Pagada','Fecha de pago','Método','Notas']
+hdr=['Fecha del paseo','Código ref (agencia)','Agencia','Cliente','Servicio','Personas','Importe cobrado al cliente (€)','Comisión %','Comisión (€)','Pagar antes de','Pagada','Fecha de pago','Método','Notas','ID reserva Cal.com']
 for i,h in enumerate(hdr,1):
     c=rs.cell(row=1,column=i,value=h); c.font=H; c.fill=HF; c.alignment=Alignment(vertical='center',wrap_text=True)
 rs.row_dimensions[1].height=32
@@ -50,7 +50,8 @@ for k,row in enumerate(rows):
         if v is not None: rs.cell(row=2+k,column=i,value=v)
 for rng,lst in ((f'K2:K{N}','"Sí,No"'),(f'M2:M{N}','"PayPal,Wise,Transferencia"'),(f'E2:E{N}','"Paseo privado 3 h,Paseo + personas extra,Taller de paella,Paseo + paella,Grupo / alojamiento"')):
     dv=DataValidation(type='list',formula1=lst,allow_blank=True); rs.add_data_validation(dv); dv.add(rng)
-for L,w in zip('ABCDEFGHIJKLMN',(13,20,22,24,22,10,18,11,13,14,9,13,13,40)): rs.column_dimensions[L].width=w
+for L,w in zip('ABCDEFGHIJKLMNO',(13,20,22,24,22,10,18,11,13,14,9,13,13,40,18)): rs.column_dimensions[L].width=w
+rs['O1'].comment=Comment('Lo rellena solo Google Sheets cuando entra una reserva desde Cal.com. No lo toques.','300sun')
 rs.freeze_panes='A2'
 rs['G1'].comment=Comment('Lo que pagó el cliente por el paseo o la paella (señal + resto). Sin propinas, entradas ni comida.','300sun')
 

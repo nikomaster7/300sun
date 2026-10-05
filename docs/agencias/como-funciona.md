@@ -29,7 +29,8 @@ Así **no tengo que facturar a la agencia**: ella no me paga nada. Le pido un re
 - Las filas de "test-agency" son ejemplos: bórralas cuando haya reservas reales.
 - Para empezar de cero: `python3 tools/make-commission-sheet.py` (borra la hoja actual).
 
-## Para que se rellene sola (siguiente paso, opcional)
+## Para que se rellene sola
+Paso a paso: **`docs/agencias/google-sheets-setup.md`**. El resumen:
 Ahora la hoja se rellena a mano. Para que cada reserva con enlace de agencia entre sola:
 1. Subir la hoja a **Google Sheets**.
 2. Crear en esa hoja un pequeño **Apps Script** gratuito que reciba los avisos de Cal.com.

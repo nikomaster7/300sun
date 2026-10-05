@@ -14,6 +14,7 @@ Para leerlos desde el móvil: **github.com/nikomaster7/300sun** → carpeta `doc
 ## Agencias y travel advisors (`agencias/`)
 - **`agencias/como-funciona.md`**: el modelo del 15 %, los enlaces por agencia, cómo probarlo y cómo automatizarlo.
 - **`agencias/300sun-comisiones-agencias.xlsx`**: la hoja de comisiones (reservas, agencias, lo que debes).
+- **`agencias/google-sheets-setup.md`**: cómo subirla a Google Sheets y que se rellene sola con cada reserva de agencia.
 - El PDF que se da a las agencias: `site/advisors/300sun-travel-advisors.pdf` (también en 300sun.com/advisors).
 
 ## Ventas en EE. UU. y marketing
@@ -33,3 +34,4 @@ Para leerlos desde el móvil: **github.com/nikomaster7/300sun** → carpeta `doc
   - `logo/make-logo.py`: genera el logo.
   - `make-onepager.sh`: genera el PDF de agencias.
   - `make-commission-sheet.py`: crea la hoja de comisiones vacía.
+  - `google-sheets/cal-webhook.gs`: el programa que va dentro de la hoja de Google (con su prueba `test.js`).
