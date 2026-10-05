@@ -4,6 +4,11 @@
   var es = html.lang === "es";
   var PHONE = "34615858017";
 
+  // Travel advisor links (?ref=agency-name), remembered while the visitor browses the site
+  var ref = (location.search.match(/[?&]ref=([a-z0-9-]{2,40})/i) || [])[1];
+  try { if (ref) sessionStorage.setItem("ref", ref); else ref = sessionStorage.getItem("ref"); } catch (e) {}
+  if (ref && !/^[a-z0-9-]{2,40}$/i.test(ref)) ref = null;
+
   // Header border once you leave the top
   var top = document.querySelector(".top");
   function onScroll() { if (top) top.classList.toggle("scrolled", window.scrollY > 8); }
@@ -97,8 +102,14 @@
         (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
         Cal("init", "walk", { origin: "https://cal.com" });
         // Pass the ad's utm_* tags on to Cal.com so each booking shows where it came from
-        var utm = location.search.match(/utm_[a-z]+=[^&]*/g);
-        Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
+        var utm = location.search.match(/utm_[a-z]+=[^&]*/g) || [];
+        // Advisor bookings: tag them and write the agency in the notes
+        if (ref) {
+          ref = ref.toLowerCase();
+          utm = utm.filter(function (p) { return !/^utm_(source|campaign)=/.test(p); });
+          utm.push("utm_source=advisor", "utm_campaign=" + ref, "notes=" + encodeURIComponent("Referred by travel advisor: " + ref));
+        }
+        Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
         Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#1a1a1a" } } });
       };
       // Nothing from Cal.com loads until the visitor asks for it (privacy: no third-party requests or cookies before that)

@@ -72,3 +72,6 @@ Sun-3 symbol: the "3" from Instrument Serif, a little heavier, with three round 
 
 ## Taxi from the port (2026-10-06)
 Cruise guests no longer take a taxi from the rank on their own: they message Nicolás on WhatsApp and he books a taxi he trusts to pick them up at the terminal and bring them to Torres de Serranos. The guest pays the driver. Changed on home (EN/ES cruise note), /cruise/ (strip, step 2, FAQ) and /advisors/ (peace-of-mind list). **Nicolás: have one or two trusted drivers' numbers ready.**
+
+## Agencies (2026-10-06)
+Commission raised to **15%** (page, one-pager, sheet). /advisors/ now speaks to "travel advisors & agencies", with a commission table and a note that net rates with invoicing are coming. Each agency gets its own link `300sun.com/cruise/?ref=agency-name`: the ref travels to Cal.com as utm tags and in the booking notes ("Referred by travel advisor: …"), and is remembered while the visitor browses. Details and test link: `docs/agencias/como-funciona.md`.
