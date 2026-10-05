@@ -69,3 +69,6 @@ Not now: blue buttons (palette option A, #174A55), new logo (concept: a small su
 
 ## Logo (2026-10-05)
 Sun-3 symbol: the "3" from Instrument Serif, a little heavier, with three round rays pointing back to its waist (concept from a ChatGPT sketch, "classic" variant). Replaces the orange dot before "300sun" in every header and footer, the favicon and the one-pager. Files in `brand/` (symbol in sun, ink and paper; round avatar for Instagram/WhatsApp), site copy in `site/assets/img/`. Rebuild with `python3 tools/logo/make-logo.py`.
+
+## Taxi from the port (2026-10-06)
+Cruise guests no longer take a taxi from the rank on their own: they message Nicolás on WhatsApp and he books a taxi he trusts to pick them up at the terminal and bring them to Torres de Serranos. The guest pays the driver. Changed on home (EN/ES cruise note), /cruise/ (strip, step 2, FAQ) and /advisors/ (peace-of-mind list). **Nicolás: have one or two trusted drivers' numbers ready.**
