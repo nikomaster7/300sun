@@ -13,7 +13,9 @@
   h1 { font: 400 44px/1 var(--serif); letter-spacing: -.01em; margin-top: 10px; }
   h1 em { color: var(--sun-ink); }
   .lede { font-size: 15px; max-width: none; margin: 0; }
-  .photo { height: 2.3in; }
+  .photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px; height: 2.6in; }
+  .photos figure { height: 2.6in; }
+  .photos figure:first-child img { object-position: center 25%; }
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid var(--ink); padding-top: 14px; }
   .grid3 h3 { font: italic 400 26px/1 var(--serif); margin-bottom: 8px; }
   .grid3 p { margin: 0 0 6px; color: var(--ink-2); }
@@ -36,7 +38,10 @@
   </div>
   <p class="lede">Private walks with a local, real paella and beds for whole groups. Your clients book directly with me, and you get 10% of what they pay.</p>
 
-  <figure class="photo"><img src="../../site/images/paella/300sun-valencia-paella-valenciana-cenital-1280.jpg" alt=""></figure>
+  <div class="photos">
+    <figure><img src="../../site/images/valencia/300sun-valencia-iglesia-san-nicolas-1280.jpg" alt=""></figure>
+    <figure><img src="../../site/images/valencia/300sun-valencia-paella-marisco-almuerzo-1280.jpg" alt=""></figure>
+  </div>
 
   <div class="grid3">
     <div>
