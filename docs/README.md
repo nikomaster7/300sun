@@ -35,4 +35,5 @@ Para leerlos desde el móvil: **github.com/nikomaster7/300sun** → carpeta `doc
   - `logo/make-logo.py`: genera el logo.
   - `make-onepager.sh`: genera el PDF de agencias.
   - `make-commission-sheet.py`: crea la hoja de comisiones vacía.
+  - `faq-schema.py`: copia las preguntas frecuentes al formato que lee Google (ejecutar tras cambiar una FAQ).
   - `google-sheets/cal-webhook.gs`: el programa que va dentro de la hoja de Google (con su prueba `test.js`).

@@ -10,6 +10,14 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
+- [ ] **Check the facts on the new cruise port guide** (300sun.com/cruise-port): ship shuttle about €10 return, taxi about €10 each way, city bus line 4 about €1.50, 15–30 min rides. They come from cruiser reports; correct anything you know is different
+- [ ] **Google Business Profile** (once created): real opening hours (e.g. 8:00–20:00 every day), real photos and 2–3 short videos, one post a week (a photo from the walk + one line). Never AI-generated photos
+- [ ] **Ask for a Google review after every walk**, the same day, ideally with a 10-second video. Steady new reviews beat many old ones
+- [ ] **Film short vertical videos** on walks (Torres de Serranos, the market, horchata, the taxi pick-up) and say the search words out loud ("Valencia shore excursion", "from the cruise port to the old town"). Claude can write scripts and subtitles
+- [ ] **Join the conversation where cruisers ask**: Cruise Critic Valencia board, roll calls of 2027 ships, r/Cruise, r/valencia, Facebook cruise groups. Help first, link only when asked. Note every repeated question and send it to Claude for the FAQ
+- [ ] **Check the search words** in `docs/marketing/youtube-learnings-seo.md` in Google Keyword Planner (free with a Google Ads account) and send Claude the top 10 by volume
+- [ ] Ask Claude for the **emails to bloggers** with "best private tours in Valencia" lists, then send them
+- [ ] Watch the videos in `docs/marketing/youtube-learnings-seo.md` when you have time (Darren Shaw's and Ahrefs' first)
 - [ ] Set up the commission sheet in Google Sheets (15 min, on a computer): `docs/agencias/google-sheets-setup.md`. Or connect Google Drive at claude.ai/customize/connectors and start a new session so Claude can do the Drive part
 - [ ] Book a first consultation with a **gestor**: questions ready in `docs/gestor-preguntas.md`
 - [ ] Test the agency link on your phone: https://300sun.com/cruise/?ref=test-agency (see `docs/agencias/como-funciona.md`)

@@ -78,3 +78,7 @@ Commission raised to **15%** (page, one-pager, sheet). /advisors/ now speaks to 
 
 ## Removed (2026-10-06)
 The Spanish/Italian online classes offer is off the home page (EN/ES): the note above the form and the form option. Bring back from git history if needed.
+
+## Cruise port guide + FAQ structured data (2026-10-06)
+- New page **/cruise-port/** (English, like /cruise): taxi I book, ship shuttle, taxi rank, city bus, with rough times and prices from cruiser reports (marked as such on the page), planning backwards from all-aboard, and 6 FAQs. Linked from /cruise (FAQ + footer) and the home cruise notes (EN/ES).
+- **FAQ structured data** (schema.org FAQPage) on /cruise and /cruise-port, generated from each page's own FAQ by `python3 tools/faq-schema.py`. **Run it after changing any FAQ** on a page with the FAQ:BEGIN/END markers.
