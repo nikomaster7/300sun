@@ -8,11 +8,24 @@ The website already has the calendar built in. It just needs your Cal.com links.
 3. When it asks, **connect Google Calendar**. From then on, anything in your calendar (a tour through City Unscripted, a dentist appointment) blocks that time on the website automatically.
 
 ## 2. Set your availability
-Settings → Availability: the days and hours you want to offer walks (for example Monday to Saturday, 08:30 to 14:00). Time zone: **Europe/Madrid**.
+Two walks a day at most: one starting at **09:00** and one at **13:00**.
+
+Availability → **New schedule** called "Walks". Time zone: **Europe/Madrid**. For each day you work (for example Monday to Saturday) add two time ranges:
+- **09:00 – 12:00**
+- **13:00 – 16:00**
+
+Each range is exactly one 3-hour walk long, so Cal.com can only offer a start at 09:00 or 13:00. The 30-minute buffer after the morning walk ends at 12:30, before the afternoon one.
 
 ## 3. Create the event type
 - Title: **Old town walk (3 h)**. URL slug: `old-town-walk`
 - Duration: 180 min. Buffer after: 30 min. Minimum notice: 24 h
+- **Availability** tab: pick the "Walks" schedule
+- **Limits** tab:
+  - **Limit booking frequency** → on → **4 per week** (no more than 4 walks a week)
+  - Time-slot intervals: leave at the default (it follows the duration)
+- **Advanced** tab: **Offer seats** stays **off**, so each slot takes only one booking. Once someone books 09:00, that time disappears for everyone else.
+
+When a week is full, or a guest needs another time, the booking note on the site sends them to WhatsApp.
 - Location: "Meeting point sent by WhatsApp" (Torres de Serranos)
 
 Under **Advanced → Booking questions**, add:
