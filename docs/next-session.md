@@ -17,6 +17,13 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 - [ ] Optional: in Porkbun, change the A record from 76.76.21.21 to 216.198.79.1 (Vercel's newer value)
 - [ ] Set up Porkbun email forwarding hola@300sun.com → 300sunvalencia@gmail.com (if not done)
 - [ ] Booking questions and calendar design: to review together
+- [ ] **Cal.com walk limits** (5 min, steps in `docs/booking-setup.md`, sections 2 and 3):
+  - New "Walks" schedule, Europe/Madrid: 09:00–12:00 and 13:00–16:00 on working days
+  - Event "Old town walk" → Availability: pick "Walks"
+  - Limits → Limit booking frequency → 4 per week
+  - Advanced → Offer seats stays off (one booking per slot)
+  - Walks closed on WhatsApp: add them to Google Calendar so the slot is blocked
+- [ ] Merge PR #1 (booking notes with the 09:00 / 13:00 times and WhatsApp link) so it goes live
 
 ## Where things are
 - Site: https://300sun.com (Vercel project `300sun`, auto-deploys from GitHub `nikomaster7/300sun`, branch `main`)
