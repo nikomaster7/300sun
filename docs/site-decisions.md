@@ -75,3 +75,6 @@ Cruise guests no longer take a taxi from the rank on their own: they message Nic
 
 ## Agencies (2026-10-06)
 Commission raised to **15%** (page, one-pager, sheet). /advisors/ now speaks to "travel advisors & agencies", with a commission table and a note that net rates with invoicing are coming. Each agency gets its own link `300sun.com/cruise/?ref=agency-name`: the ref travels to Cal.com as utm tags and in the booking notes ("Referred by travel advisor: …"), and is remembered while the visitor browses. Details and test link: `docs/agencias/como-funciona.md`.
+
+## Removed (2026-10-06)
+The Spanish/Italian online classes offer is off the home page (EN/ES): the note above the form and the form option. Bring back from git history if needed.
