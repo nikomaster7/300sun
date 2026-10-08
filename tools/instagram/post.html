@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>300sun · Instagram post</title>
+<!-- One Instagram slide, 1080 x 1350, built from a real photo and the site's own type and colours.
+     The posts are written in posts.js; tools/instagram/make.sh turns them into PNGs. -->
+<link rel="stylesheet" href="../../site/assets/css/300sun.css">
+<style>
+  html, body { margin: 0; width: 1080px; height: 1350px; overflow: hidden; background: var(--paper); }
+  .s { position: relative; width: 1080px; height: 1350px; display: flex; flex-direction: column; justify-content: flex-end; padding: 84px; box-sizing: border-box; }
+  .s img.bg { position: absolute; top: 0; left: 0; width: 1080px; height: 760px; object-fit: cover; }
+  .s.photo { background: var(--ink); padding-bottom: 72px; }
+  .s.photo .brand, .s.photo .n { text-shadow: 0 1px 12px rgba(0,0,0,.6); }
+  .s.photo h1 { font-size: 92px; }
+  .s.photo p { color: #cfcdc6; }
+  .s > * { position: relative; z-index: 1; }
+  .k { font: 500 26px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 28px; }
+  h1 { font: 400 108px/.98 var(--serif); letter-spacing: -.01em; margin: 0; }
+  h1 em { font-style: italic; }
+  p { font: 400 38px/1.35 var(--sans); margin: 32px 0 0; max-width: 21em; }
+  .photo { color: #fff; }
+  .text, .end { justify-content: center; color: var(--ink); }
+  .text h1 em, .end h1 em { color: var(--sun-ink); }
+  .text p, .end p { color: var(--ink-2); }
+  .brand { position: absolute; top: 72px; left: 84px; display: flex; align-items: center; gap: 14px; font: 500 34px/1 var(--sans); }
+  .brand img { width: 44px; height: 44px; }
+  .n { position: absolute; top: 80px; right: 84px; font: 400 26px/1 var(--sans); opacity: .8; }
+  .end .url { font: 500 44px/1 var(--sans); color: var(--ink); margin-top: 56px; }
+</style>
+</head>
+<body>
+<div class="s" id="s">
+  <img class="bg" id="bg" alt="" hidden>
+  <div class="brand"><img id="mark" src="../../brand/300sun-symbol.svg" alt=""><span>300sun</span></div>
+  <div class="n" id="n"></div>
+  <div class="k" id="k"></div>
+  <h1 id="h"></h1>
+  <p id="p"></p>
+  <div class="url" id="u" hidden>300sun.com</div>
+</div>
+<script src="posts.js"></script>
+<script>
+  // ?p=<post id>&s=<slide number>. *word* becomes italic.
+  var q = new URLSearchParams(location.search);
+  var post = POSTS.filter(function (x) { return x.id === q.get("p"); })[0] || POSTS[0];
+  var i = (parseInt(q.get("s"), 10) || 1) - 1, d = post.slides[i], t = d.t;
+  var esc = function (s) { return (s || "").replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
+  var em = function (s) { return esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>"); };
+  document.getElementById("s").classList.add(t);
+  document.getElementById("k").textContent = d.k || "";
+  document.getElementById("h").innerHTML = em(d.h);
+  document.getElementById("p").innerHTML = em(d.p);
+  document.getElementById("n").textContent = (i + 1) + "/" + post.slides.length;
+  if (t === "photo") { var bg = document.getElementById("bg"); bg.src = "../../site/images/" + d.img; bg.hidden = false; if (d.pos) bg.style.objectPosition = d.pos; }
+  if (t === "end") document.getElementById("u").hidden = false;
+</script>
+</body>
+</html>

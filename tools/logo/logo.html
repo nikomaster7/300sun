@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>300sun · logo</title>
+<!-- Square logo (symbol over wordmark), 1024 x 1024. Open with ?dark or ?light.
+     Rebuild: Chrome headless, window 1024x1024, screenshot to brand/300sun-logo-dark.png / -light.png -->
+<link rel="stylesheet" href="../../site/assets/css/300sun.css">
+<style>
+  html, body { margin: 0; width: 1024px; height: 1024px; overflow: hidden; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; background: var(--paper); color: var(--ink); }
+  body.dark { background: var(--ink); color: var(--paper); }
+  img { height: 330px; margin-left: 34px; }
+  div { font: 600 150px/1 var(--sans); letter-spacing: -.03em; }
+</style>
+</head>
+<body>
+  <img src="../../brand/300sun-symbol.svg" alt="">
+  <div>300sun</div>
+  <script>if (location.search.indexOf("dark") > -1) document.body.className = "dark";</script>
+</body>
+</html>
