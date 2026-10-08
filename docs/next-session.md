@@ -29,7 +29,8 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 - [ ] Confirm the wording of the **back-on-board promise** (taxi paid by you) and the **advisor terms** (15%, paid within 7 days). See `docs/site-decisions.md`, 2026-10-05
 - [ ] Print the advisors one-pager (`300sun.com/advisors/300sun-travel-advisors.pdf`) for the USA trip
 - [x] PayPal account opened with 300sunvalencia@gmail.com; PayPal.me is `@300sun` (2026-10-04)
-- [ ] PayPal: the app looks like a **Personal** account. Upgrade to Business on a computer (paypal.com → ⚙️ → Account settings → Upgrade to a Business account), turn on 2FA, then add the deposit text to the Cal.com event (`docs/booking-setup.md` §5)
+- [x] PayPal upgraded to a **Business** account (type Individual, trading name 300sun, identity confirmed) (done 2026-10-08)
+- [ ] PayPal: turn on 2FA, then add the deposit text to the Cal.com event (`docs/booking-setup.md` §5). Test the link with a €1 payment from someone you trust and refund it
 - [ ] Give Claude your **NIF + postal address** for the legal notice (or decide on a business address)
 - [x] Delete the Cal.com API key shared today (done 2026-09-23)
 - [ ] **Turn on two-step verification (2FA)**: Gmail, Cal.com, GitHub, Vercel, Porkbun
