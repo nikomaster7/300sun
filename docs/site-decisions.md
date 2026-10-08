@@ -53,7 +53,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 - [x] Prices (confirmed 2026-10-08): **€50 an hour per group of up to 4**, so 3 h €150 / 4 h €200 / 6 h €300; each extra person **+€10 an hour**, up to 8 (3 h: +€30). Paella from €65. Keep €150 until there are 10–15 Google reviews, then consider €180. What fills the 4 h and 6 h walks is still to define with Nicolás
 - [x] Payment (decided 2026-10-04, deposit lowered from €45 to €30 on 2026-10-08: a small amount is easier to trust): €30 deposit by PayPal link after booking; rest at the end of the walk in cash, Bizum or PayPal. Deposit refunded in full if cancelled 48 h+ before, or if the ship doesn't dock. PayPal Business account. No PayPal script on the site, so no CSP change.
 - [ ] "I usually answer the same day"
-- [x] About section removed for now (Nicolás prefers not to present himself yet). **Changed 2026-10-05:** Nicolás now appears as "Hi, I'm Nico" with his photo at the City of Arts and Sciences (home EN/ES in place of the "20–30% vs 100%" block, /cruise/, /advisors/)
+- [x] "Hi, I’m Nico" section removed again on 2026-10-08 from home (EN/ES), /cruise and /advisors, to revisit later (Nicolás prefers not to present himself yet). **Changed 2026-10-05:** Nicolás now appears as "Hi, I'm Nico" with his photo at the City of Arts and Sciences (home EN/ES in place of the "20–30% vs 100%" block, /cruise/, /advisors/)
 - [ ] Hostel photos show a room, a common area and a terrace. Change the list if a hostel has no terrace.
 - [ ] Legal notice (aviso legal: name + NIF), required by the LSSI once the site is selling
 

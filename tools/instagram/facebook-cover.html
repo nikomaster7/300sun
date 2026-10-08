@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>300sun · Facebook cover</title>
 <!-- Facebook Page cover, 1640 x 624. Phones crop the sides, so everything sits in the middle 1000 px.
-     Rebuild: Chrome headless, window 1640x624, screenshot to brand/300sun-facebook-cover.png -->
+     Rebuild: Chrome headless, window 1640x624, screenshot to brand/300sun-facebook-cover.png (dark) or, with ?light, brand/300sun-facebook-cover-light.png -->
 <link rel="stylesheet" href="../../site/assets/css/300sun.css">
 <style>
   html, body { margin: 0; width: 1640px; height: 624px; overflow: hidden; background: var(--ink); }
@@ -12,6 +12,10 @@
   .k { font: 500 20px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #bdbbb3; margin-bottom: 26px; }
   h1 { font: 400 104px/1 var(--serif); letter-spacing: -.01em; margin: 0; max-width: 1000px; }
   h1 em { font-style: italic; color: var(--sun); }
+  body.light { background: var(--paper); }
+  .light .c { color: var(--ink); }
+  .light .k { color: var(--ink-2); }
+  .light h1 em { color: var(--sun-ink); }
   .u { font: 500 28px/1 var(--sans); margin-top: 38px; display: flex; align-items: center; gap: 14px; }
   .u img { width: 34px; height: 34px; }
 </style>
@@ -22,5 +26,6 @@
   <h1>The old town, on foot, <em>at your pace.</em></h1>
   <div class="u"><img src="../../brand/300sun-symbol.svg" alt=""><span>300sun.com</span></div>
 </div>
+<script>if (location.search.indexOf("light") > -1) document.body.className = "light";</script>
 </body>
 </html>

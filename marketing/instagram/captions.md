@@ -7,7 +7,7 @@ Hashtags for every post (paste as the first comment):
 `#valencia #valenciaspain #visitvalencia #valenciaoldtown #privatewalk #shoreexcursion #cruiseport #mediterraneancruise #cruisetips #spaintravel`
 
 ## 01-300-days
-Valencia gets about 300 days of sun a year. I'm Nico, I live here, and I take visitors on private walks through the old town. Just your group, at your pace. Link in bio.
+Valencia gets about 300 days of sun a year. I live here, and I take visitors on private walks through the old town. Just your group, at your pace. Link in bio.
 
 ## 02-back-on-time
 Coming to Valencia on a cruise? The walk is planned backwards from your all-aboard time. If we're ever running tight, I put you in a taxi to the terminal and pay the fare. Link in bio to pick your port day.
