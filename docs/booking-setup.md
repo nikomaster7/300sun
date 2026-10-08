@@ -34,7 +34,7 @@ Set up:
 2. The deposit link (PayPal payment link, created 2026-10-08) is `https://www.paypal.com/ncp/payment/PTW8LWQJ73Q3U`. PayPal.me `paypal.me/300sun` also exists; `https://paypal.me/300sun/30EUR` asks for the same amount.
 3. In Cal.com → event "Old town walk" → Advanced → **Event description / confirmation**: add
    > To hold your date, please pay the €30 deposit within 24 hours: https://www.paypal.com/ncp/payment/PTW8LWQJ73Q3U. The rest is paid at the end of the walk. Cancel up to 48 hours before and I refund the deposit in full.
-   It then goes out in every confirmation email. Until the link exists, send it yourself on WhatsApp.
+   Done 2026-10-08 through the API: the event description now carries the deposit line and link (worded "After you book, hold your date with a €30 deposit within 24 hours"). Still send the link on WhatsApp too.
 4. If a deposit hasn't arrived after 24 h, a WhatsApp reminder; after 48 h you can cancel the booking in Cal.com.
 
 Fees: PayPal charges the receiver about 2.9% + €0.35 per payment in the EU (about €1.20 on €30), more for payments from the USA. Check the current rates on paypal.com/es/webapps/mpp/merchant-fees.

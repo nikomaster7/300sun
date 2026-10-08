@@ -30,7 +30,10 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 - [ ] Print the advisors one-pager (`300sun.com/advisors/300sun-travel-advisors.pdf`) for the USA trip
 - [x] PayPal account opened with 300sunvalencia@gmail.com; PayPal.me is `@300sun` (2026-10-04)
 - [x] PayPal upgraded to a **Business** account (type Individual, trading name 300sun, identity confirmed) (done 2026-10-08)
-- [ ] PayPal: turn on 2FA, then add the deposit text to the Cal.com event (`docs/booking-setup.md` §5). Test the link with a €1 payment from someone you trust and refund it
+- [x] Deposit text and PayPal link added to the Cal.com event description through the API (done 2026-10-08)
+- [ ] PayPal: turn on 2FA. Test the deposit link with a payment from someone you trust and refund it
+- [ ] Delete the Cal.com API key `claude-oct8` (Settings → Developer → API keys) and the key file in Downloads
+- [ ] Make a test booking and check the confirmation email shows the deposit line and link; cancel it afterwards
 - [ ] Give Claude your **NIF + postal address** for the legal notice (or decide on a business address)
 - [x] Delete the Cal.com API key shared today (done 2026-09-23)
 - [ ] **Turn on two-step verification (2FA)**: Gmail, Cal.com, GitHub, Vercel, Porkbun
