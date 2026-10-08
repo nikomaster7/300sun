@@ -5,7 +5,7 @@ _Preparado el 6 oct 2026. Llévalo impreso o en el móvil y apunta las respuesta
 ## Contexto para contarle en 2 minutos
 - Me llamo Nicolás Maldonado y vivo en Valencia. Trabajo por cuenta ajena en una empresa de experiencias (talleres de paella).
 - Quiero lanzar **300sun**, de momento como **prueba**: paseos privados por el centro con turistas, sobre todo cruceristas de EE. UU. (150 € por grupo de hasta 4 personas). También quiero hacer de intermediario para talleres de paella y para alojar grupos en 3 hostales colaboradores (más de 200 camas).
-- Web: 300sun.com. Reservas con Cal.com y una señal de 45 € por PayPal. El resto se cobra en mano o por PayPal al acabar el paseo.
+- Web: 300sun.com. Reservas con Cal.com y una señal de 30 € por PayPal. El resto se cobra en mano o por PayPal al acabar el paseo.
 - Quiero que agencias de viaje de EE. UU. me manden clientes a cambio de un **15 % de comisión**, que les pagaría yo por PayPal o Wise.
 - **Todavía no estoy dado de alta en nada y no emito facturas.**
 - Me voy a EE. UU. del 28 oct al 13 nov para presentar el proyecto a agencias.

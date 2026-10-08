@@ -4,7 +4,7 @@ _Decidido el 6 oct 2026. Página pública: https://300sun.com/advisors/ (inglés
 
 ## El modelo (de momento)
 1. La agencia manda al cliente a **su enlace propio**. El cliente reserva en el calendario como cualquier otro.
-2. El cliente **me paga a mí**: 45 € de señal por PayPal y el resto al acabar el paseo.
+2. El cliente **me paga a mí**: 30 € de señal por PayPal y el resto al acabar el paseo.
 3. En los **7 días siguientes al paseo**, le pago a la agencia el **15 %** de lo que pagó el cliente, por PayPal o Wise. No cuentan las propinas, las entradas ni la comida.
 
 Así **no tengo que facturar a la agencia**: ella no me paga nada. Le pido un recibo o factura de su comisión y lo guardo.

@@ -26,18 +26,18 @@ Under **Advanced → Booking questions**, add:
 - Install the **Cal.com app** on your phone, or turn on Google Calendar notifications, to get a push notification.
 - The guest gets a confirmation email and a reminder.
 
-## 5. Payments: €45 PayPal deposit (decided 2026-10-04)
-How it works: the guest books on Cal.com, then pays a **€45 deposit** through a PayPal link. The rest (€105, plus €30 per extra person) is paid at the end of the walk in cash, Bizum or PayPal. Cancelled 48 h+ before, or the ship doesn't dock: refund the deposit in full from PayPal (Activity → the payment → Refund).
+## 5. Payments: €30 PayPal deposit (decided 2026-10-04 at €45, lowered to €30 on 2026-10-08)
+How it works: the guest books on Cal.com, then pays a **€30 deposit** through a PayPal link. The rest (€120, plus €30 per extra person) is paid at the end of the walk in cash, Bizum or PayPal. Cancelled 48 h+ before, or the ship doesn't dock: refund the deposit in full from PayPal (Activity → the payment → Refund).
 
 Set up:
 1. Open a **PayPal Business** account (free) with 300sunvalencia@gmail.com; business name "300sun". Turn on 2FA.
-2. Create the PayPal.me link, ideally `paypal.me/300sun`. A ready-to-pay link for the deposit is `https://paypal.me/300sun/45EUR`.
+2. The deposit link (PayPal payment link, created 2026-10-08) is `https://www.paypal.com/ncp/payment/PTW8LWQJ73Q3U`. PayPal.me `paypal.me/300sun` also exists; `https://paypal.me/300sun/30EUR` asks for the same amount.
 3. In Cal.com → event "Old town walk" → Advanced → **Event description / confirmation**: add
-   > To hold your date, please pay the €45 deposit within 24 hours: https://paypal.me/300sun/45EUR. The rest is paid at the end of the walk. Cancel up to 48 hours before and I refund the deposit in full.
+   > To hold your date, please pay the €30 deposit within 24 hours: https://www.paypal.com/ncp/payment/PTW8LWQJ73Q3U. The rest is paid at the end of the walk. Cancel up to 48 hours before and I refund the deposit in full.
    It then goes out in every confirmation email. Until the link exists, send it yourself on WhatsApp.
 4. If a deposit hasn't arrived after 24 h, a WhatsApp reminder; after 48 h you can cancel the booking in Cal.com.
 
-Fees: PayPal charges the receiver about 2.9% + €0.35 per payment in the EU (about €1.65 on €45), more for payments from the USA. Check the current rates on paypal.com/es/webapps/mpp/merchant-fees.
+Fees: PayPal charges the receiver about 2.9% + €0.35 per payment in the EU (about €1.20 on €30), more for payments from the USA. Check the current rates on paypal.com/es/webapps/mpp/merchant-fees.
 
 Later: Cal.com can take the deposit by card itself through **Stripe**, which removes the manual step. You need to be registered to sell (autónomo or a company) to receive payments regularly and issue invoices.
 
