@@ -13,7 +13,7 @@
 - [ ] **TripAdvisor** listing (free). Americans check it before booking.
 - [ ] Ask your recent clients (City Unscripted, paella) for a **Google review**. Without breaking the platform's rules: only people who already have your WhatsApp.
 - [ ] **Business cards with a QR code** pointing to `300sun.com/?utm_source=card` (so we know where each visit came from)
-- [x] Show prices in dollars as well: done 2026-10-05 (≈ $170 / $35 / $75; deposit €30 ≈ $35 since 2026-10-08; at about 1.15 $/€). Check the rate now and then and round again if it moves a lot.
+- [x] Prices: euros only since 2026-10-08 (the dollar equivalences from 2026-10-05 were removed as confusing). Say the dollar figure of the day in person.
 
 ## 2. In the USA, in person (this is your advantage)
 Nobody at City Unscripted is going to knock on doors. You can.

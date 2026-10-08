@@ -8,26 +8,33 @@
 <style>
   @page { size: Letter; margin: 0; }
   html, body { background: var(--paper); }
-  body { width: 8.5in; height: 11in; margin: 0; padding: .55in .6in; font-size: 12.5px; line-height: 1.45; display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
+  body { width: 8.5in; height: 11in; margin: 0; padding: .55in .6in; font-size: 12.5px; line-height: 1.45; display: flex; flex-direction: column; gap: 13px; overflow: hidden; }
   .mark { font-size: 20px; }
-  h1 { font: 400 44px/1 var(--serif); letter-spacing: -.01em; margin-top: 10px; }
+  h1 { font: 400 42px/1 var(--serif); letter-spacing: -.01em; margin-top: 10px; }
   h1 em { color: var(--sun-ink); }
   .lede { font-size: 15px; max-width: none; margin: 0; }
-  .photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px; height: 2.6in; }
-  .photos figure { height: 2.6in; }
+  .photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px; height: 1.85in; }
+  .photos figure { height: 1.85in; }
   .photos figure:first-child img { object-position: center 25%; }
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid var(--ink); padding-top: 14px; }
   .grid3 h3 { font: italic 400 26px/1 var(--serif); margin-bottom: 8px; }
   .grid3 p { margin: 0 0 6px; color: var(--ink-2); }
   .grid3 .p { color: var(--ink); font-weight: 500; }
-  .deal { background: var(--ink); color: var(--paper); padding: 18px 22px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
-  .deal .big { font: 400 64px/1 var(--serif); }
+  .deal { background: var(--ink); color: var(--paper); padding: 12px 22px; display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+  .deal .big { font: 400 54px/1 var(--serif); }
   .deal ol { margin: 0; padding-left: 18px; color: #bdbbb3; }
   .deal ol b { color: var(--paper); font-weight: 500; }
   .foot1 { margin-top: auto; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; border-top: 1px solid var(--ink); padding-top: 14px; }
   .foot1 p { margin: 0; }
-  .qr { width: 1.05in; height: 1.05in; }
+  .qr { width: .95in; height: .95in; }
   .fine { font-size: 10.5px; }
+  .rates { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: start; border-top: 1px solid var(--ink); padding-top: 12px; }
+  .rates table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .rates th, .rates td { text-align: right; padding: 1.5px 0; border-bottom: 1px solid var(--line); font-weight: 400; }
+  .rates th:first-child, .rates td:first-child { text-align: left; }
+  .rates thead th { font-weight: 500; border-bottom: 1px solid var(--ink); }
+  .rates tr.you td { font-weight: 500; border-bottom: 0; color: var(--sun-ink); }
+  .rates p { margin: 0 0 6px; color: var(--ink-2); }
 </style>
 </head>
 <body>
@@ -46,18 +53,35 @@
   <div class="grid3">
     <div>
       <h3>Walk</h3>
-      <p>Private old town walk, 3 hours, just their group. For cruise passengers, timed around the all-aboard. If we’re ever running tight, I put them in a taxi to the terminal and pay the fare.</p>
-      <p class="p">€150 (≈ $170) up to 4 people<br>+€30 (≈ $35) per extra person, up to 8</p>
+      <p>Private old town walk of 3, 4 or 6 hours, just their group. For cruise passengers, timed around the all-aboard. If we’re ever running tight, I put them in a taxi to the terminal and pay the fare.</p>
     </div>
     <div>
       <h3>Paella</h3>
       <p>A paella workshop: they cook a real Valencian paella over fire, then eat it. For a couple or a group of fifty.</p>
-      <p class="p">From €65 (≈ $75) per person</p>
+      <p class="p">From €65 per person</p>
     </div>
     <div>
       <h3>Groups</h3>
       <p>Three partner hostels, 200+ beds. Study abroad, school and church trips, with paella and walks in the same chat.</p>
       <p class="p">Quote on request</p>
+    </div>
+  </div>
+
+  <div class="rates">
+    <table>
+      <thead><tr><th>Private walk · price per group</th><th>3 h</th><th>4 h</th><th>6 h</th></tr></thead>
+      <tbody>
+        <tr><td>1 to 4 people</td><td>€150</td><td>€200</td><td>€300</td></tr>
+        <tr><td>5 people</td><td>€180</td><td>€240</td><td>€360</td></tr>
+        <tr><td>6 people</td><td>€210</td><td>€280</td><td>€420</td></tr>
+        <tr><td>7 people</td><td>€240</td><td>€320</td><td>€480</td></tr>
+        <tr><td>8 people</td><td>€270</td><td>€360</td><td>€540</td></tr>
+        <tr class="you"><td>Your 15% (1 to 4 people)</td><td>€22.50</td><td>€30</td><td>€45</td></tr>
+      </tbody>
+    </table>
+    <div>
+      <p><b style="font-weight:500; color: var(--ink);">One price for the group, not per head.</b> One person or four pay the same. Each extra person is €10 an hour, up to 8.</p>
+      <p>Prices are in euros. Your clients’ card or PayPal converts at the day’s rate. Tickets, taxis and food are paid on the spot.</p>
     </div>
   </div>
 
@@ -74,7 +98,7 @@
     <div>
       <p style="font-size: 15px;"><b style="font-weight:500">Nicolás · 300sun</b></p>
       <p>WhatsApp +34 615 85 80 17 · 300sunvalencia@gmail.com · 300sun.com/advisors</p>
-      <p class="fine" style="margin-top: 6px;">Private walks with a local, not an official guided tour. Deposit refunded in full if the ship doesn’t dock or with 48 hours’ notice. Dollar prices are approximate; clients pay in euros.</p>
+      <p class="fine" style="margin-top: 6px;">Private walks with a local, not an official guided tour. Deposit refunded in full if the ship doesn’t dock or with 48 hours’ notice. Your 15% is counted on what they pay me; tips, tickets and food don’t count.</p>
     </div>
     <img class="qr" src="qr-advisors.svg" alt="QR code to 300sun.com/advisors">
   </div>

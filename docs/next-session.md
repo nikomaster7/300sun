@@ -31,6 +31,9 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 - [x] PayPal account opened with 300sunvalencia@gmail.com; PayPal.me is `@300sun` (2026-10-04)
 - [x] PayPal upgraded to a **Business** account (type Individual, trading name 300sun, identity confirmed) (done 2026-10-08)
 - [x] Deposit text and PayPal link added to the Cal.com event description through the API (done 2026-10-08)
+- [x] Walks of 4 h (€200) and 6 h (€300) added: site, advisors page, one-pager with rate table, and Cal.com (one event, the guest picks 3, 4 or 6 h) (2026-10-08)
+- [ ] Decide what fills the **4 h and 6 h walks** (extra stops, lunch) and tell Claude, so the site can describe them
+- [ ] In Cal.com, check the walk event on your phone: the 3 / 4 / 6 h choice shows and the times offered make sense for a 6 h walk
 - [ ] PayPal: turn on 2FA. Test the deposit link with a payment from someone you trust and refund it
 - [ ] Delete the Cal.com API key `claude-oct8` (Settings → Developer → API keys) and the key file in Downloads
 - [ ] Make a test booking and check the confirmation email shows the deposit line and link; cancel it afterwards

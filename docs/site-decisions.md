@@ -50,7 +50,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 **One look for all photos:** `python3 tools/prepare-photos.py <photo> <folder> <name>` resizes, applies the same edit (warmer, a bit more contrast and colour, lifted shadows, light sharpening) and strips location data. All current photos went through it on 2026-10-05.
 
 ## Nicolás to confirm (these are my assumptions in the copy)
-- [x] Prices: walk €150 (3 h, up to 4) / cruise day €280 (6 h, up to 4, Claude's proposal, to confirm) / +€30 per person / paella from €65
+- [x] Prices (confirmed 2026-10-08): **€50 an hour per group of up to 4**, so 3 h €150 / 4 h €200 / 6 h €300; each extra person **+€10 an hour**, up to 8 (3 h: +€30). Paella from €65. Keep €150 until there are 10–15 Google reviews, then consider €180. What fills the 4 h and 6 h walks is still to define with Nicolás
 - [x] Payment (decided 2026-10-04, deposit lowered from €45 to €30 on 2026-10-08: a small amount is easier to trust): €30 deposit by PayPal link after booking; rest at the end of the walk in cash, Bizum or PayPal. Deposit refunded in full if cancelled 48 h+ before, or if the ship doesn't dock. PayPal Business account. No PayPal script on the site, so no CSP change.
 - [ ] "I usually answer the same day"
 - [x] About section removed for now (Nicolás prefers not to present himself yet). **Changed 2026-10-05:** Nicolás now appears as "Hi, I'm Nico" with his photo at the City of Arts and Sciences (home EN/ES in place of the "20–30% vs 100%" block, /cruise/, /advisors/)
@@ -58,7 +58,7 @@ tools/prepare-photos.sh <original.jpg> <folder> <name>
 - [ ] Legal notice (aviso legal: name + NIF), required by the LSSI once the site is selling
 
 ## Decisions 2026-10-05: hooks for US clients
-- **Dollar prices** next to euros everywhere a price shows (EN and ES): €150 ≈ $170, €30 ≈ $35, €65 ≈ $75, deposit €30 ≈ $35. Always "approximate, you pay in euros". Assumed rate ~1.15 $/€.
+- **Euros only** (decided 2026-10-08, until Nicolás decides otherwise): the "≈ $" equivalences were confusing and are removed from the site, the advisors page and the one-pager. One line where prices show: "Prices are in euros. Your card or PayPal converts at the day’s rate." In person, Nicolás says the dollar figure of that day. (Before: dollar prices next to euros at ~1.15 $/€, 2026-10-05.)
 - **Back-on-board promise** (cruise page band + FAQ, home cruise note EN/ES): "If we're ever running tight, I put you in a taxi to the cruise terminal and I pay the fare." Nicolás to confirm the wording.
 - **/advisors/** page for US travel advisors (English only, like /cruise/; linked from both home footers): 10% commission on what the client pays (walk, extra people, paella; not tips, tickets, food), paid by PayPal or bank transfer within 7 days of the walk. Advisors identify themselves under "How did you hear about us?" in Cal.com. Nicolás to confirm the 10% and the 7 days.
 - **One-pager PDF** for advisors: `site/advisors/300sun-travel-advisors.pdf` (US Letter, QR to /advisors/?utm_source=onepager). Source `tools/onepager/advisors.html`; rebuild with `tools/make-onepager.sh` after any price or wording change.

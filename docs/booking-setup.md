@@ -27,7 +27,7 @@ Under **Advanced → Booking questions**, add:
 - The guest gets a confirmation email and a reminder.
 
 ## 5. Payments: €30 PayPal deposit (decided 2026-10-04 at €45, lowered to €30 on 2026-10-08)
-How it works: the guest books on Cal.com, then pays a **€30 deposit** through a PayPal link. The rest (€120, plus €30 per extra person) is paid at the end of the walk in cash, Bizum or PayPal. Cancelled 48 h+ before, or the ship doesn't dock: refund the deposit in full from PayPal (Activity → the payment → Refund).
+How it works: the guest books on Cal.com, then pays a **€30 deposit** through a PayPal link. The rest (the price of the walk minus €30: €120 for the 3 h walk, €170 for 4 h, €270 for 6 h, plus €10 an hour per extra person) is paid at the end of the walk in cash, Bizum or PayPal. Cancelled 48 h+ before, or the ship doesn't dock: refund the deposit in full from PayPal (Activity → the payment → Refund).
 
 Set up:
 1. Open a **PayPal Business** account (free) with 300sunvalencia@gmail.com; business name "300sun". Turn on 2FA.
