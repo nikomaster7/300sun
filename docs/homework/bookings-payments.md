@@ -15,4 +15,4 @@ Guide: `docs/booking-setup.md` (the deposit link is in section 5).
 
 ## Route sheets for clients
 - [ ] For each real client, give Claude: name, date, people, start time, stops, any fixed time (reservation or all-aboard), price and deposit. Claude makes the PDF and the WhatsApp image.
-- [ ] Check the pin positions on the map of the example sheet (`marketing/route-sheet-example.pdf`).
+- [ ] Check the map on the example sheet (`marketing/route-sheet-example.pdf`): is each number on the right building? Claude took the tall tower under the basilica as the Cathedral and the church below it as San Nicolás.

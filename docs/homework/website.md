@@ -17,5 +17,4 @@
 ## Waiting on a decision
 - [ ] **The group stays section** shows the three hostels. Talk to your boss first; if it isn't agreed, Claude hides it.
 - [ ] **"Who you'll meet"** section with a photo: off for now, back when you decide or when there is a team.
-- [ ] A map without the dotted line for the route sheet, when ChatGPT gives you images again.
 - [ ] Short vertical videos on walks. Claude writes scripts and subtitles.

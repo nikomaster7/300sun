@@ -34,7 +34,7 @@
   .tag { display: inline-block; margin-left: 6px; padding: 0 6px; border: 1px solid var(--ink); border-radius: 20px; font-size: 10px; font-weight: 500; font-style: normal; white-space: nowrap; vertical-align: 1px; }
   .tag.free { border-color: var(--line); color: var(--ink-2); }
   .tag.opt { border-style: dashed; }
-  .map { position: relative; width: 55mm; margin: 0 auto 3mm; }
+  .map { position: relative; width: 70mm; margin: 0 auto 3mm; }
   .map img { width: 100%; display: block; }
   .map .num { position: absolute; transform: translate(-50%, -50%); box-shadow: 0 0 0 1.5px var(--paper); }
   .box { margin-bottom: 3.5mm; }
@@ -82,8 +82,8 @@
 <script>
   // ?c=<file name without .js>  &dir=<folder of the data file, default "trips">
   // Where each landmark sits on the map drawing, in % from the left and from the top.
-  var PINS = { towers: [61, 5], carmen: [9, 19], basilica: [86, 27], sannicolas: [21, 37], cathedral: [66, 47],
-               lonja: [5, 53], market: [9, 69], cityhall: [70, 66], station: [36, 93] };
+  var PINS = { towers: [50.8, 13.6], carmen: [27.6, 28.0], basilica: [62.3, 34.0], cathedral: [61.0, 48.3], sannicolas: [51.8, 59.3],
+               lonja: [30.1, 68.6], market: [37.9, 82.4], cityhall: [76.2, 79.7], station: [57.4, 94.4] };
   var q = new URLSearchParams(location.search);
   var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
   var em = function (s) { return esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>"); };
