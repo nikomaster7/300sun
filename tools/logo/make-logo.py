@@ -68,9 +68,9 @@ write(ROOT / "brand/300sun-avatar.svg",
       f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {s} {s}"><circle cx="{s/2}" cy="{s/2}" r="{s/2}" fill="{INK}"/>'
       f'<g transform="translate({(s - w*k)/2 + 0.02*s:.1f} {(s - h*k)/2:.1f}) scale({k:.4f})">{body}</g></svg>')
 
-# Favicon: sun symbol on an ink rounded square, bigger in the frame so it reads at 16 px
+# Favicon: sun symbol on a paper rounded square (light version, chosen 2026-10-09), bigger in the frame so it reads at 16 px
 w, h, body = symbol(SUN, pad=0, bold=70, ray_w=95)
 s = 32; k = 0.74 * s / h
 write(ROOT / "site/favicon.svg",
-      f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {s} {s}"><rect width="{s}" height="{s}" rx="7" fill="{INK}"/>'
+      f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {s} {s}"><rect width="{s}" height="{s}" rx="7" fill="{PAPER}"/>'
       f'<g transform="translate({(s - w*k)/2:.2f} {(s - h*k)/2:.2f}) scale({k:.5f})">{body}</g></svg>')
