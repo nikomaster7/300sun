@@ -32,6 +32,7 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 - [x] PayPal upgraded to a **Business** account (type Individual, trading name 300sun, identity confirmed) (done 2026-10-08)
 - [x] Facebook Page "300sun" and Instagram **@300sunvalencia** created (2026-10-08); profile picture, covers and first 8 posts are in `brand/` and `marketing/instagram/`
 - [ ] **Meta ad account restricted** ("unusual activity", seen 2026-10-08): secure the Facebook account (new password, 2FA, log out unknown devices), then request a review at facebook.com/accountquality. Needed before any Meta ads
+- [ ] **Decide later: what to do if the Meta ad account stays blocked.** Nicolás’s idea (2026-10-09): delete the Facebook Page and Instagram and create them again from his wife’s profile. Claude’s advice: don’t delete. First wait for the review; if it fails, add his wife to the existing 300sun Page with full control, so she runs the ads from her own ad account and the Page, Instagram and posts stay. Creating new accounts to get around a restriction is against Meta’s rules and can get her profile restricted too
 - [ ] Connect Instagram @300sunvalencia to the Facebook Page: Meta showed "temporarily restricted" on 2026-10-08. Wait 24–48 h without retrying, then connect from Meta Business Suite
 - [x] Deposit text and PayPal link added to the Cal.com event description through the API (done 2026-10-08)
 - [x] Walks of 4 h (€200) and 6 h (€300) added: site, advisors page, one-pager with rate table, and Cal.com (one event, the guest picks 3, 4 or 6 h) (2026-10-08)
