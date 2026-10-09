@@ -3,7 +3,7 @@
 Para leerlos desde el móvil: **github.com/nikomaster7/300sun** → carpeta `docs/`. Los `.md` se ven con formato en GitHub. Las hojas `.xlsx` se descargan y se abren con Excel, Numbers o Google Sheets.
 
 ## Empieza aquí
-- **`next-session.md`**: deberes y pendientes. Es lo primero que se lee en cada sesión ("300sun homework").
+- **`homework/`**: deberes por departamento, con las prioridades primero. Es lo primero que se lee en cada sesión ("pull hw" o "300sun homework"). Lo terminado se borra.
 - **`site-decisions.md`**: todo lo decidido sobre la web (textos, fotos, logo, precios, permisos pendientes).
 
 ## Negocio y dinero
