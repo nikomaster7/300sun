@@ -5,42 +5,48 @@
 <title>300sun · Your walk in Valencia</title>
 <!-- One-page route sheet to send to a client before their walk (A4).
      The content comes from a small data file: trips/example.js is the model.
-     Real clients go in /clients (not on GitHub). Build with tools/itinerary/make.sh <name>. -->
+     Real clients go in /clients (not on GitHub). Build with tools/itinerary/make.sh <name>.
+     Drawings come from marketing/illustrations (white ground, blended onto the paper). -->
 <link rel="stylesheet" href="../../site/assets/css/300sun.css">
 <style>
   @page { size: A4; margin: 0; }
   html, body { background: var(--paper); }
-  body { width: 210mm; height: 297mm; margin: 0; padding: 13mm 14mm 11mm; box-sizing: border-box; font-size: 12.5px; line-height: 1.45; display: flex; flex-direction: column; overflow: hidden; }
-  .top { display: grid; grid-template-columns: 1fr 58mm; gap: 8mm; align-items: end; border-bottom: 1px solid var(--ink); padding-bottom: 5mm; }
-  .mark { font-size: 18px; }
-  .label { display: block; margin: 5mm 0 2mm; }
-  h1 { font: 400 38px/1.02 var(--serif); letter-spacing: -.01em; margin: 0; }
+  body { width: 210mm; height: 297mm; margin: 0; padding: 11mm 13mm 9mm; box-sizing: border-box; font-size: 12px; line-height: 1.4; display: flex; flex-direction: column; overflow: hidden; }
+  img { mix-blend-mode: multiply; }
+  .top { display: grid; grid-template-columns: 1fr 44mm; gap: 8mm; align-items: end; border-bottom: 1px solid var(--ink); padding-bottom: 3mm; }
+  .mark { font-size: 17px; }
+  .label { display: block; margin: 3mm 0 1.5mm; }
+  h1 { font: 400 33px/1.02 var(--serif); letter-spacing: -.01em; margin: 0; }
   h1 em { color: var(--sun-ink); }
-  .who { margin: 3mm 0 0; font-size: 14px; color: var(--ink-2); }
-  .top img { width: 100%; mix-blend-mode: multiply; display: block; }
-  .sheet { display: grid; grid-template-columns: 1.25fr 1fr; gap: 9mm; padding-top: 6mm; flex: 1; min-height: 0; }
-  h2 { font: 500 11px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 3mm; }
+  .who { margin: 2mm 0 0; font-size: 13px; color: var(--ink-2); }
+  .top img { width: 100%; display: block; }
+  .sheet { display: grid; grid-template-columns: 1fr 70mm; gap: 8mm; padding-top: 4mm; flex: 1; min-height: 0; }
+  .sheet > div { min-width: 0; }
+  h2 { font: 500 10.5px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 2mm; }
   .route { list-style: none; margin: 0; padding: 0; }
-  .route li { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; padding: 2.4mm 0; border-bottom: 1px solid var(--line); }
-  .route time { font: 400 17px/1.15 var(--serif); color: var(--sun-ink); }
-  .route b { display: block; font-weight: 500; font-size: 13.5px; }
-  .route span { color: var(--ink-2); }
-  .tag { display: inline-block; margin-left: 6px; padding: 1px 7px; border: 1px solid var(--ink); border-radius: 20px; font-size: 10.5px; font-weight: 500; white-space: nowrap; vertical-align: 1px; }
+  .route li { display: grid; grid-template-columns: 6mm 19mm 1fr; gap: 3mm; align-items: center; padding: 1.2mm 0; border-bottom: 1px solid var(--line); }
+  .num { width: 5.4mm; height: 5.4mm; border-radius: 50%; background: var(--ink); color: var(--paper); font: 500 10px/5.4mm var(--sans); text-align: center; }
+  .route .pic { width: 19mm; height: 17.5mm; }
+  .route .pic img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .route time { font: 400 16px/1.1 var(--serif); color: var(--sun-ink); margin-right: 6px; }
+  .route b { font-weight: 500; font-size: 13px; }
+  .route span { display: block; color: var(--ink-2); }
+  .tag { display: inline-block; margin-left: 6px; padding: 0 6px; border: 1px solid var(--ink); border-radius: 20px; font-size: 10px; font-weight: 500; font-style: normal; white-space: nowrap; vertical-align: 1px; }
   .tag.free { border-color: var(--line); color: var(--ink-2); }
   .tag.opt { border-style: dashed; }
-  .box { margin-bottom: 6mm; }
-  .box dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 1.6mm 5mm; }
+  .map { position: relative; width: 55mm; margin: 0 auto 3mm; }
+  .map img { width: 100%; display: block; }
+  .map .num { position: absolute; transform: translate(-50%, -50%); box-shadow: 0 0 0 1.5px var(--paper); }
+  .box { margin-bottom: 3.5mm; }
+  .box dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 1mm 4mm; }
   .box dt { color: var(--ink-2); } .box dd { margin: 0; font-weight: 500; text-align: right; }
-  .box ul { margin: 0; padding-left: 4.2mm; color: var(--ink-2); } .box li { margin-bottom: 1mm; }
-  .box small { display: block; margin-top: 2mm; color: var(--ink-2); font-size: 11px; }
-  .note { background: var(--ink); color: var(--paper); padding: 4mm 5mm; margin-bottom: 6mm; }
-  .note h2 { color: #bdbbb3; } .note p { margin: 0; font-size: 13.5px; }
-  .art { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; align-items: end; margin-top: auto; }
-  .art img { width: 100%; mix-blend-mode: multiply; display: block; }
-  .foot { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--ink); margin-top: 5mm; padding-top: 3.5mm; font-size: 12px; }
-  .foot em { font: italic 400 19px/1 var(--serif); }
+  .box p { margin: 0; color: var(--ink-2); }
+  .box small { display: block; margin-top: 1.2mm; color: var(--ink-2); font-size: 10px; }
+  .note { background: var(--ink); color: var(--paper); padding: 3mm 4mm; margin-bottom: 4mm; }
+  .note h2 { color: #bdbbb3; } .note p { margin: 0; font-size: 12.5px; }
   .right { display: flex; flex-direction: column; min-height: 0; }
-  .sheet > div { min-width: 0; }
+  .sheetfoot { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--ink); margin-top: 3mm; padding-top: 3mm; font-size: 11.5px; }
+  .sheetfoot em { font: italic 400 18px/1 var(--serif); }
 </style>
 </head>
 <body>
@@ -51,7 +57,7 @@
       <h1 id="title"></h1>
       <p class="who" id="who"></p>
     </div>
-    <img src="../../site/assets/img/sketch-towers.webp" alt="">
+    <img src="../../marketing/illustrations/sketch-towers.png" alt="">
   </div>
 
   <div class="sheet">
@@ -60,21 +66,24 @@
       <ol class="route" id="route"></ol>
     </div>
     <div class="right">
+      <div class="map" id="map"><img src="../../marketing/illustrations/map-old-town.png" alt=""></div>
       <div class="note" id="noteBox"><h2 id="noteTitle"></h2><p id="note"></p></div>
       <div class="box" id="ticketBox"><h2>Tickets, paid at the door</h2><dl id="tickets"></dl><small id="ticketNote"></small></div>
-      <div class="box" id="bonusBox"><h2>If we have time</h2><ul id="bonus"></ul></div>
+      <div class="box" id="bonusBox"><h2>If we have time</h2><p id="bonus"></p></div>
       <div class="box" id="payBox"><h2>Your booking</h2><dl id="pay"></dl></div>
-      <div class="art"><img id="art1" alt=""><img id="art2" alt=""></div>
     </div>
   </div>
 
-  <div class="foot">
+  <div class="sheetfoot">
     <em id="bye"></em>
     <span>Nicolás · WhatsApp +34 615 85 80 17 · 300sun.com</span>
   </div>
 
 <script>
   // ?c=<file name without .js>  &dir=<folder of the data file, default "trips">
+  // Where each landmark sits on the map drawing, in % from the left and from the top.
+  var PINS = { towers: [61, 5], carmen: [9, 19], basilica: [86, 27], sannicolas: [21, 37], cathedral: [66, 47],
+               lonja: [5, 53], market: [9, 69], cityhall: [70, 66], station: [36, 93] };
   var q = new URLSearchParams(location.search);
   var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]; }); };
   var em = function (s) { return esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>"); };
@@ -86,17 +95,21 @@
     $("kicker").textContent = t.kicker || "Your private walk in Valencia";
     $("title").innerHTML = em(t.title);
     $("who").textContent = t.who || "";
-    $("route").innerHTML = t.route.map(function (r) {
-      var tag = r.ticket ? '<i class="tag' + (r.optional ? " opt" : "") + '" style="font-style:normal">' + esc(r.ticket) + "</i>" : (r.free ? '<i class="tag free" style="font-style:normal">free</i>' : "");
-      return "<li><time>" + esc(r.time) + "</time><div><b>" + esc(r.name) + (r.optional ? " (optional)" : "") + tag + "</b><span>" + esc(r.note || "") + "</span></div></li>";
+    $("route").innerHTML = t.route.map(function (r, i) {
+      var tag = r.ticket ? '<i class="tag' + (r.optional ? " opt" : "") + '">' + esc(r.ticket) + "</i>" : (r.free ? '<i class="tag free">free</i>' : "");
+      var pic = r.img ? '<img src="../../marketing/illustrations/' + esc(r.img) + '.png" alt="">' : "";
+      return '<li><div class="num">' + (i + 1) + '</div><div class="pic">' + pic + "</div><div><time>" + esc(r.time) + "</time><b>" + esc(r.name) + (r.optional ? " (optional)" : "") + "</b>" + tag + "<span>" + esc(r.note || "") + "</span></div></li>";
     }).join("");
+    t.route.forEach(function (r, i) {
+      if (!r.pin || !PINS[r.pin]) return;
+      var d = document.createElement("div"); d.className = "num"; d.textContent = i + 1;
+      d.style.left = PINS[r.pin][0] + "%"; d.style.top = PINS[r.pin][1] + "%"; $("map").appendChild(d);
+    });
     if (t.note) { $("noteTitle").textContent = t.note.title; $("note").textContent = t.note.text; } else $("noteBox").hidden = true;
     var tk = t.route.filter(function (r) { return r.ticket; });
     if (tk.length) { $("tickets").innerHTML = tk.map(function (r) { return "<dt>" + esc(r.name) + (r.optional ? " (optional)" : "") + "</dt><dd>" + esc(r.ticket) + "</dd>"; }).join(""); $("ticketNote").textContent = t.ticketNote || ""; } else $("ticketBox").hidden = true;
-    if (t.bonus && t.bonus.length) $("bonus").innerHTML = t.bonus.map(function (b) { return "<li>" + esc(b) + "</li>"; }).join(""); else $("bonusBox").hidden = true;
+    if (t.bonus && t.bonus.length) $("bonus").textContent = t.bonus.join(" · "); else $("bonusBox").hidden = true;
     if (t.booking) $("pay").innerHTML = t.booking.map(function (b) { return "<dt>" + esc(b[0]) + "</dt><dd>" + esc(b[1]) + "</dd>"; }).join(""); else $("payBox").hidden = true;
-    var art = t.art || ["horchata", "paella"];
-    $("art1").src = "../../site/assets/img/sketch-" + art[0] + ".webp"; $("art2").src = "../../site/assets/img/sketch-" + art[1] + ".webp";
     $("bye").textContent = t.bye || "See you in Valencia.";
   };
   document.head.appendChild(s);
