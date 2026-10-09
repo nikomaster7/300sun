@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://300sun.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/paella/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/paella/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/paella/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/es/paella/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/paella/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/paella/"/>
+  </url>
+  <url><loc>https://300sun.com/cruise/</loc></url>
+  <url><loc>https://300sun.com/cruise-port/</loc></url>
+  <url><loc>https://300sun.com/advisors/</loc></url>
+  <url><loc>https://300sun.com/legal/</loc></url>
+  <url><loc>https://300sun.com/es/legal/</loc></url>
+</urlset>

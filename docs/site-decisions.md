@@ -82,3 +82,9 @@ The Spanish/Italian online classes offer is off the home page (EN/ES): the note 
 ## Cruise port guide + FAQ structured data (2026-10-06)
 - New page **/cruise-port/** (English, like /cruise): taxi I book, ship shuttle, taxi rank, city bus, with rough times and prices from cruiser reports (marked as such on the page), planning backwards from all-aboard, and 6 FAQs. Linked from /cruise (FAQ + footer) and the home cruise notes (EN/ES).
 - **FAQ structured data** (schema.org FAQPage) on /cruise and /cruise-port, generated from each page's own FAQ by `python3 tools/faq-schema.py`. **Run it after changing any FAQ** on a page with the FAQ:BEGIN/END markers.
+
+## SEO basics + paella page (2026-10-09)
+- New pages **/paella/** and **/es/paella/** (twins, with `hreflang`): one page per service helps search. Text reuses what the home page already says. Booking is by WhatsApp, with no price beyond "from €65", because duration, place, schedule and diet options are not confirmed yet (see next-session.md). FAQ structured data was written by hand in the `faq-schema.py` format, because Python isn't installed on this computer; re-run the tool when it is.
+- **`site/sitemap.xml`** and **`site/robots.txt`** added. Add every new page to the sitemap.
+- **Titles kept under about 60 characters and descriptions under about 160**, so Google doesn't cut them: home EN/ES, /cruise/, /advisors/, /cruise-port/.
+- Home (EN/ES) links to the paella page from the paella section; the /cruise/ footer link now goes to /paella/.

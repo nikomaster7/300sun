@@ -10,6 +10,8 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
+- [ ] **Google Search Console**: add 300sun.com (search.google.com/search-console, verify by DNS), then submit `https://300sun.com/sitemap.xml`. Once a month, send Claude the top queries and pages
+- [ ] **Paella page facts** (300sun.com/paella): how long the workshop lasts, where it is, which days and times, vegetarian or other diet options, deposit and cancellation. They are missing on purpose until you confirm them
 - [ ] **Check the facts on the new cruise port guide** (300sun.com/cruise-port): ship shuttle about €10 return, taxi about €10 each way, city bus line 4 about €1.50, 15–30 min rides. They come from cruiser reports; correct anything you know is different
 - [ ] **Google Business Profile** (once created): real opening hours (e.g. 8:00–20:00 every day), real photos and 2–3 short videos, one post a week (a photo from the walk + one line). Never AI-generated photos
 - [ ] **Ask for a Google review after every walk**, the same day, ideally with a 10-second video. Steady new reviews beat many old ones
