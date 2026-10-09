@@ -202,7 +202,7 @@ section.block { padding: clamp(72px, 10vw, 140px) 0; border-top: 1px solid var(-
 .band .btn.ghost { background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1px var(--paper); }
 .band a:not(.btn) { color: var(--paper); }
 
-.mosaic { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; aspect-ratio: 16 / 10; margin-bottom: clamp(40px, 6vw, 72px); }
+.mosaic { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: clamp(12px, 1.6vw, 22px); aspect-ratio: 16 / 10; margin-bottom: clamp(40px, 6vw, 72px); }
 .mosaic figure:first-child { grid-row: span 2; }
 @media (max-width: 720px) { .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; aspect-ratio: auto; } .mosaic figure:first-child { grid-column: span 2; grid-row: auto; aspect-ratio: 4/3; } .mosaic figure { aspect-ratio: 1; } }
 
@@ -234,12 +234,12 @@ figure.empty::after {
 .checklist li { padding: 12px 0 12px 28px; border-bottom: 1px solid var(--line); position: relative; }
 .checklist li::before { content: ""; position: absolute; left: 0; top: 20px; width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--ink); }
 
-.duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 10px; align-items: start; margin-bottom: clamp(40px, 6vw, 72px); }
+.duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(16px, 2.6vw, 36px); align-items: start; margin-bottom: clamp(40px, 6vw, 72px); }
 .duo figure { background: none; overflow: visible; }
 .duo img { aspect-ratio: 4 / 5; object-fit: cover; }
 .duo figure + figure { margin-top: clamp(40px, 8vw, 120px); }
 .duo figcaption { font-size: 13px; color: var(--ink-2); padding-top: 10px; max-width: 34em; }
-@media (max-width: 720px) { .duo { grid-template-columns: 1fr; } .duo figure + figure { margin-top: 18px; } .duo figure + figure img { aspect-ratio: 4 / 3; } }
+@media (max-width: 720px) { .duo { grid-template-columns: 1fr; } .duo figure + figure { margin-top: 32px; } .duo figure + figure img { aspect-ratio: 4 / 3; } }
 
 .wide-photo { margin-top: 56px; background: none; overflow: visible; }
 .wide-photo img { aspect-ratio: 8 / 3; object-fit: cover; }
@@ -251,7 +251,7 @@ figure.empty::after {
 .strip.captioned figcaption { font-size: 13px; color: var(--ink-2); padding-top: 8px; }
 @media (max-width: 720px) { .strip.captioned figure:last-child { display: none; } }
 
-.strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 56px; }
+.strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 1.6vw, 22px); margin-top: 56px; }
 .strip figure { aspect-ratio: 4 / 5; }
 @media (max-width: 720px) { .strip { grid-template-columns: 1fr 1fr; } .strip figure:last-child { display: none; } }
 
