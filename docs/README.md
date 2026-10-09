@@ -19,6 +19,8 @@ Para leerlos desde el móvil: **github.com/nikomaster7/300sun** → carpeta `doc
 
 ## Ventas en EE. UU. y marketing
 - `usa-campaign.md`: el plan para EE. UU. (viaje del 28 oct al 13 nov, anuncios, agencias).
+- `meta-ads-handover.md`: qué pasó con la cuenta publicitaria de Meta y cómo llevar los anuncios de Facebook e Instagram (para la mujer de Nicolás).
+- `google-business-profile.md`: alta y textos del perfil de Google.
 - `marketing/cruise-paella-campaign.md`: borrador de campaña para cruceristas.
 - **`marketing/youtube-learnings-seo.md`**: lo que enseñan 5 YouTubers (Ahrefs, Darren Shaw, Greg Isenberg, Jeff Su, Chris Raroque) sobre SEO, búsqueda con IA y vibe coding, aplicado a 300sun, con prioridades y palabras clave para cruceros.
 
