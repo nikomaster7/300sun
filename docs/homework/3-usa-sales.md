@@ -20,7 +20,7 @@ Come back with travel advisors who have your link and have met you, because crui
 - [ ] Decide how each visit is recorded. Claude can add an "Agencies visited" tab to the commission sheet (name, contact, date, their link, next step).
 
 ## To prepare and pack
-- [ ] You: print 30 one-pagers (download again first: it now has the rate table) and 10 example route sheets.
+- [ ] You: print 30 one-pagers (download again first: it now has the rate table and the sample link) and 10 copies of the sample route sheet (`marketing/route-sheet-advisor-sample.pdf`, also at 300sun.com/advisors/sample-route.pdf).
 - [ ] You: set up the commission sheet in Google Sheets (`docs/agencias/google-sheets-setup.md`) and test `300sun.com/cruise/?ref=test-agency` on your phone.
 - [ ] You: get 3–5 Google reviews before leaving. Advisors will look you up.
 - [ ] Claude: a small card with a QR code that opens 300sun.com/advisors, if you want something to leave behind.
