@@ -54,6 +54,7 @@ body {
 }
 
 img { display: block; max-width: 100%; height: auto; }
+picture { display: contents; }
 a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-color: var(--sun); }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }

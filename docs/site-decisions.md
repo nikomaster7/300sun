@@ -88,3 +88,10 @@ The Spanish/Italian online classes offer is off the home page (EN/ES): the note 
 - **`site/sitemap.xml`** and **`site/robots.txt`** added. Add every new page to the sitemap.
 - **Titles kept under about 60 characters and descriptions under about 160**, so Google doesn't cut them: home EN/ES, /cruise/, /advisors/, /cruise-port/.
 - Home (EN/ES) links to the paella page from the paella section; the /cruise/ footer link now goes to /paella/.
+
+## 2026-10-09: speed and trust (after an outside review)
+- **Photos:** every JPG has a WebP twin (quality 0.6, about 40% lighter overall: 7.7 MB → 4.6 MB for the whole set), served with `<picture>` and the JPG as fallback. Width and height are set on each photo so the page doesn't jump while they load.
+- **Caching** (`vercel.json`): photos 30 days, fonts one year, styles and scripts one week. Before, the browser re-checked every file on every page view, which is slow on ship wifi.
+- **Cruise page:** "shore excursion" added to the title and the opening line (what cruise passengers search for), and a "The terms, in plain words" block before the booking calendar. Every line in it was already promised elsewhere on the site.
+- **Hidden fallback text** ("the calendar is almost ready") reworded. Visitors never saw it, but search engines and AI assistants read it and concluded bookings weren't open.
+- **No face for now** (Nicolás, 2026-10-09): he may hire other people later and hasn't yet spoken with his employer about the groups side. Trust comes from the terms block, the back-on-board promise and, once they exist, Google reviews. When there is a team, a "who you'll meet" section with each person.

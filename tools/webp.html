@@ -1,0 +1,7 @@
+<html><body><pre id="o">WAIT</pre><script>
+var q = new URLSearchParams(location.search), img = new Image();
+img.onload = function () { var c = document.createElement("canvas"); c.width = img.naturalWidth; c.height = img.naturalHeight; c.getContext("2d").drawImage(img, 0, 0);
+  document.getElementById("o").textContent = "DIM " + c.width + "x" + c.height + " DATA " + c.toDataURL("image/webp", parseFloat(q.get("q") || "0.8")).split(",")[1] + " END"; };
+img.onerror = function () { document.getElementById("o").textContent = "ERROR"; };
+img.src = q.get("f");
+</script></body></html>
