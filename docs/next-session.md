@@ -5,15 +5,19 @@ _Written 2026-09-23. Nicolás travels to the USA 28 Oct – 13 Nov 2026; everyth
 ## Next session: what we'll work on
 1. ~~**PayPal payments**~~: decided 2026-10-04 (€30 deposit by PayPal link, rest at the end; lowered from €45 on 2026-10-08). Site updated. Your part is in the list below and in `docs/booking-setup.md` §5.
 2. **Instagram + Facebook**: create the Facebook Page and Instagram @300sun in Meta Business Suite, profile photo (brand/300sun-avatar-sun-1080.png; cover brand/300sun-facebook-cover.png), bio, link to 300sun.com/cruise, and the first 6–9 posts with the real photos.
-3. **Google Business Profile**: create it as a service-area business (no public address), verify it, and set up the review link to send to past clients.
+3. ~~**Google Business Profile**~~: created 2026-10-09. What's left (verification, review link, hours, photos) is in the list below.
 4. **Storing passwords safely**: choose and set up a password manager (e.g. Bitwarden, free, or 1Password), move every 300sun account into it, and turn on 2FA everywhere.
 5. **Cookie banner + ad tracking (only when the ads launch)**: install CookieConsent (open source, free) with Google Consent Mode v2, then the Meta Pixel and Google Ads tag, both loading only after consent. Update the cookie policy (/legal/#cookies) and remove "No tracking cookies" from the footer, all on the same day.
 
 ## Pending from today
-- [ ] **Google Search Console**: add 300sun.com (search.google.com/search-console, verify by DNS), then submit `https://300sun.com/sitemap.xml`. Once a month, send Claude the top queries and pages
+- [x] **Google Search Console**: 300sun.com verified by DNS on 2026-10-09 (TXT record at Porkbun; leave it there) and the sitemap submitted
+- [ ] **Search Console, follow-up**: the sitemap showed "Couldn't fetch" right after sending it, which is normal at first. Check in 1–2 days that it says "Success"; if not, test `https://300sun.com/` with URL inspection → Test live URL and send Claude a screenshot. Then request indexing for /, /cruise/, /paella/, /cruise-port/, /es/ and /es/paella/
+- [ ] **Search Console, first review around 26 Oct 2026** (before the USA trip; if there's no data yet, after 13 Nov), then once a month: open Performance, set the last 28 days, and send Claude screenshots of the Queries and Pages tabs with clicks, impressions and position showing. Claude then says which title or page to change: seen a lot but few clicks → new title; position 8–20 for a search with demand → strengthen that page
+- [ ] **Bing Webmaster Tools** (2 minutes): at bing.com/webmasters, sign in and choose "Import from Google Search Console". Bing feeds ChatGPT search and Copilot
+- [ ] **Google reviews from past clients**: once the profile is verified, copy the review link (profile → "Ask for reviews") and send it by WhatsApp to everyone who has already walked with you. Real names and real words only; never write them yourself
 - [ ] **Paella page facts** (300sun.com/paella): how long the workshop lasts, where it is, which days and times, vegetarian or other diet options, deposit and cancellation. They are missing on purpose until you confirm them
 - [ ] **Check the facts on the new cruise port guide** (300sun.com/cruise-port): ship shuttle about €10 return, taxi about €10 each way, city bus line 4 about €1.50, 15–30 min rides. They come from cruiser reports; correct anything you know is different
-- [ ] **Google Business Profile** (once created): real opening hours (e.g. 8:00–20:00 every day), real photos and 2–3 short videos, one post a week (a photo from the walk + one line). Never AI-generated photos
+- [ ] **Google Business Profile** (created 2026-10-09): finish the verification if Google asks for the video, then real opening hours (e.g. 8:00–20:00 every day), real photos and 2–3 short videos, one post a week (a photo from the walk + one line). Never AI-generated photos
 - [ ] **Ask for a Google review after every walk**, the same day, ideally with a 10-second video. Steady new reviews beat many old ones
 - [ ] **Film short vertical videos** on walks (Torres de Serranos, the market, horchata, the taxi pick-up) and say the search words out loud ("Valencia shore excursion", "from the cruise port to the old town"). Claude can write scripts and subtitles
 - [ ] **Join the conversation where cruisers ask**: Cruise Critic Valencia board, roll calls of 2027 ships, r/Cruise, r/valencia, Facebook cruise groups. Help first, link only when asked. Note every repeated question and send it to Claude for the FAQ
