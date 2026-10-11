@@ -94,7 +94,7 @@
       booking.querySelector(".book-fallback").hidden = false;
     } else {
       var loaded = false;
-      var loadCal = function (minutes) {
+      var loadCal = function (minutes, likes) {
         if (loaded) return;
         loaded = true;
         frame.innerHTML = "";
@@ -104,12 +104,16 @@
         Cal("init", "walk", { origin: "https://cal.com" });
         // Pass the ad's utm_* tags on to Cal.com so each booking shows where it came from
         var utm = location.search.match(/utm_[a-z]+=[^&]*/g) || [];
-        // Advisor bookings: tag them and write the agency in the notes
+        // Notes on the booking: what they like (step 2) and, for advisor bookings, the agency
+        var notes = [];
+        if (likes && likes.length) notes.push((es ? "Me gusta: " : "I like: ") + likes.join(", "));
         if (ref) {
           ref = ref.toLowerCase();
           utm = utm.filter(function (p) { return !/^utm_(source|campaign)=/.test(p); });
-          utm.push("utm_source=advisor", "utm_campaign=" + ref, "notes=" + encodeURIComponent("Referred by travel advisor: " + ref));
+          utm.push("utm_source=advisor", "utm_campaign=" + ref);
+          notes.push("Referred by travel advisor: " + ref);
         }
+        if (notes.length) utm.push("notes=" + encodeURIComponent(notes.join("\n")));
         // The length picked on our cards opens the calendar on that length (Cal.com event with 3 / 4 / 6 h)
         if (minutes) utm.push("duration=" + minutes);
         Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
@@ -133,16 +137,72 @@
         [240, "4 hours", "€200", "Personalised: we build the route together"],
         [360, "6 hours", "€300", "Personalised, with time for everything"]
       ];
-      frame.innerHTML = '<div class="cal-gate">' +
+      var gate = '<div class="cal-gate">' +
         '<p class="label">' + (es ? "1 · Elige la duración" : "1 · Choose how long") + '</p>' +
         '<div class="cal-pick">' + lengths.map(function (l) {
           return '<button type="button" data-min="' + l[0] + '"><b>' + l[1] + '</b><span class="cal-price">' + l[2] + '</span><span class="cal-what">' + l[3] + '</span><span class="cal-go">' + (es ? "Ver días →" : "See days →") + '</span></button>';
         }).join("") + '</div>' +
-        '<p class="fine">' + (es ? "Hasta 4 personas. Luego eliges día y hora. Se abre el calendario de Cal.com. " : "Up to 4 people. Next you pick the day and time, in a calendar provided by Cal.com. ") +
+        '<p class="fine">' + (es ? "Hasta 4 personas. Luego me cuentas qué te gusta y eliges día y hora en el calendario de Cal.com. " : "Up to 4 people. Next you tell me what you like, then pick the day and time in a calendar provided by Cal.com. ") +
         '<a href="' + privacyHref + '">' + (es ? "Privacidad y cookies" : "Privacy &amp; cookies") + '</a></p></div>';
-      frame.querySelectorAll(".cal-pick button").forEach(function (b) {
-        b.addEventListener("click", function () { loadCal(b.getAttribute("data-min")); });
-      });
+      var bindGate = function () {
+        frame.querySelectorAll(".cal-pick button").forEach(function (b) {
+          b.addEventListener("click", function () { showLikes(b.getAttribute("data-min")); });
+        });
+      };
+      frame.innerHTML = gate;
+      bindGate();
+
+      // Step 2: tap what you like, it lights up; the list goes into the booking notes so I can shape the walk
+      var likeTiles = [
+        ["history", "/assets/img/sketch-towers.webp", "History & old town", "Historia y casco antiguo", 1],
+        ["churches", "/images/valencia/300sun-valencia-iglesia-san-nicolas-640.webp", "Churches", "Iglesias", 0],
+        ["markets", "/assets/img/sketch-market.webp", "Markets", "Mercados", 1],
+        ["food", "/assets/img/sketch-paella.webp", "Food & paella", "Comida y paella", 1],
+        ["sweets", "/assets/img/sketch-horchata.webp", "Horchata & sweets", "Horchata y dulces", 1],
+        ["modern", "/images/valencia/300sun-nico-ciudad-artes-ciencias-640.webp", "Modern Valencia", "Valencia moderna", 0]
+      ];
+      var likeChips = es
+        ? ["Museos", "Vida diaria", "Arte urbano", "Jardín del Turia", "Playa", "Tapas y vino", "Compras", "Fotos", "Con niños", "Sin prisa"]
+        : ["Museums", "Daily life", "Street art", "Turia gardens", "Beach", "Tapas & wine", "Shopping", "Photos", "With kids", "Slow pace"];
+      var showLikes = function (minutes) {
+        frame.innerHTML = '<div class="cal-gate likes">' +
+          '<p class="label">' + (es ? "2 · ¿Qué te gusta más?" : "2 · What do you like most?") + '</p>' +
+          '<p>' + (es ? "Toca lo que te interesa y se ilumina. Así preparo el paseo a tu medida." : "Tap what you’re into and it lights up. I’ll shape the walk around it.") + '</p>' +
+          '<div class="like-tiles">' + likeTiles.map(function (t) {
+            var name = es ? t[3] : t[2];
+            return '<button type="button" class="like-tile' + (t[4] ? " is-sketch" : "") + '" aria-pressed="false" data-like="' + name + '"><img src="' + t[1] + '" alt="" loading="lazy"><span class="like-chip">' + name + '</span></button>';
+          }).join("") + '</div>' +
+          '<div class="like-chips">' + likeChips.map(function (c) {
+            return '<button type="button" class="like-chip" aria-pressed="false" data-like="' + c + '">' + c + '</button>';
+          }).join("") + '</div>' +
+          '<div class="like-go"><button type="button" class="like-all">' + (es ? "Me gusta todo" : "I like it all") + '</button>' +
+          '<button type="button" class="btn like-next">' + (es ? "Ver días →" : "See days →") + '</button></div>' +
+          '<button type="button" class="like-back">' + (es ? "← Cambiar duración" : "← Change length") + '</button></div>';
+        var all = frame.querySelectorAll("[data-like]");
+        var next = frame.querySelector(".like-next");
+        var picked = function () {
+          return Array.prototype.filter.call(all, function (b) { return b.getAttribute("aria-pressed") === "true"; })
+            .map(function (b) { return b.getAttribute("data-like"); });
+        };
+        var update = function () {
+          var n = picked().length;
+          next.textContent = n ? (es ? "Ver días (" + n + ") →" : "See days (" + n + ") →") : (es ? "Saltar y ver días →" : "Skip, see days →");
+        };
+        all.forEach(function (b) {
+          b.addEventListener("click", function () {
+            b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
+            update();
+          });
+        });
+        frame.querySelector(".like-all").addEventListener("click", function () {
+          all.forEach(function (b) { b.setAttribute("aria-pressed", "true"); });
+          update();
+        });
+        next.addEventListener("click", function () { loadCal(minutes, picked()); });
+        frame.querySelector(".like-back").addEventListener("click", function () { frame.innerHTML = gate; bindGate(); });
+        update();
+        frame.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
     }
   }
 

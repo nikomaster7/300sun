@@ -468,5 +468,42 @@ html.present .present-hint.show { opacity: .9; }
 .cal-pick button:hover .cal-go { color: var(--ink); }
 @media (max-width: 720px) { .cal-pick { grid-template-columns: 1fr; } .cal-pick button { padding: 16px; } .cal-go { margin-top: 2px; } }
 .cal-gate p { margin: 0; max-width: 34em; }
+.cal-frame { scroll-margin-top: 90px; }
+/* Step 2 of booking: tap what you like, it lights up */
+.like-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.like-tile {
+  position: relative; aspect-ratio: 4 / 3; padding: 0; overflow: hidden; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 6px; background: #fff; font: inherit;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.like-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s, filter .2s; }
+.like-tile.is-sketch img { object-fit: contain; padding: 8px 8px 40px; mix-blend-mode: multiply; }
+.like-tile:not(.is-sketch) img { filter: saturate(.85); }
+.like-tile .like-chip { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); width: max-content; max-width: calc(100% - 16px); text-align: center; pointer-events: none; }
+.like-tile:hover { transform: translateY(-2px); }
+.like-tile[aria-pressed="true"] { border-color: var(--sun); box-shadow: 0 0 0 3px var(--sun); }
+.like-tile[aria-pressed="true"] img { transform: scale(1.04); }
+.like-tile[aria-pressed="true"]:not(.is-sketch) img { filter: none; }
+.like-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.like-chip {
+  display: inline-block; padding: 8px 14px; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--ink); color: var(--paper); font: 500 14px/1.2 var(--sans);
+  box-shadow: 0 2px 8px rgba(0,0,0,.18); transition: background .15s, color .15s;
+}
+.like-chips .like-chip { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.like-chips .like-chip:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.like-chip[aria-pressed="true"], .like-tile[aria-pressed="true"] .like-chip,
+.like-chips .like-chip[aria-pressed="true"] { background: var(--sun); color: var(--ink); box-shadow: none; }
+.like-chip[aria-pressed="true"]::before, .like-tile[aria-pressed="true"] .like-chip::before { content: "✓ "; }
+.like-go { display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex-wrap: wrap; }
+.like-all, .like-back { padding: 6px 0; border: 0; background: none; color: var(--ink-2); font: 500 14px/1 var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.like-back { justify-self: start; text-decoration: none; }
+@media (max-width: 720px) {
+  .like-tiles { grid-template-columns: 1fr 1fr; }
+  .like-tile .like-chip { font-size: 13px; padding: 7px 11px; }
+  .like-go { justify-content: space-between; }
+  .like-go .btn { flex: 1 1 auto; text-align: center; }
+}
+@media (min-width: 960px) { .like-tiles { grid-template-columns: repeat(6, 1fr); } .like-tile { aspect-ratio: 4 / 5; } .like-tile.is-sketch img { padding: 8px 8px 56px; } }
 .gdpr { margin-top: 10px; font-size: 12px; color: var(--ink-2); max-width: 60em; }
 .gdpr a { color: inherit; }
