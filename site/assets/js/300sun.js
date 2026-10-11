@@ -32,6 +32,21 @@
     document.querySelectorAll(".rise").forEach(function (el) { el.classList.add("in"); });
   }
 
+  // Phone booking bar: shows once the hero is gone, hides again while the booking box is on screen
+  var bar = document.querySelector("[data-book-bar]");
+  var hero = document.querySelector(".hero"), bookBox = document.querySelector(".booking");
+  if (bar && hero && bookBox && "IntersectionObserver" in window) {
+    var seen = { hero: true, book: false };
+    var bio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen[e.target === hero ? "hero" : "book"] = e.isIntersecting; });
+      var show = !seen.hero && !seen.book;
+      bar.classList.toggle("show", show);
+      html.classList.toggle("bar-on", show);
+    });
+    bio.observe(hero);
+    bio.observe(bookBox);
+  }
+
   // Today's sun in Valencia (sunrise equation, good to about a minute)
   var sunEl = document.getElementById("sun-today");
   if (sunEl) {
