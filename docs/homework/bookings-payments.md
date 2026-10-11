@@ -6,7 +6,6 @@ Guide: `docs/booking-setup.md` (the deposit link is in section 5).
 - [ ] You: **delete the API key `claude-oct8`** (Settings → Developer → API keys) and the key file in Downloads.
 - [ ] You: make a test booking. Check the confirmation email shows the deposit line and link, and that the 3 / 4 / 6 h choice and the times make sense. Cancel it afterwards.
 - [ ] Review the booking questions together.
-- [ ] You: on the live site, click each of the 3 / 4 / 6 h cards and check the calendar opens on that length and in the site colours (Claude could not reach Cal.com from its sandbox to check). If a card opens on the wrong length, tell Claude.
 
 ## PayPal
 - [ ] You: turn on two-step verification.
