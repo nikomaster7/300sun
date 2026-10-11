@@ -396,7 +396,8 @@ html.present .present-hint.show { opacity: .9; }
 .booking { margin-top: clamp(56px, 8vw, 110px); border-top: 1px solid var(--ink); padding-top: 28px; }
 .booking-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 24px; }
 .booking-title { font: 400 clamp(30px, 3.4vw, 44px)/1.05 var(--serif); margin-top: 12px; }
-.cal-frame { min-height: 560px; background: #fff; border: 1px solid var(--line); overflow: auto; }
+.cal-frame { background: var(--paper-2); border-radius: 4px; overflow: auto; }
+.cal-frame.is-open { min-height: 560px; background: var(--paper); }
 .cal-frame[hidden], .book-fallback[hidden], .booking-note[hidden] { display: none; }
 .booking-note { margin-top: 14px; }
 .book-fallback { border: 1px dashed var(--ink-2); padding: 24px; display: grid; gap: 14px; justify-items: start; }
@@ -451,7 +452,21 @@ html.present .present-hint.show { opacity: .9; }
 .prose td { color: var(--ink-2); }
 
 /* booking: click-to-load gate + privacy notice */
-.cal-gate { min-height: 320px; display: grid; place-content: center; justify-items: center; gap: 14px; text-align: center; padding: 32px 20px; background: var(--paper); }
+.cal-gate { display: grid; gap: 16px; padding: clamp(20px, 3vw, 32px); }
+.cal-gate .label { margin: 0; }
+.cal-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cal-pick button {
+  display: grid; grid-template-columns: 1fr auto; align-content: start; gap: 6px 12px; text-align: left;
+  padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--ink); font: inherit; cursor: pointer;
+  transition: border-color .15s, transform .15s;
+}
+.cal-pick button:hover { border-color: var(--ink); transform: translateY(-2px); }
+.cal-pick b { font: 400 30px/1 var(--serif); }
+.cal-price { font: 500 17px/1.6 var(--sans); font-variant-numeric: tabular-nums; }
+.cal-what { grid-column: 1 / -1; font-size: 15px; color: var(--ink-2); }
+.cal-go { grid-column: 1 / -1; margin-top: 8px; font: 500 14px/1 var(--sans); color: var(--sun-ink); }
+.cal-pick button:hover .cal-go { color: var(--ink); }
+@media (max-width: 720px) { .cal-pick { grid-template-columns: 1fr; } .cal-pick button { padding: 16px; } .cal-go { margin-top: 2px; } }
 .cal-gate p { margin: 0; max-width: 34em; }
 .gdpr { margin-top: 10px; font-size: 12px; color: var(--ink-2); max-width: 60em; }
 .gdpr a { color: inherit; }
