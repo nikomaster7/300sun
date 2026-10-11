@@ -85,19 +85,20 @@
   // Leave empty until the Cal.com account exists; the WhatsApp fallback shows instead.
   var CAL_LINK = "300-sun/old-town-walk";
 
-  var booking = document.querySelector(".booking");
-  if (booking) {
-    var frame = booking.querySelector(".cal-frame");
+  var frame = document.querySelector(".booking .cal-frame");
+  if (frame) {
+    var booking = frame.closest(".booking");
     if (!CAL_LINK) {
       booking.querySelector(".booking-note").hidden = true;
       frame.hidden = true;
       booking.querySelector(".book-fallback").hidden = false;
     } else {
       var loaded = false;
-      var loadCal = function () {
+      var loadCal = function (minutes) {
         if (loaded) return;
         loaded = true;
         frame.innerHTML = "";
+        frame.classList.add("is-open");
         // Cal.com's standard embed loader
         (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
         Cal("init", "walk", { origin: "https://cal.com" });
@@ -109,16 +110,39 @@
           utm = utm.filter(function (p) { return !/^utm_(source|campaign)=/.test(p); });
           utm.push("utm_source=advisor", "utm_campaign=" + ref, "notes=" + encodeURIComponent("Referred by travel advisor: " + ref));
         }
+        // The length picked on our cards opens the calendar on that length (Cal.com event with 3 / 4 / 6 h)
+        if (minutes) utm.push("duration=" + minutes);
         Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
-        Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#1a1a1a" } } });
+        // Site colours inside the calendar: paper ground, ink for the chosen day, sun for today
+        Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: {
+          "cal-brand": "#1a1a1a", "cal-brand-emphasis": "#000000", "cal-brand-text": "#f5f5f3",
+          "cal-bg": "#f5f5f3", "cal-bg-muted": "#ecebe6", "cal-bg-subtle": "#ecebe6", "cal-bg-emphasis": "#d9d7d0",
+          "cal-border": "#d9d7d0", "cal-border-subtle": "#d9d7d0", "cal-border-booker": "#d9d7d0",
+          "cal-text": "#1a1a1a", "cal-text-emphasis": "#1a1a1a", "cal-text-subtle": "#5b5a56", "cal-text-muted": "#5b5a56"
+        } } });
       };
       // Nothing from Cal.com loads until the visitor asks for it (privacy: no third-party requests or cookies before that)
       var privacyHref = es ? "/es/legal/#cookies" : "/legal/#cookies";
-      frame.innerHTML = '<div class="cal-gate"><button type="button" class="btn">' + (es ? "Ver días disponibles" : "See available days") + '</button>' +
-        '<p class="fine">' + (es ? "Se abre el calendario de reservas de Cal.com. " : "Opens the booking calendar, provided by Cal.com. ") +
+      // Step 1 on our side: choose the length, then the calendar opens on it
+      var lengths = es ? [
+        [180, "3 horas", "150 €", "El paseo por el centro"],
+        [240, "4 horas", "200 €", "Personalizado: la ruta la montamos juntos"],
+        [360, "6 horas", "300 €", "Personalizado, con tiempo para todo"]
+      ] : [
+        [180, "3 hours", "€150", "The old town walk"],
+        [240, "4 hours", "€200", "Personalised: we build the route together"],
+        [360, "6 hours", "€300", "Personalised, with time for everything"]
+      ];
+      frame.innerHTML = '<div class="cal-gate">' +
+        '<p class="label">' + (es ? "1 · Elige la duración" : "1 · Choose how long") + '</p>' +
+        '<div class="cal-pick">' + lengths.map(function (l) {
+          return '<button type="button" data-min="' + l[0] + '"><b>' + l[1] + '</b><span class="cal-price">' + l[2] + '</span><span class="cal-what">' + l[3] + '</span><span class="cal-go">' + (es ? "Ver días →" : "See days →") + '</span></button>';
+        }).join("") + '</div>' +
+        '<p class="fine">' + (es ? "Hasta 4 personas. Luego eliges día y hora. Se abre el calendario de Cal.com. " : "Up to 4 people. Next you pick the day and time, in a calendar provided by Cal.com. ") +
         '<a href="' + privacyHref + '">' + (es ? "Privacidad y cookies" : "Privacy &amp; cookies") + '</a></p></div>';
-      frame.querySelector(".cal-gate .btn").addEventListener("click", loadCal);
-      document.querySelectorAll('a[href="#book"], a[href="#reservar"]').forEach(function (a) { a.addEventListener("click", loadCal); });
+      frame.querySelectorAll(".cal-pick button").forEach(function (b) {
+        b.addEventListener("click", function () { loadCal(b.getAttribute("data-min")); });
+      });
     }
   }
 
