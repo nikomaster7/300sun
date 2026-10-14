@@ -21,6 +21,11 @@ Under **Advanced → Booking questions**, add:
 - **Coming off a cruise? Ship name and all-aboard time** (text, optional)
 - **Anything I should know?** (kids, mobility, interests)
 
+## 3b. Questions before the walk: 300sun.com/plan/
+After booking, send guests **300sun.com/plan/** (Spanish: **300sun.com/es/plan/**). It asks who's coming, first time, cruise ship, pace, mobility, things to avoid, food, occasion, and 1–5 interest scales (main sights vs hidden corners, food, history, art, local life, photos, planned vs spontaneous). "Send to 300sun on WhatsApp" opens WhatsApp with the answers as a short summary to +34 615 85 80 17. Nothing is stored on the site.
+Add this line to the Cal.com event description / confirmation, and to the WhatsApp message with the deposit link:
+> To make the walk yours, answer a few quick questions (2 minutes): https://300sun.com/plan/
+
 ## 4. Notifications
 - You get an **email for every booking** automatically, and the walk appears in your Google Calendar.
 - Install the **Cal.com app** on your phone, or turn on Google Calendar notifications, to get a push notification.

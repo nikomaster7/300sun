@@ -346,6 +346,44 @@ form.ask .btn { justify-self: start; }
 @media (max-width: 880px) { .enquiry { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { form.ask { grid-template-columns: 1fr; } }
 
+/* plan your walk (guest questionnaire → WhatsApp) */
+form.plan { max-width: 760px; display: grid; gap: 30px; }
+form.plan h3 { display: flex; align-items: center; gap: 14px; font: 400 clamp(28px, 3vw, 38px)/1.1 var(--serif); margin: 24px 0 0; padding-top: 24px; border-top: 1px solid var(--ink); }
+form.plan h3:first-child { margin-top: 0; }
+form.plan .step { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--sun); font: 600 17px/1 var(--sans); }
+form.plan .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+form.plan .pair label, form.plan .line { display: grid; gap: 6px; font-size: 15px; font-weight: 500; }
+form.plan input[type=text], form.plan input[type=date], form.plan input[type=number], form.plan textarea {
+  font: 400 17px/1.4 var(--sans); color: var(--ink);
+  background: transparent; border: 0; border-bottom: 1px solid var(--ink);
+  padding: 8px 0; border-radius: 0; width: 100%;
+  -webkit-appearance: none; appearance: none;
+}
+form.plan textarea { resize: vertical; min-height: 96px; }
+form.plan input:focus, form.plan textarea:focus { outline: 0; border-bottom-width: 2px; }
+form.plan fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+form.plan legend { padding: 0; margin-bottom: 12px; font-size: 15px; font-weight: 500; }
+form.plan legend i { font-weight: 400; color: var(--ink-2); }
+form.plan .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+form.plan .chips legend { width: 100%; }
+form.plan .chips label, form.plan .seg label { position: relative; cursor: pointer; }
+form.plan input[type=radio], form.plan input[type=checkbox] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+form.plan .chips span { display: inline-block; padding: 9px 15px; border: 1px solid var(--line); border-radius: 999px; font-size: 15px; transition: background .15s, border-color .15s; }
+form.plan .chips label:hover span { border-color: var(--ink); }
+form.plan input:checked + span { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+form.plan input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 3px; }
+form.plan .seg { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--ink); border-radius: 999px; overflow: hidden; }
+form.plan .seg label + label { border-left: 1px solid var(--ink); }
+form.plan .seg span { display: block; padding: 11px 0; text-align: center; font-size: 17px; font-variant-numeric: tabular-nums; transition: background .15s; }
+form.plan .seg label:hover span { background: var(--paper-2); }
+form.plan .seg input:checked + span { background: var(--sun); color: var(--ink); }
+form.plan .seg input:focus-visible + span { outline-offset: -4px; }
+form.plan .ends { display: flex; justify-content: space-between; gap: 16px; margin: 8px 0 0; font-size: 13px; color: var(--ink-2); }
+form.plan .ends span:last-child { text-align: right; }
+form.plan .btn { justify-self: start; padding: 16px 22px; font-size: 15px; }
+form.plan .fine { margin: -14px 0 0; }
+@media (max-width: 520px) { form.plan .pair { grid-template-columns: 1fr; } }
+
 /* footer */
 .foot { border-top: 1px solid var(--ink); padding: 40px 0 56px; font-size: 14px; color: var(--ink-2); }
 .foot .wrap { display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: baseline; }

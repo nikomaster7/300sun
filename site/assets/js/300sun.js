@@ -81,6 +81,29 @@
     });
   }
 
+  // Plan your walk (/plan/) → WhatsApp with the answers as a short summary for the guide.
+  // Every question carries its summary name in data-q; scales (1–5) go on one line.
+  var plan = document.querySelector("form.plan");
+  if (plan) {
+    plan.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var lines = [], scales = [];
+      plan.querySelectorAll("[data-q]").forEach(function (q) {
+        var v = q.tagName === "FIELDSET"
+          ? Array.prototype.map.call(q.querySelectorAll("input:checked"), function (i) { return i.value; }).join(", ")
+          : q.value.trim();
+        if (!v) return;
+        if (q.classList.contains("scale")) scales.push(q.getAttribute("data-q") + " " + v);
+        else lines.push(q.getAttribute("data-q") + ": " + v);
+      });
+      if (scales.length) lines.push("\n" + plan.getAttribute("data-scales") + "\n" + scales.join("\n"));
+      var notes = plan.elements.notes.value.trim();
+      var msg = plan.getAttribute("data-hello") + "\n\n" + lines.join("\n") +
+        (notes ? "\n\n" + notes : "") + "\n\n— " + plan.elements.name.value.trim();
+      window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+    });
+  }
+
   // Walk bookings — Cal.com event link ("username/event-slug").
   // Leave empty until the Cal.com account exists; the WhatsApp fallback shows instead.
   var CAL_LINK = "300-sun/old-town-walk";
