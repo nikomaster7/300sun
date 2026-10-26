@@ -1,6 +1,6 @@
 # Pitch en persona para agencias (método Jim Camp, "Start with No")
 
-_Para practicar en voz alta y leer antes de entrar. Viaje a EE. UU. 28 oct – 13 nov 2026. Lista de agencias: [prospectos-florida.md](prospectos-florida.md)._
+_Guion para practicar, todo en inglés: [pitch-practice-en.md](pitch-practice-en.md). Aquí, las reglas y las objeciones. Viaje a EE. UU. 28 oct – 13 nov 2026. Lista de agencias: [prospectos-florida.md](prospectos-florida.md)._
 
 ## Las 5 reglas de Jim Camp, en corto
 1. **Dales permiso para decir "no".** Quita la presión. La gente escucha cuando no se siente acorralada.
