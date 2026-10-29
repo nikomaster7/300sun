@@ -46,7 +46,7 @@ Google chooses the method. For a business with no office it's usually a **video*
 | Personalised walk (4 h) | €200 | For up to 4 people. We build the route together by message. Each extra person €40, up to 8. |
 | Personalised walk (6 h) | €300 | For up to 4 people. We build the route together by message. Each extra person €60, up to 8. |
 | Cruise day walk | €150 | The 3-hour walk, planned backwards from your ship's all-aboard time. Meet at Torres de Serranos. |
-| Paella workshop | from €65 | Cook a real Valencian paella over fire, then eat it. |
+| Paella workshop | from €70 | Cook a real Valencian paella over fire, then eat it. |
 | Group accommodation | on request | 200+ beds across 3 partner hostels in central Valencia, for student and school groups. |
 
 **Booking link** (Edit profile → Bookings): `https://300sun.com/cruise/#book`

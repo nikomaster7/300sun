@@ -39,7 +39,7 @@ Si sale el miedo a perder el barco, **para y deja que lo cuenten.** No interrump
 >
 > Here's what I do. A private walk, just their group, at their pace. Cathedral, the Silk Exchange, the Central Market, horchata. **€150 for up to four people, three hours.** For cruise passengers I plan it backwards from all-aboard, and **if we're ever running tight, I put them in a taxi and pay the fare.**
 >
-> They can add a real Valencian paella workshop, from €65 a person. And if you ever sell groups (schools, churches, study abroad), I have beds for over 200 people with partner hostels.
+> They can add a real Valencian paella workshop, from €70 a person. And if you ever sell groups (schools, churches, study abroad), I have beds for over 200 people with partner hostels.
 >
 > **You get 15% of what they pay me, within seven days of the walk.** You don't invoice or collect anything. You send your link, I do the rest.
 
@@ -79,7 +79,7 @@ Si es no:
 
 **Preguntas:** ¿Qué hacen hoy sus clientes cuando tienen un día libre en Valencia o en una escala de crucero? ¿Qué les preocupa cuando el cliente va por su cuenta? ¿Cuántos clientes mandan a España al año?
 
-**Propuesta:** Paseo privado de 3 horas, solo su grupo, **150 € hasta 4 personas**. Taller de paella desde 65 € por persona. Si van en crucero, lo planifico hacia atrás desde la hora de embarque, y si vamos justos, les pago el taxi al puerto. **Ustedes se llevan el 15 %**, pagado en 7 días, sin facturar nada.
+**Propuesta:** Paseo privado de 3 horas, solo su grupo, **150 € hasta 4 personas**. Taller de paella desde 70 € por persona. Si van en crucero, lo planifico hacia atrás desde la hora de embarque, y si vamos justos, les pago el taxi al puerto. **Ustedes se llevan el 15 %**, pagado en 7 días, sin facturar nada.
 
 **Cierre:** Entonces, ¿es un no, o te mando hoy tu enlace propio para reservar?
 

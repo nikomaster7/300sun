@@ -5,7 +5,7 @@ _Read it out loud. "Me" is Nicolás, "Agent" is the travel advisor. Notes and ob
 **Prices to know by heart**
 - Private walk, 3 hours: **€150 for the whole group, up to 4 people.** Not per person.
 - 4 hours €200, 6 hours €300. Each extra person, up to 8: €10 an hour.
-- Paella workshop: from €65 per person.
+- Paella workshop: from €70 per person.
 - Advisor commission: **15%**, paid within 7 days of the walk.
 
 ---
@@ -46,7 +46,7 @@ _(Stop. Let them tell the story. Don't sell yet.)_
 
 **Me:** For cruise passengers, I plan the walk backwards from the all-aboard time. And if we're ever running tight, I put them in a taxi to the terminal and I pay the fare.
 
-**Me:** If they're hungry afterwards, they can cook a real Valencian paella with me, from €65 a person.
+**Me:** If they're hungry afterwards, they can cook a real Valencian paella with me, from €70 a person.
 
 **Me:** You get 15% of what they pay me, within seven days of the walk. You don't collect or invoice anything. You send them your link, and I do the rest.
 
@@ -74,9 +74,28 @@ _(Show 300sun.com/advisors on your phone, then the sample route sheet.)_
 **Agent:** We don't really sell Valencia.
 **Me:** Understood. Is it a no, or do you have a Mediterranean cruise coming up with a stop in Valencia?
 
-## Scene 5: the close
+## ⭐ Scene 5 (main scene): "confirm to me it's a no"
 
-**Me:** So, is it a no, or would it make sense for me to send you your own booking link today? It's just 300sun.com/cruise with your agency's name at the end.
+_This is the heart of the visit. Learn it before anything else. Say it slowly, smile, then stay quiet. Never use it at the opening, only after Scene 3._
+
+**Me:** I don't want to waste your time, so I'd rather hear a clear no than a maybe. Just confirm for me: you're not interested, right?
+
+_(Silence. Count to five in your head. Let them answer.)_
+
+**Agent:** No, no, I didn't say that. It could work for some clients.
+
+**Me:** Okay. What would need to be true for you to send me one client?
+
+_Other ways to say it (pick one and always use the same):_
+- "Is it fair to say this isn't something you'd want?"
+- "Am I right that this isn't a fit for you?"
+- "Would it be a bad idea to try it with just one client?"
+
+**If they really say no:** "Thank you, I appreciate you being straight with me." Then go to the card line below.
+
+## Scene 5b: the link
+
+**Me:** So, would it make sense for me to send you your own booking link today? It's just 300sun.com/cruise with your agency's name at the end.
 
 **Agent:** Okay, send it.
 
@@ -97,7 +116,7 @@ _If it's a no:_
 ---
 
 ## How to practise
-1. Read Scenes 1 and 3 out loud five times, until you can say them without looking.
+1. Read Scene 5 (the main scene), then Scenes 1 and 3, out loud five times, until you can say them without looking.
 2. Record yourself on your phone. Do you sound calm, with no rush?
 3. Ask someone to read the "Agent" lines in Scene 4, in random order.
 4. The rule: if you talk for more than 30 seconds in a row, stop and ask a question.

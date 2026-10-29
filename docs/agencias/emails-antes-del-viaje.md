@@ -71,7 +71,7 @@ I'm Nicolás. I live in Valencia, Spain, where I run private walks with a local 
 
 I'll be near Sand Lake Road on [day]. It's completely fine to tell me no. If Spain comes up in your clients' trips, would it be a bad idea to stop by for 15 minutes?
 
-In short: a private 3-hour walk, €150 for up to 4 people, and a real paella workshop from €65 a person. You get 15% within 7 days. Details: 300sun.com/advisors
+In short: a private 3-hour walk, €150 for up to 4 people, and a real paella workshop from €70 a person. You get 15% within 7 days. Details: 300sun.com/advisors
 
 Nicolás
 WhatsApp +34 615 85 80 17
