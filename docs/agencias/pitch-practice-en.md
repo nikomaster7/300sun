@@ -1,66 +1,106 @@
 # Practice script: visiting a travel agency (English)
 
-_Read it out loud. "Me" is Nicolás, "Agent" is the travel advisor. Notes and objections: [pitch-en-persona.md](pitch-en-persona.md)._
+_Read it out loud. "Me" is Nicolás, "Agent" is the travel advisor. Rules and the Spanish version: [pitch-en-persona.md](pitch-en-persona.md). Version 2 (2 Nov 2026), reviewed with ChatGPT: more casual, fewer "is it a no?" questions, one question at a time._
 
 **Prices to know by heart**
 - Private walk, 3 hours: **€150 for the whole group, up to 4 people.** Not per person.
 - 4 hours €200, 6 hours €300. Each extra person, up to 8: €10 an hour.
 - Paella workshop: from €70 per person.
-- Advisor commission: **15%**, paid within 7 days of the walk.
+- Advisor commission: **15%**, paid within 7 days of the walk. Say "15%", not "€22.50": longer walks and bigger groups pay them more.
+
+**The line to remember:** "Give your clients a more personal way to experience Valencia, without adding more work to your plate."
 
 ---
 
+## The 60-second pitch (learn this first)
+
+**Me:** Hi! I'm Nicolás. I live in Valencia, Spain. I offer private walks in Valencia for cruise passengers. It's just for their group, not a big tour.
+
+**Me:** I thought there might be an opportunity for us to work together. You'd earn a commission on every booking. But I don't know if this is something that makes sense for your business.
+
+**Me:** What do your clients usually do when their cruise stops in Valencia?
+
+_(Listen. Then:)_
+
+**Me:** It's three hours, €150 for up to four people. I plan everything around the ship's all-aboard time. And if we're running late, I cover the taxi back to the ship.
+
+**Me:** You earn 15%, paid within seven days after the walk. You just share your personal link. I handle everything else.
+
+**Me:** Would it make sense for me to send you your own booking link?
+
+---
+
+## Scene 0: at the door (reception)
+
+**Me:** Hi there! How are you? I'm Nicolás, I'm visiting from Valencia, Spain.
+
+**Me:** I was wondering if there's a travel advisor available for a quick two-minute chat. It's about a private walk I offer in Valencia, for cruise passengers.
+
+_If nobody is available:_
+
+**Me:** No worries at all. When would be a better time to stop by? Or would it be easier if I sent someone an email first?
+
 ## Scene 1: the opening
 
-**Me:** Hi, I'm Nicolás. I live in Valencia, Spain. I run private walks with a local there, and paella workshops.
+**Me:** Hi! I'm Nicolás. I live in Valencia, Spain.
 
-**Me:** I'll be honest, I don't know if this is a fit for you. It's completely fine to tell me no. Could I take two minutes to ask how you look after clients who stop in Valencia? If it's not useful, I'll get out of your way.
+_(Pause. Let them answer. Don't say everything in one breath.)_
 
-**Agent:** Sure, go ahead.
+**Me:** I run private walks with a local in Valencia, especially for cruise passengers who have a day in port. It's a private experience, just for their group. No big tour groups.
 
-## Scene 2: the questions
+**Me:** I thought there might be an opportunity for us to work together. You'd earn a commission for every client you refer.
 
-**Me:** What happens today when one of your cruise clients has a day in Valencia?
+**Me:** Now, I don't know if this is something that makes sense for your business. And that's perfectly fine. If it's not a fit, just let me know.
 
-**Agent:** Most of them take the ship's excursion, or they just walk around on their own.
+## ⭐ Scene 2 (main scene): the "no" question
 
-**Me:** How do they feel about the ship's excursions?
+_Say it slowly, smile, then stay quiet. Count to five in your head._
 
-**Agent:** Some say it's a big bus, forty people, not much time.
+**Me:** You don't really handle shore excursions in Spain, do you?
 
-**Me:** And the ones who go on their own, what worries you about that?
+**Agent:** Well, actually, we do have clients going to Spain…
 
-**Agent:** Honestly? That they get lost or come back late to the ship.
+**Me:** Okay. Tell me more about that.
 
-**Me:** Has that ever happened to one of your clients?
+_If they really say no:_ "Thank you, I appreciate you being upfront with me." Then go to the card line in Scene 6.
+
+## Scene 3: the questions
+
+_Pick two or three. Follow their answers. They talk 70% of the time._
+
+**Me:** What do your clients usually do when their cruise stops in Valencia?
+
+**Agent:** Most take the ship's excursion, or walk around on their own.
+
+**Me:** How do they normally explore the city?
+
+**Me:** What concerns do you usually have when your clients go exploring on their own in port?
+
+**Agent:** That they come back late to the ship.
 
 _(Stop. Let them tell the story. Don't sell yet.)_
 
-## Scene 3: the offer
+**Me:** Do you get many clients booking Mediterranean cruises?
 
-**Me:** So what I'm hearing is: your clients want something more personal than a bus, but you need them back on board on time. Is that right?
+## Scene 4: the offer
 
-**Agent:** Yes, exactly.
+**Me:** Here's how it works. I offer a private three-hour walk in Valencia, just for their group, at their own pace. The Cathedral, the Silk Exchange, the Central Market, a cold horchata.
 
-**Me:** Here's what I do. A private walk, just their group, at their pace. The Cathedral, the Silk Exchange, the Central Market, a cold horchata. Three hours, €150 for the whole group, up to four people.
+**Me:** It's €150 for the whole group, up to four people.
 
-**Me:** For cruise passengers, I plan the walk backwards from the all-aboard time. And if we're ever running tight, I put them in a taxi to the terminal and I pay the fare.
+**Me:** I plan everything around their ship's all-aboard time. And here's something important: if we're running late for any reason, I'll get them a taxi back to the ship and cover the fare.
 
-**Me:** If they're hungry afterwards, they can cook a real Valencian paella with me, from €70 a person.
+**Me:** Your commission is 15%, paid within seven days after the walk. You don't have to collect money, handle bookings, or deal with logistics. You simply share your personal booking link, and I take care of the rest.
 
-**Me:** You get 15% of what they pay me, within seven days of the walk. You don't collect or invoice anything. You send them your link, and I do the rest.
+_(Show 300sun.com/advisors on your phone, then the sample route sheet: "This is what your client receives.")_
 
-_(Show 300sun.com/advisors on your phone, then the sample route sheet.)_
+## Scene 5: the objections
 
-**Me:** This is the route sheet your client gets before the day: times, stops, tickets, and what's left to pay.
+**Agent:** We use the cruise line's excursions.
+**Me:** Absolutely, that makes sense. What do your clients usually like most about those excursions? And do you ever have clients looking for something a little more private or personal?
 
-## Scene 4: the objections
-
-**Agent:** We already sell the cruise line's excursions.
-**Me:** That makes sense. What do your clients say about those big groups?
-
-**Agent:** We have a supplier in Spain already.
-**Me:** Great. How do they handle Valencia specifically? Would it hurt to have someone for that port?
+**Agent:** We already have a supplier in Spain.
+**Me:** That's great. How do they handle Valencia specifically? Would having an extra contact just for Valencia be useful, or would that just complicate things for you?
 
 **Agent:** How do I know you're reliable?
 **Me:** Fair question. What would you need to see? You could send me one client as a test, and ask them afterwards.
@@ -69,43 +109,33 @@ _(Show 300sun.com/advisors on your phone, then the sample route sheet.)_
 **Me:** What do you usually get from local suppliers?
 
 **Agent:** Just send me an email.
-**Me:** Happy to. So I send the right thing, what's the one thing you'd want to see in it?
+**Me:** Absolutely. So I don't send you something generic, what would be most useful to see? The walk, the pricing, or how the commission works?
 
-**Agent:** We don't really sell Valencia.
-**Me:** Understood. Is it a no, or do you have a Mediterranean cruise coming up with a stop in Valencia?
+**Agent:** We don't sell Valencia very much.
+**Me:** I understand. Do you see that changing anytime soon, or is Valencia just not a common stop for your clients?
+_If it's uncommon:_ Fair enough. Would it make sense to keep my details for the occasional client who does stop there?
 
-## ⭐ Scene 5 (main scene): "confirm to me it's a no"
+## Scene 6: the close (one question at a time)
 
-_This is the heart of the visit. Learn it before anything else. Say it slowly, smile, then stay quiet. Never use it at the opening, only after Scene 3._
+**Me:** So, based on what we've discussed, would it make sense for me to set up a personal booking link for your agency? It takes care of the referral tracking, so you'll know which bookings came through you.
 
-**Me:** I don't want to waste your time, so I'd rather hear a clear no than a maybe. Just confirm for me: you're not interested, right?
+**Agent:** Sure.
 
-_(Silence. Count to five in your head. Let them answer.)_
+**Me:** What's the best email or WhatsApp to send it to?
 
-**Agent:** No, no, I didn't say that. It could work for some clients.
+_(Wait for the answer. Then:)_
 
-**Me:** Okay. What would need to be true for you to send me one client?
+**Me:** And do you have any clients with a Valencia stop coming up next year who might be a good fit?
 
-_Other ways to say it (pick one and always use the same):_
-- "Is it fair to say this isn't something you'd want?"
-- "Am I right that this isn't a fit for you?"
-- "Would it be a bad idea to try it with just one client?"
+_If they hesitate:_
 
-**If they really say no:** "Thank you, I appreciate you being straight with me." Then go to the card line below.
-
-## Scene 5b: the link
-
-**Me:** So, would it make sense for me to send you your own booking link today? It's just 300sun.com/cruise with your agency's name at the end.
-
-**Agent:** Okay, send it.
-
-**Me:** Great. What's the best email or WhatsApp for you? And is there a client with a Valencia stop next year we could start with?
+**Me:** No problem. What would you need to know before deciding whether this makes sense?
 
 _If it's a no:_
 
-**Me:** Thank you, I appreciate you being straight with me. Can I leave my card, in case a client ever asks about Valencia?
+**Me:** That's absolutely fine. I appreciate you being upfront with me. Would you mind if I left you my card, just in case someone asks about Valencia?
 
-## Scene 6: the follow-up email (5–7 days later, no reply)
+## Scene 7: the follow-up email (5–7 days later, no reply)
 
 > Subject: Valencia
 >
@@ -116,7 +146,7 @@ _If it's a no:_
 ---
 
 ## How to practise
-1. Read Scene 5 (the main scene), then Scenes 1 and 3, out loud five times, until you can say them without looking.
+1. Learn the 60-second pitch and Scene 2 first. Read them out loud five times, until you can say them without looking.
 2. Record yourself on your phone. Do you sound calm, with no rush?
-3. Ask someone to read the "Agent" lines in Scene 4, in random order.
+3. Ask someone to read the "Agent" lines in Scene 5, in random order.
 4. The rule: if you talk for more than 30 seconds in a row, stop and ask a question.

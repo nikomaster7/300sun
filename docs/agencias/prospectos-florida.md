@@ -43,6 +43,17 @@ Encontrados en Travel Leaders Network. Sirven para emails antes o después del v
 - Brenda Torres, **A Love for Adventures** (Orlando): Europa, grupos, cruceros.
 - Beverly Shine, **Bev's Bucket List Travel** (Orlando): Europa, grupos, cruceros fluviales, Regent.
 
+## Aventura en dos paradas (2 nov 2026)
+Datos de Yelp, BBB, D&B y webs de las agencias; los horarios no coinciden entre fuentes, llama antes si puedes.
+
+| Parada | Agencia | Dirección | Teléfono | Horario | Web |
+|---|---|---|---|---|---|
+| 1 | Forest Travel | 2420 NE Miami Gardens Dr, Suite 301, Aventura FL 33180 | +1 786 751 8771 | L–V 9–18, S 10–16 | foresttravel.com |
+| 1 | Luxuria Vacations (grupo Forest) | Mismo edificio, Suite 401 (otras fuentes: 2440 NE Miami Gardens Dr #107) | +1 844 785 8575 | L–V 9–19, S 10–14 | luxuriavacations.com |
+| 2 | Jerry Allen Travel | 20624 Biscayne Blvd, Aventura FL 33180 | +1 305 937 1900 | L–V 9–19 | jerryallencruises.com |
+| (otro día) | SERVIRSOL | 3475 N Country Club Dr, Suite 305, Aventura FL 33180 | +1 305 487 0392 | L–V 10–17, S 10–13 | servirsoltravelagency.us |
+| (otro día) | House of Travel | 17813 Biscayne Blvd, Aventura FL 33160 | +1 305 931 3002 | sin publicar | houseoftravel.net |
+
 ## Ruta sugerida
 - **Un día en Aventura:** Forest Travel + Luxuria (mismo edificio) → Jerry Allen → SERVIRSOL → House of Travel. 5 visitas en una mañana larga.
 - **Hallandale:** Costamar cualquier día, está al lado.
