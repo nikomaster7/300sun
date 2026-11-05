@@ -612,3 +612,13 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
   body.has-sticky .top .btn { display: none; }
 }
 @media (max-width: 880px) { .home-hero { padding: 20px 0 16px; } .home-hero h1 { font-size: 34px; } }
+
+/* home: the five cruise-day drawings above the cards. Phones: one swipeable row, so the cards stay close */
+.home-steps { margin: 0 0 clamp(24px, 4vw, 48px); }
+@media (max-width: 720px) {
+  .home-steps { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(var(--gutter) * -1) 24px; padding: 0 var(--gutter) 6px; scrollbar-width: none; }
+  .home-steps::-webkit-scrollbar { display: none; }
+  .home-steps li { flex: 0 0 38%; scroll-snap-align: start; }
+  .home-steps li:last-child { width: auto; grid-column: auto; justify-self: auto; }
+  .home-steps span { font-size: 13px; }
+}
