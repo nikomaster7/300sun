@@ -601,3 +601,14 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
   body.has-sticky .wa-float { display: none; }
   body.has-sticky .foot { padding-bottom: 120px; }
 }
+
+/* 2026-11-05 b: on phones the buy box comes first (title, price, Book now), photos after; Book now bar always on */
+.sticky-cta .what { display: block; font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 2px; }
+@media (max-width: 880px) {
+  .pdp { padding-top: 16px; }
+  .pdp > .pdp-info { order: -1; }
+  .pdp > .gallery { margin: 0 calc(var(--gutter) * -1); aspect-ratio: 16 / 9; }
+  .buy { margin-top: 18px; }
+  body.has-sticky .top .btn { display: none; }
+}
+@media (max-width: 880px) { .home-hero { padding: 20px 0 16px; } .home-hero h1 { font-size: 34px; } }

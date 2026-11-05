@@ -166,6 +166,8 @@
       loadCal(calFrame, minutes);
     }
     document.querySelectorAll("[data-book]").forEach(function (b) { b.addEventListener("click", startBooking); });
+    // Coming from a "Book now" on another page (/walk/?book): go straight to the calendar
+    if (/[?&]book\b/.test(location.search)) startBooking();
     // "Change": back to the page. Cal.com keeps its first length, so a new length reloads the calendar.
     document.querySelectorAll("[data-unbook]").forEach(function (b) {
       b.addEventListener("click", function () {
@@ -205,11 +207,8 @@
   });
 
   // Phones: a bar with the price and the button stays at the bottom until the real box is on screen
-  var sticky = document.querySelector(".sticky-cta"), box = document.querySelector(".buy");
-  if (sticky && box && "IntersectionObserver" in window) {
-    document.body.classList.add("has-sticky");
-    new IntersectionObserver(function (e) { sticky.classList.toggle("away", e[0].isIntersecting); }).observe(box);
-  }
+  // (Nicolás, 2026-11-05: the button is always there, on every page, wherever you scroll)
+  if (document.querySelector(".sticky-cta")) document.body.classList.add("has-sticky");
 
   // Presentation mode: P to toggle, arrows / space to move, Esc to leave
   var slides = function () { return Array.prototype.slice.call(document.querySelectorAll(".hero, section.block, .foot")); };
