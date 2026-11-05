@@ -144,7 +144,7 @@
   if (buy) {
     var minutes = 180;
     var pills = buy.querySelectorAll(".pills button");
-    var priceEls = document.querySelectorAll("[data-price]");
+    var priceEls = document.querySelectorAll("b[data-price]");
     var sumEl = document.querySelector("[data-summary]");
     pills.forEach(function (b) {
       b.addEventListener("click", function () {
@@ -175,37 +175,6 @@
         calFrame.classList.remove("is-open");
       });
     });
-  }
-
-  // Cruise page: the older in-page calendar with its own length picker
-  var frame = document.querySelector(".booking .cal-frame");
-  if (frame) {
-    var booking = frame.closest(".booking");
-    if (!CAL_LINK) {
-      booking.querySelector(".booking-note").hidden = true;
-      frame.hidden = true;
-      booking.querySelector(".book-fallback").hidden = false;
-    } else {
-      var lengths = es ? [
-        [180, "3 horas", "150 €", "El paseo por el centro"],
-        [240, "4 horas", "200 €", "Personalizado: la ruta la montamos juntos"],
-        [360, "6 horas", "300 €", "Personalizado, con tiempo para todo"]
-      ] : [
-        [180, "3 hours", "€150", "The old town walk"],
-        [240, "4 hours", "€200", "Personalised: we build the route together"],
-        [360, "6 hours", "€300", "Personalised, with time for everything"]
-      ];
-      frame.innerHTML = '<div class="cal-gate">' +
-        '<p class="label">' + (es ? "1 · Elige la duración" : "1 · Choose how long") + '</p>' +
-        '<div class="cal-pick">' + lengths.map(function (l) {
-          return '<button type="button" data-min="' + l[0] + '"><b>' + l[1] + '</b><span class="cal-price">' + l[2] + '</span><span class="cal-what">' + l[3] + '</span><span class="cal-go">' + (es ? "Ver días →" : "See days →") + '</span></button>';
-        }).join("") + '</div>' +
-        '<p class="fine">' + (es ? "Hasta 4 personas. Luego eliges día y hora. Se abre el calendario de Cal.com. " : "Up to 4 people. Next you pick the day and time, in a calendar provided by Cal.com. ") +
-        '<a href="' + privacyHref + '">' + (es ? "Privacidad y cookies" : "Privacy &amp; cookies") + '</a></p></div>';
-      frame.querySelectorAll(".cal-pick button").forEach(function (b) {
-        b.addEventListener("click", function () { loadCal(frame, b.getAttribute("data-min")); });
-      });
-    }
   }
 
   // Paella and groups: a short form that opens WhatsApp with the booking already written

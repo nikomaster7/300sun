@@ -21,7 +21,7 @@
 
   <link rel="preload" href="../assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../assets/css/300sun.css?v=20261105">
+  <link rel="stylesheet" href="../assets/css/300sun.css?v=20261105b">
 
   <script type="application/ld+json">
   {
@@ -99,7 +99,7 @@
   <div class="wrap">
     <a class="mark" href="../" aria-label="300sun, home"><span class="dot"></span>300sun</a>
     <span class="spacer" style="flex:1"></span>
-    <a class="btn" href="#book">Book your walk</a>
+    <button class="btn" type="button" data-book>Book now</button>
   </div>
 </header>
 
@@ -111,7 +111,7 @@
       <span class="label">For cruise passengers · Valencia, Spain</span>
       <h1 style="margin-top: 18px;">See Valencia. <em>Get back to your ship on time.</em></h1>
       <p class="lede">A private shore excursion in Valencia: a 3-hour walk through the old town, planned backwards from your all-aboard time. Just your group and me.</p>
-      <p style="margin-top: 28px;"><a class="btn" href="#book">See available days</a> &nbsp; <a class="btn ghost" href="https://wa.me/34615858017?text=Hi%20Nicol%C3%A1s%2C%20I%27m%20coming%20to%20Valencia%20on%20a%20cruise%20and%20I%20have%20a%20question%20about%20the%20walk." target="_blank" rel="noopener">Ask on WhatsApp</a></p>
+      <p style="margin-top: 28px;"><button class="btn" type="button" data-book>Book now</button> &nbsp; <a class="btn ghost" href="https://wa.me/34615858017?text=Hi%20Nicol%C3%A1s%2C%20I%27m%20coming%20to%20Valencia%20on%20a%20cruise%20and%20I%20have%20a%20question%20about%20the%20walk." target="_blank" rel="noopener">Ask on WhatsApp</a></p>
     </div>
     <ul class="facts rise" aria-label="The walk at a glance">
       <li><b>€150</b><span>3 hours, up to 4 people. <br>Also 4 h €200 and 6 h €300.</span></li>
@@ -215,22 +215,12 @@
 <!-- Reviews: add real ones here once there are Google reviews. Never invent them. -->
 
 <section class="block" id="book-section">
-  <div class="wrap">
-    <div class="booking rise" id="book" style="margin-top:0">
-      <div class="booking-head">
-        <div>
-          <span class="label">Book your walk</span>
-          <h3 class="booking-title">Pick your port day.</h3>
-        </div>
-        <p class="fine" style="max-width: 26em; margin: 0;">A €30 PayPal deposit holds the day. The rest at the end of the walk. Prices are in euros. Your card or PayPal converts at the day’s rate.</p>
-      </div>
-      <div class="cal-frame" id="cal-walk" data-cal-panel="walk"></div>
-      <p class="fine booking-note">Only the days I’m free show up. More than 4 people? Put the number in the booking.</p>
-      <p class="gdpr"><b>Data protection:</b> Nicolás Maldonado (300sun) uses your booking details only to arrange your walk. The calendar is run by Cal.com (USA). Your details aren’t shared with anyone else or used for advertising. You can see, correct or delete them at any time. <a href="/legal/#privacy">Privacy policy</a></p>
-      <div class="book-fallback" hidden>
-        <p>Prefer to ask first? Send me your ship and date on WhatsApp and I’ll hold the day for you.</p>
-        <a class="btn" href="https://wa.me/34615858017?text=Hi%20Nicol%C3%A1s%2C%20I%27d%20like%20to%20book%20the%20private%20walk%20for%20my%20cruise%20day.%20Ship%3A%20%20Date%3A%20%20People%3A%20" target="_blank" rel="noopener">Hold my day on WhatsApp</a>
-      </div>
+  <div class="wrap" style="max-width: 600px;">
+    <div class="buy" id="book" data-walk data-hello="Hi Nicolás, I'd like to book the private walk for my cruise day:">
+      <p class="buy-price"><b data-price>€150</b>per group, up to 4</p>
+      <div class="pills" role="radiogroup" aria-label="How long"><button type="button" role="radio" aria-checked="true" data-min="180" data-price="€150" data-label="3 h">3 h<span>€150</span></button><button type="button" role="radio" aria-checked="false" data-min="240" data-price="€200" data-label="4 h">4 h<span>€200</span></button><button type="button" role="radio" aria-checked="false" data-min="360" data-price="€300" data-label="6 h">6 h<span>€300</span></button></div>
+      <button class="btn book" type="button" data-book>Book now</button>
+      <p class="buy-note">€30 deposit · free cancellation up to 48 h before</p>
     </div>
   </div>
 </section>
@@ -254,7 +244,15 @@
   </div>
 </section>
 
+<div class="wrap pdp-cal">
+  <div class="cal-summary"><b>Private walk</b><span data-summary>3 h · €150</span><button type="button" data-unbook>Change</button></div>
+  <div class="cal-frame" id="cal-walk"></div>
+  <p class="gdpr">The calendar is run by Cal.com (USA). I use your details only to arrange your walk. <a href="/legal/#privacy">Privacy policy</a></p>
+</div>
+
 </main>
+
+<div class="sticky-cta"><p class="buy-price"><b data-price>€150</b>/ group</p><button class="btn book" type="button" data-book>Book now</button></div>
 
 <footer class="foot">
   <div class="wrap">
@@ -273,6 +271,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"/></svg>
 </a>
 
-<script src="../assets/js/300sun.js?v=20261105" defer></script>
+<script src="../assets/js/300sun.js?v=20261105b" defer></script>
 </body>
 </html>

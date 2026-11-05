@@ -565,7 +565,7 @@ html.present .present-hint.show { opacity: .9; }
 
 /* walk: after "Book now" the calendar takes over the page, like a checkout step */
 .pdp-cal { display: none; }
-body.booking-open .pdp { display: none; }
+body.booking-open main > :not(.pdp-cal) { display: none; }
 body.booking-open .pdp-cal { display: block; padding-top: 16px; padding-bottom: 48px; }
 body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !important; }
 .cal-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding: 14px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 12px; font-size: 15px; }

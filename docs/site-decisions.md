@@ -114,3 +114,4 @@ The Spanish/Italian online classes offer is off the home page (EN/ES): the note 
 - Phones: a bar with price and Book now stays at the bottom until the real box is on screen; the WhatsApp bubble is hidden on these pages so it doesn't cover the button.
 - Removed from the home page: the 1-2-3 list, the cruise drawings, the long walk/paella/groups sections, the FAQ and the enquiry form. The cruise pages keep their own booking box for now.
 - No face, as decided on 2026-10-09: the walk page uses San Nicolás and the seafood paella photo.
+- **Cruise page (2026-11-05, Nicolás: "yes, same workflow"):** the old three length cards are gone. Same box as /walk/ (3 h picked, Book now), every Book now on the page opens the calendar step directly, sticky bar on phones. /cruise-port/ buttons now say Book now. Fixed: picking a length overwrote the length buttons with the price.
