@@ -15,6 +15,6 @@
 - [ ] Ask the American couple in the paella photo if it can stay on the site.
 
 ## Waiting on a decision
-- [ ] **The group stays section** shows the three hostels. Talk to your boss first; if it isn't agreed, Claude hides it.
+- [ ] **Group stays page** (/groups/) shows the three hostels. Talk to your boss first; if it isn't agreed, Claude hides it.
 - [ ] **"Who you'll meet"** section with a photo: off for now, back when you decide or when there is a team.
 - [ ] Short vertical videos on walks. Claude writes scripts and subtitles.

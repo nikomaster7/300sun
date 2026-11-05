@@ -107,7 +107,77 @@
   // Walk bookings — Cal.com event link ("username/event-slug").
   // Leave empty until the Cal.com account exists; the WhatsApp fallback shows instead.
   var CAL_LINK = "300-sun/old-town-walk";
+  var privacyHref = es ? "/es/legal/#cookies" : "/legal/#cookies";
 
+  // Nothing from Cal.com loads until the visitor asks for it (privacy: no third-party requests or cookies before that)
+  var calLoaded = false;
+  function loadCal(frame, minutes) {
+    if (calLoaded) return;
+    calLoaded = true;
+    frame.innerHTML = "";
+    frame.classList.add("is-open");
+    // Cal.com's standard embed loader
+    (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "walk", { origin: "https://cal.com" });
+    // Pass the ad's utm_* tags on to Cal.com so each booking shows where it came from
+    var utm = location.search.match(/utm_[a-z]+=[^&]*/g) || [];
+    // Advisor bookings: tag them and write the agency in the notes
+    if (ref) {
+      var r = ref.toLowerCase();
+      utm = utm.filter(function (p) { return !/^utm_(source|campaign)=/.test(p); });
+      utm.push("utm_source=advisor", "utm_campaign=" + r, "notes=" + encodeURIComponent("Referred by travel advisor: " + r));
+    }
+    // The length picked on our side opens the calendar on that length (Cal.com event with 3 / 4 / 6 h)
+    if (minutes) utm.push("duration=" + minutes);
+    Cal.ns.walk("inline", { elementOrSelector: "#" + frame.id, calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
+    // Site colours inside the calendar: paper ground, ink for the chosen day, sun for today
+    Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: {
+      "cal-brand": "#1a1a1a", "cal-brand-emphasis": "#000000", "cal-brand-text": "#f5f5f3",
+      "cal-bg": "#f5f5f3", "cal-bg-muted": "#ecebe6", "cal-bg-subtle": "#ecebe6", "cal-bg-emphasis": "#d9d7d0",
+      "cal-border": "#d9d7d0", "cal-border-subtle": "#d9d7d0", "cal-border-booker": "#d9d7d0",
+      "cal-text": "#1a1a1a", "cal-text-emphasis": "#1a1a1a", "cal-text-subtle": "#5b5a56", "cal-text-muted": "#5b5a56"
+    } } });
+  }
+
+  // /walk/: pick the length (3 h is already picked), press Book now, the calendar takes over the page
+  var buy = document.querySelector(".buy[data-walk]");
+  if (buy) {
+    var minutes = 180;
+    var pills = buy.querySelectorAll(".pills button");
+    var priceEls = document.querySelectorAll("[data-price]");
+    var sumEl = document.querySelector("[data-summary]");
+    pills.forEach(function (b) {
+      b.addEventListener("click", function () {
+        pills.forEach(function (o) { o.setAttribute("aria-checked", o === b ? "true" : "false"); });
+        minutes = +b.getAttribute("data-min");
+        priceEls.forEach(function (el) { el.textContent = b.getAttribute("data-price"); });
+      });
+    });
+    var calFrame = document.getElementById("cal-walk");
+    function startBooking() {
+      if (!CAL_LINK) {
+        location.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(buy.getAttribute("data-hello") + " " + (minutes / 60) + " h");
+        return;
+      }
+      var picked = buy.querySelector('.pills [aria-checked="true"]');
+      if (sumEl && picked) sumEl.textContent = picked.getAttribute("data-label") + " · " + picked.getAttribute("data-price");
+      document.body.classList.add("booking-open");
+      window.scrollTo(0, 0);
+      loadCal(calFrame, minutes);
+    }
+    document.querySelectorAll("[data-book]").forEach(function (b) { b.addEventListener("click", startBooking); });
+    // "Change": back to the page. Cal.com keeps its first length, so a new length reloads the calendar.
+    document.querySelectorAll("[data-unbook]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        document.body.classList.remove("booking-open");
+        calLoaded = false;
+        calFrame.innerHTML = "";
+        calFrame.classList.remove("is-open");
+      });
+    });
+  }
+
+  // Cruise page: the older in-page calendar with its own length picker
   var frame = document.querySelector(".booking .cal-frame");
   if (frame) {
     var booking = frame.closest(".booking");
@@ -116,37 +186,6 @@
       frame.hidden = true;
       booking.querySelector(".book-fallback").hidden = false;
     } else {
-      var loaded = false;
-      var loadCal = function (minutes) {
-        if (loaded) return;
-        loaded = true;
-        frame.innerHTML = "";
-        frame.classList.add("is-open");
-        // Cal.com's standard embed loader
-        (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "walk", { origin: "https://cal.com" });
-        // Pass the ad's utm_* tags on to Cal.com so each booking shows where it came from
-        var utm = location.search.match(/utm_[a-z]+=[^&]*/g) || [];
-        // Advisor bookings: tag them and write the agency in the notes
-        if (ref) {
-          ref = ref.toLowerCase();
-          utm = utm.filter(function (p) { return !/^utm_(source|campaign)=/.test(p); });
-          utm.push("utm_source=advisor", "utm_campaign=" + ref, "notes=" + encodeURIComponent("Referred by travel advisor: " + ref));
-        }
-        // The length picked on our cards opens the calendar on that length (Cal.com event with 3 / 4 / 6 h)
-        if (minutes) utm.push("duration=" + minutes);
-        Cal.ns.walk("inline", { elementOrSelector: "#cal-walk", calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
-        // Site colours inside the calendar: paper ground, ink for the chosen day, sun for today
-        Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: {
-          "cal-brand": "#1a1a1a", "cal-brand-emphasis": "#000000", "cal-brand-text": "#f5f5f3",
-          "cal-bg": "#f5f5f3", "cal-bg-muted": "#ecebe6", "cal-bg-subtle": "#ecebe6", "cal-bg-emphasis": "#d9d7d0",
-          "cal-border": "#d9d7d0", "cal-border-subtle": "#d9d7d0", "cal-border-booker": "#d9d7d0",
-          "cal-text": "#1a1a1a", "cal-text-emphasis": "#1a1a1a", "cal-text-subtle": "#5b5a56", "cal-text-muted": "#5b5a56"
-        } } });
-      };
-      // Nothing from Cal.com loads until the visitor asks for it (privacy: no third-party requests or cookies before that)
-      var privacyHref = es ? "/es/legal/#cookies" : "/legal/#cookies";
-      // Step 1 on our side: choose the length, then the calendar opens on it
       var lengths = es ? [
         [180, "3 horas", "150 €", "El paseo por el centro"],
         [240, "4 horas", "200 €", "Personalizado: la ruta la montamos juntos"],
@@ -164,9 +203,43 @@
         '<p class="fine">' + (es ? "Hasta 4 personas. Luego eliges día y hora. Se abre el calendario de Cal.com. " : "Up to 4 people. Next you pick the day and time, in a calendar provided by Cal.com. ") +
         '<a href="' + privacyHref + '">' + (es ? "Privacidad y cookies" : "Privacy &amp; cookies") + '</a></p></div>';
       frame.querySelectorAll(".cal-pick button").forEach(function (b) {
-        b.addEventListener("click", function () { loadCal(b.getAttribute("data-min")); });
+        b.addEventListener("click", function () { loadCal(frame, b.getAttribute("data-min")); });
       });
     }
+  }
+
+  // Paella and groups: a short form that opens WhatsApp with the booking already written
+  document.querySelectorAll("form[data-wa]").forEach(function (f) {
+    var out = f.querySelector(".stepper output"), hidden = f.querySelector("input[name=people]");
+    var each = +f.getAttribute("data-each") || 0;
+    var totals = document.querySelectorAll("[data-total]");
+    function setPeople(n) {
+      var min = +hidden.min || 1, max = +hidden.max || 99;
+      n = Math.max(min, Math.min(max, n));
+      hidden.value = n; out.textContent = n;
+      if (each) totals.forEach(function (t) { t.textContent = (es ? (n * each) + " €" : "€" + n * each); });
+    }
+    if (out) {
+      f.querySelectorAll(".stepper button").forEach(function (b) {
+        b.addEventListener("click", function () { setPeople(+hidden.value + (+b.getAttribute("data-step"))); });
+      });
+      setPeople(+hidden.value);
+    }
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var lines = [];
+      f.querySelectorAll("[data-q]").forEach(function (q) { if (q.value.trim()) lines.push(q.getAttribute("data-q") + ": " + q.value.trim()); });
+      if (ref) lines.push("Advisor: " + ref);
+      var msg = f.getAttribute("data-wa") + (lines.length ? "\n\n" + lines.join("\n") : "");
+      window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+    });
+  });
+
+  // Phones: a bar with the price and the button stays at the bottom until the real box is on screen
+  var sticky = document.querySelector(".sticky-cta"), box = document.querySelector(".buy");
+  if (sticky && box && "IntersectionObserver" in window) {
+    document.body.classList.add("has-sticky");
+    new IntersectionObserver(function (e) { sticky.classList.toggle("away", e[0].isIntersecting); }).observe(box);
   }
 
   // Presentation mode: P to toggle, arrows / space to move, Esc to leave

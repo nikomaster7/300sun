@@ -105,3 +105,12 @@ The Spanish/Italian online classes offer is off the home page (EN/ES): the note 
 - **The guide is named "300sun", not Nicolás**, on this page and in its WhatsApp message (decided 2026-10-14). The older home-page enquiry form still says "Hi Nicolás".
 - **No guide portal for now** (2026-10-14): one guide, and Cal.com + WhatsApp already cover the guide side. A portal means logins, a database and guest data to protect. Revisit when hiring guides; Cal.com Teams gives each guide their own login and calendar first.
 - Legal page (EN/ES) now says "the forms on this site" don't store anything.
+
+## One page per service, one button (2026-11-05)
+- Feedback from a software-engineer friend, plus Viator / City Unscripted as models: the visitor is lazy, too many words and choices cause decision fatigue, and in-page jumps (click Paella → scroll down, click a button → jump to a form) felt broken.
+- **Priority:** 1) private walk, 2) paella, 3) group stays. The home page is now the headline plus two cards: a big walk card and a smaller paella card, each opening its own page. Group stays left the front page: one small link under the cards, plus header and footer.
+- **New pages** /walk/, /groups/ (and /es/walk/, /es/groups/); /paella/ rewritten. Same layout on all three: photos, title, three short facts, one box with the price and one green "Book now". Details (stops, ingredients, questions) sit below, collapsed. Full descriptions go in the confirmation email, not on the page.
+- **Walk booking:** 3 h is picked by default; Book now hides the page and shows the Cal.com calendar full width with a "Change" link (a checkout step, no scrolling). Paella and groups: Book now opens WhatsApp with date and people already written (paella shows the total, €70 × people, from).
+- Phones: a bar with price and Book now stays at the bottom until the real box is on screen; the WhatsApp bubble is hidden on these pages so it doesn't cover the button.
+- Removed from the home page: the 1-2-3 list, the cruise drawings, the long walk/paella/groups sections, the FAQ and the enquiry form. The cruise pages keep their own booking box for now.
+- No face, as decided on 2026-10-09: the walk page uses San Nicolás and the seafood paella photo.

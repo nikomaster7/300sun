@@ -508,3 +508,96 @@ html.present .present-hint.show { opacity: .9; }
 .cal-gate p { margin: 0; max-width: 34em; }
 .gdpr { margin-top: 10px; font-size: 12px; color: var(--ink-2); max-width: 60em; }
 .gdpr a { color: inherit; }
+
+/* ——— 2026-11 rework: one page per service, one call to action ——— */
+
+/* home: the walk card leads, paella follows, groups is only a link */
+.home-hero { padding: clamp(36px, 7vw, 88px) 0 clamp(24px, 4vw, 40px); }
+.home-hero h1 { font: 400 clamp(42px, 6.6vw, 92px)/.95 var(--serif); letter-spacing: -.02em; max-width: 13em; }
+.home-hero h1 em { color: var(--sun-ink); }
+.offers { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(14px, 2vw, 24px); padding-bottom: clamp(48px, 7vw, 96px); }
+.offer { position: relative; display: grid; grid-template-rows: auto 1fr; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: border-color .2s, transform .2s; }
+.offer:hover { border-color: var(--ink); transform: translateY(-2px); }
+.offer figure { aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: 0; }
+.offer.main figure { aspect-ratio: 16 / 10; }
+.offer-body { display: grid; gap: 6px; padding: 18px 20px 20px; align-content: start; }
+.offer h2 { font: 400 clamp(28px, 3vw, 40px)/1.05 var(--serif); }
+.offer .meta { font-size: 15px; color: var(--ink-2); margin: 0; }
+.offer .row-cta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; }
+.offer .from { font-size: 15px; color: var(--ink-2); }
+.offer .from b { font-size: 20px; color: var(--ink); font-weight: 600; }
+.offer .tag { position: absolute; top: 14px; left: 14px; z-index: 1; background: var(--sun); color: var(--ink); font: 600 12px/1 var(--sans); letter-spacing: .04em; padding: 7px 10px; border-radius: 999px; }
+.side-link { margin: -24px 0 clamp(48px, 7vw, 80px); font-size: 15px; color: var(--ink-2); }
+@media (max-width: 760px) { .offers { grid-template-columns: 1fr; } .offer.main figure { aspect-ratio: 4 / 3; } }
+
+/* product page: photos left, buy box right (sticky); on phones, photos then buy box */
+.pdp { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(20px, 4vw, 56px); align-items: start; padding-top: clamp(12px, 3vw, 40px); padding-bottom: clamp(40px, 6vw, 80px); }
+.gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; aspect-ratio: 4 / 3; border-radius: 14px; overflow: hidden; }
+.gallery figure { border-radius: 0; }
+.gallery figure:first-child { grid-row: span 2; }
+.gallery.two { grid-template-columns: 1.6fr 1fr; grid-template-rows: 1fr; }
+.gallery.two figure:first-child { grid-row: auto; }
+.pdp-info h1 { font: 400 clamp(34px, 4vw, 54px)/1.02 var(--serif); letter-spacing: -.01em; }
+.pdp-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 14px 0 0; padding: 0; list-style: none; font-size: 15px; color: var(--ink-2); }
+.pdp-meta li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--sun); margin-right: 8px; vertical-align: middle; }
+.pdp-info { position: sticky; top: 84px; }
+
+.buy { margin-top: 24px; padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: #fff; display: grid; gap: 16px; }
+.buy-price { margin: 0; font-size: 15px; color: var(--ink-2); }
+.buy-price b { font: 600 30px/1 var(--sans); color: var(--ink); letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-right: 6px; }
+.pills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.pills button { font: 500 16px/1 var(--sans); padding: 14px 6px; border-radius: 10px; border: 1px solid var(--ink); background: #fff; color: var(--ink); cursor: pointer; display: grid; gap: 6px; justify-items: center; }
+.pills button span { font-size: 13px; font-weight: 400; color: var(--ink-2); }
+.pills button[aria-checked="true"] { background: var(--ink); color: var(--paper); }
+.pills button[aria-checked="true"] span { color: #c9c7bf; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.field { display: grid; gap: 4px; padding: 10px 12px; border: 1px solid var(--ink); border-radius: 10px; font-size: 12px; font-weight: 500; color: var(--ink-2); }
+.field input { font: 500 17px/1.3 var(--sans); color: var(--ink); border: 0; padding: 0; background: transparent; width: 100%; min-width: 0; -webkit-appearance: none; appearance: none; }
+.field input:focus { outline: 0; }
+.field:focus-within { outline: 2px solid var(--ink); outline-offset: 1px; }
+.stepper { display: flex; align-items: center; justify-content: space-between; }
+.stepper button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--ink); background: #fff; font: 400 18px/1 var(--sans); cursor: pointer; color: var(--ink); }
+.stepper output { font: 500 17px/1 var(--sans); font-variant-numeric: tabular-nums; }
+.btn.book { width: 100%; justify-content: center; padding: 18px; font-size: 17px; font-weight: 600; border-radius: 12px; background: var(--wa); }
+.btn.book:hover { background: #17633e; }
+.buy-note { margin: -4px 0 0; font-size: 13px; color: var(--ink-2); text-align: center; }
+.buy .cal-frame { margin: 0 -22px -22px; border-radius: 0 0 14px 14px; }
+
+/* walk: after "Book now" the calendar takes over the page, like a checkout step */
+.pdp-cal { display: none; }
+body.booking-open .pdp { display: none; }
+body.booking-open .pdp-cal { display: block; padding-top: 16px; padding-bottom: 48px; }
+body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !important; }
+.cal-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding: 14px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 12px; font-size: 15px; }
+.cal-summary b { font-weight: 600; }
+.cal-summary button { margin-left: auto; background: none; border: 0; padding: 0; font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.pdp-cal .cal-frame.is-open { min-height: 640px; }
+
+/* below the fold: a few facts, the questions, the small print */
+.pdp-more { border-top: 1px solid var(--line); padding: clamp(32px, 5vw, 56px) 0 clamp(56px, 8vw, 96px); }
+.pdp-more .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: clamp(20px, 4vw, 56px); }
+.pdp-more h2 { font: 400 clamp(26px, 2.6vw, 34px)/1.1 var(--serif); margin-bottom: 8px; }
+.stops { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.stops li { padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; background: #fff; }
+.pdp-more .faq details:first-of-type { border-top: 1px solid var(--line); }
+.pdp-more .faq summary { font-size: 16px; padding: 16px 36px 16px 0; }
+.pdp-more .faq summary::after { top: 12px; }
+@media (max-width: 880px) {
+  .pdp, .pdp-more .wrap { grid-template-columns: 1fr; }
+  .pdp-info { position: static; }
+  .pdp { padding-top: 0; }
+  .pdp > .gallery { margin: 0 calc(var(--gutter) * -1); border-radius: 0; aspect-ratio: 4 / 3; }
+}
+@media (max-width: 520px) { .gallery, .gallery.two { grid-template-columns: 1fr; grid-template-rows: 1fr; } .gallery figure:not(:first-child) { display: none; } .gallery figure:first-child { grid-row: auto; } }
+
+/* phones: the price and the button stay on screen */
+.sticky-cta { display: none; }
+@media (max-width: 880px) {
+  .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.06); transition: transform .25s; }
+  .sticky-cta.away { transform: translateY(110%); }
+  .sticky-cta .buy-price b { font-size: 22px; }
+  .sticky-cta .btn.book { width: auto; padding: 14px 26px; }
+  body.has-sticky .wa-float { display: none; }
+  body.has-sticky .foot { padding-bottom: 120px; }
+}
