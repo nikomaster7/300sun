@@ -129,9 +129,9 @@
     }
     // The length picked on our side opens the calendar on that length (Cal.com event with 3 / 4 / 6 h)
     if (minutes) utm.push("duration=" + minutes);
-    Cal.ns.walk("inline", { elementOrSelector: "#" + frame.id, calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light" } });
+    Cal.ns.walk("inline", { elementOrSelector: "#" + frame.id, calLink: CAL_LINK + (utm.length ? "?" + utm.join("&") : ""), config: { layout: "month_view", theme: "light", hideEventTypeDetails: "true" } });
     // Site colours inside the calendar: paper ground, ink for the chosen day, sun for today
-    Cal.ns.walk("ui", { theme: "light", layout: "month_view", cssVarsPerTheme: { light: {
+    Cal.ns.walk("ui", { theme: "light", layout: "month_view", hideEventTypeDetails: true, cssVarsPerTheme: { light: {
       "cal-brand": "#1a1a1a", "cal-brand-emphasis": "#000000", "cal-brand-text": "#f5f5f3",
       "cal-bg": "#f5f5f3", "cal-bg-muted": "#ecebe6", "cal-bg-subtle": "#ecebe6", "cal-bg-emphasis": "#d9d7d0",
       "cal-border": "#d9d7d0", "cal-border-subtle": "#d9d7d0", "cal-border-booker": "#d9d7d0",
