@@ -46,6 +46,12 @@
     .note { margin: 0; text-align: center; font-size: 14px; color: var(--coral); font-weight: 700; }
     footer { background: var(--navy); color: #c9cede; font-size: 14px; padding: 20px 0 28px; }
     .present-hint { display: none; }
+    .bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.06); padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); }
+    .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .bar p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.3; }
+    .bar b { display: block; color: var(--coral); font-size: 15px; }
+    .bar button { width: auto; margin: 0; padding: 14px 22px; }
+    footer { padding-bottom: 100px !important; }
     footer a { color: var(--yellow); text-decoration: none; font-weight: 600; }
   </style>
 </head>
@@ -61,7 +67,7 @@
 </header>
 
 <main class="wrap">
-  <form data-wa="Hola, quiero la primera clase de inglés gratis.">
+  <form id="book" data-wa="Hola, quiero la primera clase de inglés gratis.">
     <label class="plan"><input type="radio" name="plan" value="Básico, 2 clases por semana" data-q="Plan"><b>Básico</b><small>2 clases por semana</small><span class="price"><strong>13,50 €</strong><span>/clase · 108 €/mes</span></span></label>
     <label class="plan"><input type="radio" name="plan" value="Intensivo, 3 clases por semana" data-q="Plan"><b>Intensivo</b><small>3 clases por semana</small><span class="price"><strong>12,50 €</strong><span>/clase · 150 €/mes</span></span></label>
     <label class="plan"><span class="badge">MEJOR PRECIO</span><input type="radio" name="plan" value="Pro, 4 clases por semana" data-q="Plan" checked><b>Pro</b><small>4 clases por semana</small><span class="price"><strong>11,50 €</strong><span>/clase · 184 €/mes</span></span></label>
@@ -73,6 +79,8 @@
     <p class="note">🎁 Tu primera clase es gratis</p>
   </form>
 </main>
+
+<div class="bar"><div class="wrap"><p><b>1.ª clase gratis</b>45 min, con profesora</p><button type="submit" form="book">Reservar</button></div></div>
 
 <footer>
   <div class="wrap">Espanglishfun · WhatsApp <a href="https://wa.me/34615858017" target="_blank" rel="noopener">+34 615 85 80 17</a></div>
