@@ -197,7 +197,7 @@
     f.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var lines = [];
-      f.querySelectorAll("[data-q]").forEach(function (q) { if (q.value.trim()) lines.push(q.getAttribute("data-q") + ": " + q.value.trim()); });
+      f.querySelectorAll("[data-q]").forEach(function (q) { if ((q.type === "radio" || q.type === "checkbox") && !q.checked) return; if (q.value.trim()) lines.push(q.getAttribute("data-q") + ": " + q.value.trim()); });
       if (ref) lines.push("Advisor: " + ref);
       var msg = f.getAttribute("data-wa") + (lines.length ? "\n\n" + lines.join("\n") : "");
       window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");

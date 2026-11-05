@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clases de inglés | Espanglishfun</title>
+  <meta name="description" content="Clases de inglés 1 a 1 de 45 minutos, online o en persona en Valencia. La primera clase es gratis.">
+  <!-- Private page: only for people Nicolás sends the link to. Not linked from 300sun, not in the sitemap. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1e2a4a">
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: "Inter"; src: url("../assets/fonts/inter-var.woff2") format("woff2"); font-weight: 300 800; font-display: swap; }
+    :root { --navy: #1e2a4a; --coral: #e8664a; --yellow: #fec93b; --cream: #fdf6ee; --ink: #1e2a4a; --muted: #5d6478; --line: #ece4d8; --green: #1f7a4d; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font: 400 17px/1.5 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 560px; margin: 0 auto; padding: 0 16px; }
+    .logo { font: 800 22px/1 "Inter", sans-serif; letter-spacing: -.02em; color: #fff; text-decoration: none; }
+    .logo span { color: var(--yellow); }
+    .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; padding: 24px 0 64px; }
+    .hero::before { content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: var(--coral); top: -90px; right: -90px; }
+    .hero::after { content: ""; position: absolute; width: 96px; height: 48px; border-radius: 96px 96px 0 0; background: var(--yellow); bottom: 0; right: 8%; }
+    .hero .wrap { position: relative; z-index: 1; }
+    .kicker { margin: 36px 0 10px; font: 700 12px/1 "Inter", sans-serif; letter-spacing: .16em; color: var(--yellow); }
+    h1 { margin: 0; font: 800 clamp(34px, 9vw, 46px)/1.05 "Inter", sans-serif; letter-spacing: -.03em; }
+    .sub { margin: 14px 0 0; color: #d6dae6; max-width: 26em; }
+    form { padding: 24px 0 40px; display: grid; gap: 12px; }
+    .plan { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 12px; padding: 18px; background: #fff; border: 2px solid transparent; border-radius: 16px; box-shadow: 0 2px 0 var(--line); cursor: pointer; }
+    .plan input { position: absolute; opacity: 0; }
+    .plan:has(input:checked) { border-color: var(--coral); }
+    .plan:has(input:focus-visible) { outline: 2px solid var(--navy); outline-offset: 2px; }
+    .plan b { font-size: 19px; font-weight: 800; }
+    .plan small { grid-column: 1; font-size: 14px; color: var(--muted); }
+    .plan .price { grid-row: 1 / span 2; grid-column: 2; text-align: right; }
+    .plan .price strong { display: block; font: 800 28px/1 "Inter", sans-serif; letter-spacing: -.02em; }
+    .plan .price span { font-size: 13px; color: var(--muted); }
+    .badge { position: absolute; top: -11px; left: 16px; background: var(--coral); color: #fff; font: 700 11px/1 "Inter", sans-serif; letter-spacing: .08em; padding: 6px 10px; border-radius: 999px; }
+    .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+    .modes label { position: relative; }
+    .modes input { position: absolute; opacity: 0; }
+    .modes span { display: block; text-align: center; padding: 13px 8px; border: 1.5px solid var(--navy); border-radius: 12px; font-weight: 600; background: #fff; cursor: pointer; }
+    .modes input:checked + span { background: var(--navy); color: #fff; }
+    .modes input:focus-visible + span { outline: 2px solid var(--coral); outline-offset: 2px; }
+    button[type=submit] { margin-top: 6px; width: 100%; padding: 18px; border: 0; border-radius: 14px; background: var(--green); color: #fff; font: 700 17px/1 "Inter", sans-serif; cursor: pointer; }
+    button[type=submit]:hover { background: #17633e; }
+    .note { margin: 0; text-align: center; font-size: 14px; color: var(--coral); font-weight: 700; }
+    footer { background: var(--navy); color: #c9cede; font-size: 14px; padding: 20px 0 28px; }
+    .present-hint { display: none; }
+    footer a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="logo">Espanglish<span>fun</span></span>
+    <p class="kicker">CLASES DE INGLÉS</p>
+    <h1>Aprende inglés a tu ritmo</h1>
+    <p class="sub">Clases 1 a 1 de 45 minutos con profesora. Online o en persona.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <form data-wa="Hola, quiero la primera clase de inglés gratis.">
+    <label class="plan"><input type="radio" name="plan" value="Básico, 2 clases por semana" data-q="Plan"><b>Básico</b><small>2 clases por semana</small><span class="price"><strong>13,50 €</strong><span>/clase · 108 €/mes</span></span></label>
+    <label class="plan"><input type="radio" name="plan" value="Intensivo, 3 clases por semana" data-q="Plan"><b>Intensivo</b><small>3 clases por semana</small><span class="price"><strong>12,50 €</strong><span>/clase · 150 €/mes</span></span></label>
+    <label class="plan"><span class="badge">MEJOR PRECIO</span><input type="radio" name="plan" value="Pro, 4 clases por semana" data-q="Plan" checked><b>Pro</b><small>4 clases por semana</small><span class="price"><strong>11,50 €</strong><span>/clase · 184 €/mes</span></span></label>
+    <div class="modes" role="radiogroup" aria-label="Modalidad">
+      <label><input type="radio" name="mode" value="Online" data-q="Modalidad" checked><span>Online</span></label>
+      <label><input type="radio" name="mode" value="En persona" data-q="Modalidad"><span>En persona</span></label>
+    </div>
+    <button type="submit">Reservar clase gratis</button>
+    <p class="note">🎁 Tu primera clase es gratis</p>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap">Espanglishfun · WhatsApp <a href="https://wa.me/34615858017" target="_blank" rel="noopener">+34 615 85 80 17</a></div>
+</footer>
+
+<script src="../assets/js/300sun.js?v=20261105d" defer></script>
+</body>
+</html>
