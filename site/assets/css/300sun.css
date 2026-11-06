@@ -654,3 +654,63 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
 .pdp-info h1 { font-size: clamp(28px, 3.2vw, 42px); line-height: 1.1; }
 .pdp-more h2 { font-size: clamp(20px, 2vw, 24px); }
 @media (max-width: 880px) { .home-hero h1 { font-size: 30px; } }
+
+/* ——— 2026-11-06 b: button states and soft borders (from Nicolás's style-guide references) ———
+   Every button shows a state: default, hover (lifts, glows), focus (ring), pressed (sinks, darker),
+   disabled (grey), loading (spinner). Borders are thin and tinted, not black. */
+:root { --cta-edge: #26b866; --cta-tint: #e9faf0; --ring: rgba(61, 220, 132, .38); --edge: #e4e2db; }
+
+.btn.book {
+  position: relative;
+  background: linear-gradient(180deg, #5ce79c 0%, var(--cta) 100%);
+  border: 1px solid var(--cta-edge);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55), 0 1px 2px rgba(11,42,23,.18), 0 6px 16px -4px rgba(38,184,102,.45);
+  transition: transform .12s ease, box-shadow .18s ease, background .18s ease, filter .18s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn.book:hover { background: linear-gradient(180deg, #66eaa4 0%, #45e08b 100%); transform: translateY(-1px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 2px 4px rgba(11,42,23,.16), 0 10px 22px -6px rgba(38,184,102,.6); }
+.btn.book:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--ring), inset 0 1px 0 rgba(255,255,255,.55); }
+.btn.book:active { transform: translateY(1px) scale(.985); background: linear-gradient(180deg, #34c977 0%, #2bbd6c 100%);
+  box-shadow: inset 0 2px 5px rgba(11,42,23,.22); }
+.btn.book:disabled, .btn.book[aria-disabled="true"] { background: #d9d8d3; border-color: #cfcdc6; color: #8d8b84; box-shadow: none; transform: none; cursor: not-allowed; }
+/* loading: label hides, a spinner turns */
+.btn.book.is-loading { color: transparent !important; pointer-events: none; }
+.btn.book.is-loading > * { visibility: hidden; }
+.btn.book.is-loading::after { content: ""; position: absolute; left: 50%; top: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px;
+  border: 2.5px solid rgba(11,42,23,.25); border-top-color: var(--cta-ink); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .btn.book, .pills button { transition: none; } .btn.book.is-loading::after { animation-duration: 2s; } }
+
+/* secondary (paella card): mint tint, green edge */
+.btn.book.soft { background: var(--cta-tint); color: var(--cta-ink); border: 1px solid #b9eccf; box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(11,42,23,.08); }
+.btn.book.soft:hover { background: #dcf7e7; border-color: var(--cta); box-shadow: 0 6px 16px -6px rgba(38,184,102,.45); }
+.btn.book.soft:active { background: #cdf2dc; box-shadow: inset 0 2px 4px rgba(11,42,23,.12); }
+
+/* length pills (3 h / 4 h / 6 h): soft edge; picked = mint with a green edge and a tick */
+.pills button { border: 1px solid var(--edge); background: #fff; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  transition: border-color .15s, background .15s, transform .1s, box-shadow .15s; -webkit-tap-highlight-color: transparent; }
+.pills button:hover { border-color: #bdbbb3; }
+.pills button:active { transform: scale(.97); }
+.pills button:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); }
+.pills button[aria-checked="true"] { background: var(--cta-tint); color: var(--cta-ink); border: 1.5px solid var(--cta); box-shadow: 0 0 0 3px rgba(61,220,132,.15); }
+.pills button[aria-checked="true"]::before { content: "✓ "; font-weight: 700; color: var(--cta-edge); }
+.pills button[aria-checked="true"] span { color: #3c6b4f; }
+
+/* fields and the people stepper */
+.field { border: 1px solid var(--edge); background: #fff; transition: border-color .15s, box-shadow .15s; }
+.field:focus-within { outline: none; border-color: var(--cta); box-shadow: 0 0 0 3px var(--ring); }
+.stepper button { border: 1px solid var(--edge); background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.06); transition: transform .1s, background .15s; }
+.stepper button:hover { border-color: #bdbbb3; }
+.stepper button:active { transform: scale(.9); background: var(--cta-tint); border-color: var(--cta); }
+
+/* cards: thin tinted edge, soft lift; the walk card has a green accent edge */
+.buy, .offer { border: 1px solid var(--edge); box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 28px -12px rgba(0,0,0,.12); }
+.offer { transition: border-color .2s, transform .2s, box-shadow .2s; }
+.offer:hover { border-color: #cfcdc6; box-shadow: 0 2px 4px rgba(0,0,0,.05), 0 16px 34px -14px rgba(0,0,0,.18); }
+.offer:active { transform: scale(.99); }
+.offer.main { border-left: 3px solid var(--cta); }
+.offer .tag { background: var(--cta-tint); color: var(--cta-ink); border: 1px solid #b9eccf; }
+.sticky-cta { border-top: 1px solid var(--edge); }
+.pills button { position: relative; }
+.pills button[aria-checked="true"]::before { content: "✓"; position: absolute; top: 5px; right: 8px; font-size: 12px; }

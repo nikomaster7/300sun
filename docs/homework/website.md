@@ -1,7 +1,7 @@
 # Website
 
 ## Facts only you can confirm
-- [ ] **Paella page** (300sun.com/paella): how long the workshop lasts, where, which days and times, diet options, deposit and cancellation.
+- [ ] **Paella page** (300sun.com/paella): where, which days and times, diet options, deposit and cancellation.
 - [ ] **Cruise port guide** (300sun.com/cruise-port): shuttle about €10 return, taxi about €10 each way, bus line 4 about €1.50, 15–30 minute rides. Correct what you know is different.
 - [ ] **Ticket prices** for the route sheet: San Nicolás, La Lonja and the Cathedral. Claude found €16, €2 and €9; your sheet said €18, €12 and €12.
 - [ ] Is **San Nicolás** a regular stop? If yes, Claude adds it to the route on the site.

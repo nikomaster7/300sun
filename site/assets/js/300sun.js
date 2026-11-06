@@ -206,6 +206,15 @@
     });
   });
 
+  // Button feedback: a short spinner after a tap, so people see something happened.
+  // (The empty touchstart listener makes :active work on iPhone.)
+  document.addEventListener("touchstart", function () {}, { passive: true });
+  function busy(b) { if (!b) return; b.classList.add("is-loading"); setTimeout(function () { b.classList.remove("is-loading"); }, 1200); }
+  document.querySelectorAll("a.btn.book").forEach(function (a) { a.addEventListener("click", function () { busy(a); }); });
+  document.querySelectorAll("form[data-wa]").forEach(function (f) {
+    f.addEventListener("submit", function (ev) { busy(ev.submitter || f.querySelector("button[type=submit]")); });
+  });
+
   // Phones: a bar with the price and the button stays at the bottom until the real box is on screen
   // (Nicolás, 2026-11-05: the button is always there, on every page, wherever you scroll)
   if (document.querySelector(".sticky-cta")) document.body.classList.add("has-sticky");
