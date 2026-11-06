@@ -133,3 +133,4 @@ The Spanish/Italian online classes offer is off the home page (EN/ES): the note 
 - Nicolás considered renaming the walk to "Private City Walk in Valencia with a Local", then kept the current title with "With a local" underneath.
 - **Button states (2026-11-06, b, from Nicolás's style-guide references):** Book now has visible states: hover lifts and glows, focus shows a green ring, pressed sinks and darkens, disabled is grey, and after a tap a spinner shows for about a second. Borders are thin and tinted, not black: the picked length is mint with a green edge and a tick, form fields get a green ring when in use, cards have a soft edge and shadow, the walk card a green accent edge on the left.
 - **Paella lasts 3 h** (Nicolás, 2026-11-06): shown on the paella page and the home card.
+- **Home headline back in the serif with italic** ("Valencia gets about 300 days of sun a year. *Let's use a few.*"), Nicolás 2026-11-06. All other titles stay Inter bold.

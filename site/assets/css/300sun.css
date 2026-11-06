@@ -714,3 +714,8 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
 .sticky-cta { border-top: 1px solid var(--edge); }
 .pills button { position: relative; }
 .pills button[aria-checked="true"]::before { content: "✓"; position: absolute; top: 5px; right: 8px; font-size: 12px; }
+
+/* Home headline keeps the serif + italic (Nicolás, 2026-11-06); other titles stay Inter bold */
+.home-hero h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.02em; font-size: clamp(40px, 6.2vw, 88px); line-height: .98; }
+.home-hero h1 em { font-style: italic; }
+@media (max-width: 880px) { .home-hero h1 { font-size: 40px; } }
