@@ -75,7 +75,7 @@
         f.people.value && (es ? "Personas: " : "People: ") + f.people.value,
         f.ship.value && (es ? "Barco / alojamiento: " : "Ship / hotel: ") + f.ship.value
       ].filter(Boolean).join("\n");
-      var msg = (es ? "Hola Nicolás, te escribo desde la web de 300sun." : "Hi Nicolás, I found you on the 300sun website.") +
+      var msg = (es ? "Hola 300sun, os escribo desde la web." : "Hi 300sun, I found you on your website.") +
         "\n\n" + details + (f.notes.value ? "\n\n" + f.notes.value : "") + "\n\n— " + f.name.value;
       window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
     });
