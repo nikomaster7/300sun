@@ -18,3 +18,6 @@ Guide: `docs/booking-setup.md` (the deposit link is in section 5).
 ## Route sheets for clients
 - [ ] For each real client, give Claude: name, date, people, start time, stops, any fixed time (reservation or all-aboard), price and deposit. Claude makes the PDF and the WhatsApp image.
 - [ ] Check the map on the example sheet (`marketing/route-sheet-example.pdf`): is each number on the right building? Claude took the tall tower under the basilica as the Cathedral and the church below it as San Nicolás.
+
+## Put back after the test booking (2026-11-06)
+- [ ] The **€30 deposit** line under Book now was removed for a test booking. To restore: walk pages (build) and /cruise/ buy box: "€30 deposit · free cancellation up to 48 h before" / "Señal de 30 € · cancelación gratis hasta 48 h antes". The FAQ answer "How do I pay?" and the Cal.com event description still mention it.
