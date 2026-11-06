@@ -719,3 +719,26 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
 .home-hero h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.02em; font-size: clamp(40px, 6.2vw, 88px); line-height: .98; }
 .home-hero h1 em { font-style: italic; }
 @media (max-width: 880px) { .home-hero h1 { font-size: 40px; } }
+
+/* ——— 2026-11-06 c: deep Mediterranean green (ChatGPT audit, Nicolás). White text 6.5:1, 6.0:1 against the page ——— */
+:root { --cta: #176b45; --cta-hover: #125638; --cta-pressed: #0e4930; --cta-ink: #ffffff; --cta-edge: #0e4930; --cta-tint: #e8f2ec; --ring: rgba(23, 107, 69, .32); }
+.btn.book { background: linear-gradient(180deg, #1d7a50 0%, var(--cta) 100%); color: #fff; border-color: var(--cta-edge);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 1px 2px rgba(0,0,0,.18), 0 6px 16px -4px rgba(23,107,69,.45); }
+.btn.book:hover { background: linear-gradient(180deg, #186b46 0%, var(--cta-hover) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 2px 4px rgba(0,0,0,.16), 0 10px 22px -6px rgba(23,107,69,.55); }
+.btn.book:active { background: var(--cta-pressed); box-shadow: inset 0 2px 5px rgba(0,0,0,.3); }
+.btn.book:focus-visible { box-shadow: 0 0 0 4px var(--ring), inset 0 1px 0 rgba(255,255,255,.18); }
+.btn.book .sep { opacity: .6; }
+.btn.book.is-loading::after { border-color: rgba(255,255,255,.35); border-top-color: #fff; }
+.btn.book.soft { background: var(--cta-tint); color: var(--cta); border: 1px solid #b6d4c2; box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(0,0,0,.06); }
+.btn.book.soft:hover { background: #dcebe2; border-color: var(--cta); box-shadow: 0 6px 16px -6px rgba(23,107,69,.4); }
+.btn.book.soft:active { background: #cfe3d7; box-shadow: inset 0 2px 4px rgba(0,0,0,.1); }
+.pills button[aria-checked="true"] { background: var(--cta-tint); color: var(--cta); border-color: var(--cta); box-shadow: 0 0 0 3px rgba(23,107,69,.12); }
+.pills button[aria-checked="true"]::before { color: var(--cta); }
+.pills button[aria-checked="true"] span { color: #3f6b55; }
+.field:focus-within { border-color: var(--cta); }
+.stepper button:active { background: var(--cta-tint); border-color: var(--cta); }
+.offer.main { border-left-color: var(--cta); }
+.offer .tag { background: var(--cta-tint); color: var(--cta); border-color: #b6d4c2; }
+/* WhatsApp stays secondary: white bubble, green icon, so the only filled green is Book now */
+.wa-float { background: #fff; color: #1f7a4d; border: 1px solid var(--edge); box-shadow: 0 4px 14px rgba(0,0,0,.12); }
