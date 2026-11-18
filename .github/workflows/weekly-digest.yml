@@ -30,10 +30,10 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHANNEL_URL: ${{ vars.TELEGRAM_CHANNEL_URL }}
         run: python3 tools/weekly-digest/digest.py
-      - name: Publish (commit as Nicolás, so Vercel deploys)
+      - name: Publish (commit as nikomaster7, the GitHub account Vercel deploys for)
         run: |
-          git config user.name "Nicolás Maldonado"
-          git config user.email "nicolasmusicplus@gmail.com"
+          git config user.name "nikomaster7"
+          git config user.email "NIKO.ROMAN7@OUTLOOK.COM"
           git add site/valencia-this-week tools/weekly-digest/archive
           git diff --cached --quiet && exit 0
           git commit -m "Valencia this week: $(date -u +%Y-%m-%d)"
