@@ -32,6 +32,18 @@
     document.querySelectorAll(".rise").forEach(function (el) { el.classList.add("in"); });
   }
 
+  // Valencia climate: average high / low per month (approximate, from AEMET normals for Valencia, rounded)
+  var CLIMATE = [[16, 7], [17, 8], [19, 10], [21, 12], [24, 15], [27, 19], [30, 22], [30, 22], [28, 20], [25, 16], [20, 11], [17, 8]];
+  var MONTHS = es
+    ? ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function climateLine(d) {
+    var c = CLIMATE[d.getMonth()];
+    return es
+      ? "<span>Media en " + MONTHS[d.getMonth()] + " <b>" + c[0] + "° / " + c[1] + "°</b></span>"
+      : "<span>Average in " + MONTHS[d.getMonth()] + " <b>" + c[0] + "° / " + c[1] + "°</b></span>";
+  }
+
   // Today's sun in Valencia (sunrise equation, good to about a minute)
   var sunEl = document.getElementById("sun-today");
   if (sunEl) {
@@ -53,6 +65,7 @@
     sunEl.innerHTML = es
       ? "<span>Hoy en Valencia</span><span>Amanece <b>" + fmt(rise) + "</b></span><span>Anochece <b>" + fmt(set) + "</b></span><span><b>" + light + "</b> de luz</span>"
       : "<span>Today in Valencia</span><span>Sunrise <b>" + fmt(rise) + "</b></span><span>Sunset <b>" + fmt(set) + "</b></span><span><b>" + light + "</b> of daylight</span>";
+    sunEl.innerHTML += climateLine(new Date());
   }
 
   // Service buttons pre-select the form
@@ -139,6 +152,40 @@
     } } });
   }
 
+  // Weather for the next 14 days above the booking calendar (Open-Meteo, free, no cookies).
+  // Like Cal.com, it's only requested once the visitor opens the calendar.
+  var SKY = { 0: ["Sunny", "Sol"], 1: ["Mostly sunny", "Casi despejado"], 2: ["Some cloud", "Algo nublado"], 3: ["Cloudy", "Nublado"],
+    45: ["Fog", "Niebla"], 48: ["Fog", "Niebla"], 51: ["Drizzle", "Llovizna"], 53: ["Drizzle", "Llovizna"], 55: ["Drizzle", "Llovizna"],
+    61: ["Rain", "Lluvia"], 63: ["Rain", "Lluvia"], 65: ["Heavy rain", "Lluvia fuerte"], 80: ["Showers", "Chubascos"],
+    81: ["Showers", "Chubascos"], 82: ["Heavy showers", "Chubascos fuertes"], 95: ["Storms", "Tormenta"], 96: ["Storms", "Tormenta"], 99: ["Storms", "Tormenta"] };
+  var wxLoaded = false;
+  function loadWeather(box) {
+    if (!box || wxLoaded || !window.fetch) return;
+    wxLoaded = true;
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=39.47&longitude=-0.376&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FMadrid&forecast_days=14")
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (j) {
+        var d = j.daily, days = "";
+        for (var i = 0; i < d.time.length; i++) {
+          var day = new Date(d.time[i] + "T12:00:00");
+          var label = day.toLocaleDateString(es ? "es-ES" : "en-GB", { weekday: "short", day: "numeric" });
+          var sky = (SKY[d.weather_code[i]] || ["Mixed", "Variable"])[es ? 1 : 0];
+          var rain = d.precipitation_probability_max[i];
+          days += "<li><span class=\"d\">" + label + "</span><b>" + Math.round(d.temperature_2m_max[i]) + "°</b><span class=\"lo\">" +
+            Math.round(d.temperature_2m_min[i]) + "°</span><span class=\"s\">" + sky + "</span>" +
+            (rain >= 30 ? "<span class=\"r\">" + rain + "%</span>" : "") + "</li>";
+        }
+        var later = new Date(); later.setDate(later.getDate() + 14);
+        var c = CLIMATE[later.getMonth()];
+        box.innerHTML = "<p class=\"wx-title\">" + (es ? "El tiempo en Valencia, próximos 14 días" : "Weather in Valencia, next 14 days") + "</p>" +
+          "<ol class=\"wx-days\">" + days + "</ol><p class=\"wx-note\">" +
+          (es ? "¿Más adelante? En " + MONTHS[later.getMonth()] + " suele hacer " + c[0] + "° de máxima y " + c[1] + "° de mínima. Previsión de Open-Meteo."
+              : "Further ahead? In " + MONTHS[later.getMonth()] + " it’s usually " + c[0] + "° by day and " + c[1] + "° at night. Forecast from Open-Meteo.") + "</p>";
+        box.hidden = false;
+      })
+      .catch(function () { wxLoaded = false; });
+  }
+
   // /walk/: pick the length (3 h is already picked), press Book now, the calendar takes over the page
   var buy = document.querySelector(".buy[data-walk]");
   if (buy) {
@@ -164,6 +211,7 @@
       document.body.classList.add("booking-open");
       window.scrollTo(0, 0);
       loadCal(calFrame, minutes);
+      loadWeather(document.querySelector("[data-weather]"));
     }
     document.querySelectorAll("[data-book]").forEach(function (b) { b.addEventListener("click", startBooking); });
     // Coming from a "Book now" on another page (/walk/?book): go straight to the calendar

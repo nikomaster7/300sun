@@ -742,3 +742,13 @@ body.booking-open .pdp-more, body.booking-open .sticky-cta { display: none !impo
 .offer .tag { background: var(--cta-tint); color: var(--cta); border-color: #b6d4c2; }
 /* WhatsApp stays secondary: white bubble, green icon, so the only filled green is Book now */
 .wa-float { background: #fff; color: #1f7a4d; border: 1px solid var(--edge); box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+
+/* Weather strip above the booking calendar (2026-11-18) */
+.wx { margin: 0 0 16px; }
+.wx-title { font-size: 13px; color: var(--ink-2); margin: 0 0 8px; }
+.wx-days { list-style: none; margin: 0; padding: 0 0 6px; display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; }
+.wx-days li { flex: 0 0 72px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 2px; padding: 10px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); font-size: 12px; color: var(--ink-2); text-align: center; }
+.wx-days .d { text-transform: capitalize; color: var(--ink); font-weight: 500; }
+.wx-days b { font: 400 24px/1.1 var(--serif); color: var(--ink); }
+.wx-days .r { color: #2f5d8a; }
+.wx-note { font-size: 12px; color: var(--ink-2); margin: 8px 0 0; }
