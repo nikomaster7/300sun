@@ -1,0 +1,40 @@
+# Valencia this week: every Monday, research the week, update
+# site/valencia-this-week/ (pushing to main publishes it) and post to Telegram.
+# Secrets (Settings > Secrets and variables > Actions):
+#   ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+# Variable (same page, "Variables" tab), optional: TELEGRAM_CHANNEL_URL
+name: Weekly digest
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"   # Mondays 05:17 UTC (06:17 in Valencia in winter, 07:17 in summer)
+  workflow_dispatch: {}    # "Run workflow" button, for a test run
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "anthropic>=2.10"
+      - name: Build the digest and post it
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL_URL: ${{ vars.TELEGRAM_CHANNEL_URL }}
+        run: python3 tools/weekly-digest/digest.py
+      - name: Publish (commit as Nicolás, so Vercel deploys)
+        run: |
+          git config user.name "Nicolás Maldonado"
+          git config user.email "nicolasmusicplus@gmail.com"
+          git add site/valencia-this-week tools/weekly-digest/archive
+          git diff --cached --quiet && exit 0
+          git commit -m "Valencia this week: $(date -u +%Y-%m-%d)"
+          git push
