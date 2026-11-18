@@ -11,6 +11,26 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/"/>
   </url>
   <url>
+    <loc>https://300sun.com/walk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/walk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/walk/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/es/walk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/walk/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/walk/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/groups/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/groups/"/>
+  </url>
+  <url>
+    <loc>https://300sun.com/es/groups/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/groups/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/groups/"/>
+  </url>
+  <url>
     <loc>https://300sun.com/paella/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://300sun.com/paella/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://300sun.com/es/paella/"/>
